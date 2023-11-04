@@ -14,6 +14,6 @@
 ---
 include:
   - board: seeeduino_xiao_ble
-    shield: a_dux_left
+    shield: BLE28_left
   - board: seeeduino_xiao_ble
-    shield: a_dux_right
+    shield: BLE28_right
