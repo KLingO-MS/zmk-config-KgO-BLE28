@@ -125,10 +125,10 @@
     combos {
         compatible = "zmk,combos";
 // ------------------------- LAYER COMBOS --------------------------------
-        combo_RESET {
+        combo_BOOT {
             timeout-ms = <50>;
             key-positions = <LMC RMC>;
-            bindings = <&to _BOOT>;
+            bindings = <&bootloader>;
             layers = <_BTF>;
         };
 
