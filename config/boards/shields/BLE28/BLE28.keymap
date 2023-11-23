@@ -201,21 +201,21 @@
             layers = <_BASE>;
         };
 
-        combo_RALTL {
-            timeout-ms = <40>;
-            key-positions = <LMP LTP>;
-            bindings = <&kp RALT>;
-            require-prior-idle-ms = <200>;
-            //layers = <_BASE>;
-        };
+        // combo_RALTL {
+        //     timeout-ms = <40>;
+        //     key-positions = <LMP LTP>;
+        //     bindings = <&kp RALT>;
+        //     require-prior-idle-ms = <200>;
+        //     //layers = <_BASE>;
+        // };
 
-        combo_RALTR {
-            timeout-ms = <40>;
-            key-positions = <LMP RTP>;
-            bindings = <&kp RALT>;
-            require-prior-idle-ms = <200>;
-            //layers = <_BASE>;
-        };
+        // combo_RALTR {
+        //     timeout-ms = <40>;
+        //     key-positions = <LMP RTP>;
+        //     bindings = <&kp RALT>;
+        //     require-prior-idle-ms = <200>;
+        //     //layers = <_BASE>;
+        // };
 
 // ------------------------- CHARACTER COMBOS --------------------------------
         combo_LPAR {
@@ -268,37 +268,37 @@
             require-prior-idle-ms = <200>;
         };
 
-        combo_COPY_M {
-            timeout-ms = <40>;
-            key-positions = <RTM RTR>;
-            bindings = <&kp LG(C)>;
-            layers = <_BASE>;
-            require-prior-idle-ms = <200>;
-        };
+        // combo_COPY_M {
+        //     timeout-ms = <40>;
+        //     key-positions = <RTM RTR>;
+        //     bindings = <&kp LG(C)>;
+        //     layers = <_BASE>;
+        //     require-prior-idle-ms = <200>;
+        // };
 
-        combo_COPY_W {
-            timeout-ms = <40>;
-            key-positions = <LTM LTR>;
-            bindings = <&kp LC(C)>;
-            layers = <_BASE>;
-            require-prior-idle-ms = <200>;
-        };
+        // combo_COPY_W {
+        //     timeout-ms = <40>;
+        //     key-positions = <LTM LTR>;
+        //     bindings = <&kp LC(C)>;
+        //     layers = <_BASE>;
+        //     require-prior-idle-ms = <200>;
+        // };
 
-        combo_PASTA_M {
-            timeout-ms = <40>;
-            key-positions = <RBM RBR>;
-            bindings = <&kp LG(V)>;
-            layers = <_BASE>;
-            require-prior-idle-ms = <200>;
-        };
+        // combo_PASTA_M {
+        //     timeout-ms = <40>;
+        //     key-positions = <RBM RBR>;
+        //     bindings = <&kp LG(V)>;
+        //     layers = <_BASE>;
+        //     require-prior-idle-ms = <200>;
+        // };
 
-        combo_PASTA_W {
-            timeout-ms = <40>;
-            key-positions = <LBM LBR>;
-            bindings = <&kp LC(V)>;
-            layers = <_BASE>;
-            require-prior-idle-ms = <200>;
-        };
+        // combo_PASTA_W {
+        //     timeout-ms = <40>;
+        //     key-positions = <LBM LBR>;
+        //     bindings = <&kp LC(V)>;
+        //     layers = <_BASE>;
+        //     require-prior-idle-ms = <200>;
+        // };
 
         // combo_GT {
         //     timeout-ms = <45>;
@@ -448,14 +448,14 @@
 
                 base_layer {
 // -------------------------------    -------------------------------
-// |  B  |  C  |  D  |  L  |  W  |    |  F  |  P  |  O  |  U  |  Y  |
+// |  B  |  Z  |  D  |  L  |  W  |    |  F  |  M  |  O  |  U  |  Y  |
 // |  N  |  S  |  T  |  R  |  J  |    |  G  |  H  |  A  |  E  |  I  |
-//       |  Z  |  M  |  V  |                |  K  |  X  |  Q  |
+//       |  C  |  P  |  V  |                |  K  |  Q  |  X  |
 //                  | _SYM(BSPC) |    | _NAV(SPC) |
                         bindings = <
-   &kp B       &kp C        &kp D       &kp L        &kp W    &kp F  &kp P        &kp O       &kp U        &kp Y
+   &kp B       &kp Z        &kp D       &kp L        &kp W    &kp F  &kp M        &kp O       &kp U        &kp Y
    &hml LALT N &hml LCTRL S &hml LGUI T &hsl LSHFT R &kp J    &kp G  &hsr LSHFT H &hmr LGUI A &hmr LCTRL E &hmr LALT I 
-               &kp Z        &kp M       &kp V                        &kp K        &kp X       &kp Q
+               &kp C        &kp P       &kp V                        &kp K        &kp Q       &kp X
                                             &bst _SYM BSPC    &spt _NAV SPACE
                         >;
                 };
