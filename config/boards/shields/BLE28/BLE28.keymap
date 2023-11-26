@@ -264,25 +264,25 @@
             timeout-ms = <40>;
             key-positions = <LBR LBI>;
             bindings = <&kp PSCRN>;
-            layers = <_BASE _SYM _NAV>;
+            layers = <_BASE _NAV>;
             require-prior-idle-ms = <200>;
         };
 
-        // combo_COPY_M {
-        //     timeout-ms = <40>;
-        //     key-positions = <RTM RTR>;
-        //     bindings = <&kp LG(C)>;
-        //     layers = <_BASE>;
-        //     require-prior-idle-ms = <200>;
-        // };
+        combo_CP_M {
+            timeout-ms = <40>;
+            key-positions = <RTC RMC>;
+            bindings = <&mac_cp>;
+            layers = <_NAV>;
+            require-prior-idle-ms = <200>;
+        };
 
-        // combo_COPY_W {
-        //     timeout-ms = <40>;
-        //     key-positions = <LTM LTR>;
-        //     bindings = <&kp LC(C)>;
-        //     layers = <_BASE>;
-        //     require-prior-idle-ms = <200>;
-        // };
+        combo_CP_W {
+            timeout-ms = <40>;
+            key-positions = <LTC LMC>;
+            bindings = <&win_cp>;
+            layers = <_NAV>;
+            require-prior-idle-ms = <200>;
+        };
 
         // combo_PASTA_M {
         //     timeout-ms = <40>;
@@ -331,21 +331,21 @@
 
     behaviors {
 // ------------------------- TAP-DANCES --------------------------------
-        // win_cp: win_cp {
-        //     compatible = "zmk,behavior-tap-dance";
-        //     label = "CTRL_COPY_PASTA";
-        //     #binding-cells = <0>;
-        //     tapping-term-ms = <400>;
-        //     bindings = <&kp LC(C)>, <&kp LC(V)>;
-        // };
+        win_cp: win_cp {
+            compatible = "zmk,behavior-tap-dance";
+            label = "CTRL_COPY_PASTA";
+            #binding-cells = <0>;
+            tapping-term-ms = <400>;
+            bindings = <&kp LC(C)>, <&kp LC(V)>;
+        };
 
-        // mac_cp: mac_cp {
-        //     compatible = "zmk,behavior-tap-dance";
-        //     label = "GUI_COPY_PASTA";
-        //     #binding-cells = <0>;
-        //     tapping-term-ms = <400>;
-        //     bindings = <&kp LG(C)>, <&kp LG(V)>;
-        // };
+        mac_cp: mac_cp {
+            compatible = "zmk,behavior-tap-dance";
+            label = "GUI_COPY_PASTA";
+            #binding-cells = <0>;
+            tapping-term-ms = <400>;
+            bindings = <&kp LG(C)>, <&kp LG(V)>;
+        };
 
 // ------------------------- HOLD-TAPS --------------------------------
         /* left-hand HRMs */
@@ -448,14 +448,14 @@
 
                 base_layer {
 // -------------------------------    -------------------------------
-// |  B  |  C  |  D  |  L  |  W  |    |  F  |  M  |  O  |  U  |  Y  |
-// |  N  |  S  |  T  |  R  |  G  |    |  Z  |  H  |  A  |  E  |  I  |
-//       |  J  |  P  |  V  |                |  K  |  Q  |  X  |
+// |  Z  |  C  |  L  |  D  |  B  |    |  F  |  M  |  O  |  U  |  Y  |
+// |  R  |  S  |  N  |  T  |  G  |    |  J  |  H  |  A  |  E  |  I  |
+//       |  W  |  V  |  M  |                |  K  |  X  |  Q  |
 //                  | _SYM(BSPC) |    | _NAV(SPC) |
                         bindings = <
-   &kp B       &kp C        &kp D       &kp L        &kp W    &kp F  &kp M        &kp O       &kp U        &kp Y
-   &hml LALT N &hml LCTRL S &hml LGUI T &hsl LSHFT R &kp G    &kp Z  &hsr LSHFT H &hmr LGUI A &hmr LCTRL E &hmr LALT I 
-               &kp J        &kp P       &kp V                        &kp K        &kp Q       &kp X
+   &kp Z       &kp C        &kp L       &kp D        &kp B    &kp F  &kp M        &kp O       &kp U        &kp Y
+   &hml LALT R &hml LCTRL S &hml LGUI N &hsl LSHFT T &kp G    &kp J  &hsr LSHFT H &hmr LGUI A &hmr LCTRL E &hmr LALT I 
+               &kp W        &kp V       &kp M                        &kp K        &kp X       &kp Q
                                             &bst _SYM BSPC    &spt _NAV SPACE
                         >;
                 };
