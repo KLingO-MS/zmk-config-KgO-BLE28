@@ -454,23 +454,23 @@
 //                  | _SYM(BSPC) |    | _NAV(SPC) |
                         bindings = <
    &kp B       &kp C        &kp L       &kp D        &kp W    &kp F  &kp P        &kp O       &kp U        &kp Y
-   &hml LALT N &hml LCTRL S &hml LGUI R &hsl LSHFT T &kp G    &kp J  &hsr LSHFT H &hmr LGUI A &hmr LCTRL E &hmr LALT I 
+   &hml LALT N &hml LCTRL S &hml LGUI R &hsl LSHFT T &kp J    &kp G  &hsr LSHFT H &hmr LGUI A &hmr LCTRL E &hmr LALT I 
                &kp Z        &kp V       &kp M                        &kp K        &kp Q       &kp X
                                             &bst _SYM BSPC    &spt _NAV SPACE
                         >;
                 };
 
                 nav_layer {
-// --------------------------------    -----------------------------------
-// | . , |  7  |  8  |  9  | ESC  |    | PGUP | HOME |  UP  | END  | INS |
-// |  0  |  4  |  5  |  6  | TAB  |    | PGDN | LEFT | SPC  | RGHT | RET |
-//       |  1  |  2  |  3  |                  | DEL  | DOWN | APP  |
-//                         | BSPC |    | SHFT |
+// -------------------------------    ----------------------------------
+// | ESC |  7  |  8  |  9  |  0  |    | INS | HOME |  UP  | END  | DEL |
+// | TAB |  4  |  5  |  6  |  ., |    | APP | LEFT | SPC  | RGHT | RET |
+//       |  1  |  2  |  3  |                | PGUP | DOWN | PGDN |
+//                        | BSPC |    | SHFT |
                         bindings = <
-   &kp KP_DOT   &kp N7        &kp N8       &kp N9        &kp ESC    &kp PG_UP &kp HOME        &kp UP          &kp END          &kp INS
-   &hml LALT N0 &hml LCTRL N4 &hml LGUI N5 &hsl LSHFT N6 &kp TAB    &kp PG_DN &hsr LSHFT LEFT &hmr LGUI SPACE &hmr LCTRL RIGHT &hmr LALT RET
-                &kp N1        &kp N2       &kp N3                             &kp DEL         &kp DOWN        &kp K_APP
-                                                  &bst _SYM BSPC    &kp LSHFT
+   &kp ESC       &kp N7        &kp N8       &kp N9        &kp N0       &kp INS   &kp HOME        &kp UP          &kp END          &kp DEL
+   &hml LALT TAB &hml LCTRL N4 &hml LGUI N5 &hsl LSHFT N6 &kp KP_DOT   &kp K_APP &hsr LSHFT LEFT &hmr LGUI SPACE &hmr LCTRL RIGHT &hmr LALT RET
+                 &kp N1        &kp N2       &kp N3                               &kp PG_UP       &kp DOWN        &kp PG_DN
+                                                     &bst _SYM BSPC    &kp LSHFT
                         >;
                 };
                 
