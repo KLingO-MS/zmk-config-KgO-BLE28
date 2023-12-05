@@ -449,7 +449,7 @@
                 base_layer {
 // -------------------------------    -------------------------------
 // |  B  |  C  |  L  |  D  |  W  |    |  F  |  P  |  O  |  U  |  Y  |
-// |  N  |  S  |  R  |  T  |  G  |    |  J  |  H  |  A  |  E  |  I  |
+// |  N  |  S  |  R  |  T  |  J  |    |  G  |  H  |  A  |  E  |  I  |
 //       |  Z  |  V  |  M  |                |  K  |  Q  |  X  |
 //                  | _SYM(BSPC) |    | _NAV(SPC) |
                         bindings = <
