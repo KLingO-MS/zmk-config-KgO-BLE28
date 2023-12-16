@@ -13,8 +13,9 @@
 #define _A1      0
 #define _A2      1
 #define _NV      2
-// #define _SYM     2
-#define _BT      3
+#define _NM      3
+#define _SM      4
+#define _BT      5
 
 // &sk {
 //     quick-release;
@@ -436,7 +437,7 @@
                         bindings = <
    &kp B       &kp C        &kp L       &kp D             &kp P        &kp O       &kp U        &kp Y
    &hml LALT N &hml LCTRL S &hml LGUI R &hsl LSHFT T      &hsr LSHFT H &hmr LGUI A &hmr LCTRL E &hmr LALT I 
-                            &kp TAB     &bst _A2 BSPC     &spt _NV SPACE    &kp RET
+                          &bst _SM TAB  &bst _A2 BSPC     &spt _NV SPACE  &spt _NM RET
                         >;
                 };
 
@@ -464,19 +465,29 @@
                         >;
                 };
                 
-//                 sym_layer {
-// // -------------------------------    -------------------------------
-// // |  @  |  #  |  $  |  %  |  `  |    |  ~  |  '  |  "  |  &  |  |  |
-// // |  /  |  *  |  -  |  +  |  <  |    |  >  |  ,  |  .  |  ?  |  \  |
-// //       |  ^  |  _  |  =  |                |  ;  |  :  |  !  |
-// //                        | BSPC |    | SPC |
-//                         bindings = <
-//    &kp AT          &kp HASH        &kp DLLR        &kp PRCNT       &kp GRAVE    &kp TILDE  &kp SQT          &kp DQT       &kp AMPS         &kp PIPE
-//    &hml LALT SLASH &hml LCTRL STAR &hml LGUI MINUS &hsl LSHFT PLUS &kp LT       &kp GT     &hsr LSHFT COMMA &hmr LGUI DOT &hmr LCTRL QMARK &hmr LALT BSLH
-//                    &kp CARET       &kp UNDER       &kp EQUAL                               &kp SEMI         &kp COLON     &kp EXCL
-//                                                                    &kp BSPC     &spt _NAV SPACE
-//                         >;
-//                 };
+                num_layer {
+// -------------------------------    ----------------------------------
+// |  5  |  6  |  7  |  8  |                |  _  |  =  |  ^  |  \  |
+// |  1  |  2  |  3  |  4  |                |  -  |  +  |  *  |  /  |
+//                   |  9  |  0  |    | SPC | BSPC |
+                        bindings = <
+   &kp N5       &kp N6        &kp N7       &kp N8             &kp UNDER        &kp EQUAL      &kp CARET       &kp BACKSLASH
+   &hml LALT N1 &hml LCTRL N2 &hml LGUI N3 &hsl LSHFT N4      &hsr LSHFT MINUS &hmr LGUI PLUS &hmr LCTRL STAR &hmr LALT SLASH
+                                       &kp N9     &kp N0      &kp SPACE       &kp BSPC
+                        >;
+                };
+
+                sym_layer {
+// -------------------------------    -------------------------------
+// |  @  |  #  |  $  |  %  |                |  !  |  ?  |  &  |  |  |
+// |  <  |  {  |  [  |  (  |                |  )  |  ]  |  }  |  >  |
+//                   |     |     |    |  `  |  ~  |
+                        bindings = <
+   &kp AT       &kp HASH        &kp DLLR       &kp PRCNT             &kp EXCL        &kp QMARK      &kp AMPS        &kp PIPE
+   &hml LALT LT &hml LCTRL LBRC &hml LGUI LBKT &hsl LSHFT LPAR       &hsr LSHFT RPAR &hmr LGUI RBKT &hmr LCTRL RBRC &hmr LALT GT
+                                               &none    &none        &kp GRAVE &kp TILDE
+                        >;
+                };
 
                 bt_layer {
 // -------------------------    ---------------------
