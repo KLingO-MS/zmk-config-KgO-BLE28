@@ -12,10 +12,9 @@
 
 #define _A1      0
 #define _A2      1
-
-// #define _NAV     1
+#define _NV      2
 // #define _SYM     2
-#define _BT      2
+#define _BT      3
 
 // &sk {
 //     quick-release;
@@ -128,16 +127,16 @@
 
         combo_BT {
             timeout-ms = <50>;
-            key-positions = <LOT LIT LTI>;
+            key-positions = <LOT LTI>;
             bindings = <&tog _BT>;
         };
 
-        // combo_NAVR {
-        //     timeout-ms = <50>;
-        //     key-positions = <RMI RMM RMR>;
-        //     bindings = <&to _NAV>;
-        //     layers = <_BASE _SYM>;
-        // };
+        combo_NAVR {
+            timeout-ms = <50>;
+            key-positions = <RBI RBM RBR>;
+            bindings = <&to _NV>;
+            layers = <_A1>;
+        };
 
         // combo_NAVL {
         //     timeout-ms = <50>;
@@ -146,19 +145,19 @@
         //     layers = <_BASE _SYM>;
         // };
 
-        // combo_BASER {
-        //     timeout-ms = <50>;
-        //     key-positions = <RMI RMM RMR>;
-        //     bindings = <&to _BASE>;
-        //     layers = <_NAV>;
-        // };
+        combo_BASER {
+            timeout-ms = <50>;
+            key-positions = <RBI RBM RBR>;
+            bindings = <&to _A1>;
+            layers = <_NV>;
+        };
 
-        // combo_BASEL {
-        //     timeout-ms = <50>;
-        //     key-positions = <LMI LMM LMR>;
-        //     bindings = <&to _BASE>;
-        //     layers = <_NAV>;
-        // };
+        combo_BASEL {
+            timeout-ms = <50>;
+            key-positions = <LBI LBM LBR>;
+            bindings = <&to _A1>;
+            layers = <_NV>;
+        };
 
 // ------------------------- VOLUME COMBOS --------------------------------
         // combo_V_UP {
@@ -392,7 +391,7 @@
         bst: backspace-tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "balanced";
+            flavor = "hold-preferred";
             tapping-term-ms = <200>;
             quick-tap-ms = <170>;
             //require-prior-idle-ms = <100>;
@@ -433,11 +432,11 @@
 // -------------------------------    -------------------------------
 // |  B  |  C  |  L  |  D  |                |  P  |  O  |  U  |  Y  |
 // |  N  |  S  |  R  |  T  |                |  H  |  A  |  E  |  I  |
-//                  | _SYM(BSPC) |    | _NAV(SPC) |
+//             | TAB | _A2(BSPC) |    | _NV(SPC) | RET |
                         bindings = <
    &kp B       &kp C        &kp L       &kp D             &kp P        &kp O       &kp U        &kp Y
    &hml LALT N &hml LCTRL S &hml LGUI R &hsl LSHFT T      &hsr LSHFT H &hmr LGUI A &hmr LCTRL E &hmr LALT I 
-                            &none       &bst _A2 BSPC     &kp SPACE    &kp RET
+                            &kp TAB     &bst _A2 BSPC     &spt _NV SPACE    &kp RET
                         >;
                 };
 
@@ -445,7 +444,7 @@
 // -------------------------------    -------------------------------
 // |  ;  |  '  |  J  |  W  |                |  F  |  Q  |  "  |  :  |
 // |  ,  |  Z  |  V  |  M  |                |  K  |  G  |  X  |  .  |
-//                  | _SYM(BSPC) |    | _NAV(SPC) |
+//                   |     |     |    | SPC | RET |
                         bindings = <
    &kp SEMI        &kp SQT      &kp J       &kp W             &kp F        &kp Q       &kp DQT      &kp COLON
    &hml LALT COMMA &hml LCTRL Z &hml LGUI V &hsl LSHFT M      &hsr LSHFT K &hmr LGUI G &hmr LCTRL X &hmr LALT DOT 
@@ -453,19 +452,17 @@
                         >;
                 };
 
-//                 nav_layer {
-// // -------------------------------    ----------------------------------
-// // | ESC |  7  |  8  |  9  |  0  |    | INS | HOME |  UP  | END  | DEL |
-// // | TAB |  4  |  5  |  6  |  ., |    | APP | LEFT | SPC  | RGHT | RET |
-// //       |  1  |  2  |  3  |                | PGUP | DOWN | PGDN |
-// //                        | BSPC |    | SHFT |
-//                         bindings = <
-//    &kp ESC       &kp N7        &kp N8       &kp N9        &kp N0       &kp INS   &kp HOME        &kp UP          &kp END          &kp DEL
-//    &hml LALT TAB &hml LCTRL N4 &hml LGUI N5 &hsl LSHFT N6 &kp KP_DOT   &kp K_APP &hsr LSHFT LEFT &hmr LGUI SPACE &hmr LCTRL RIGHT &hmr LALT RET
-//                  &kp N1        &kp N2       &kp N3                               &kp PG_UP       &kp DOWN        &kp PG_DN
-//                                                      &bst _SYM BSPC    &kp LSHFT
-//                         >;
-//                 };
+                nav_layer {
+// -------------------------------    ----------------------------------
+// | ESC | wCP | mCP | PGUP |               | HOME |  UP  | END  | DEL |
+// | TAB | PRN | INS | PGDN |               | LEFT | DOWN | RGHT | RET |
+//                  | APP | BSPC |    | SPC | LSFT |
+                        bindings = <
+   &kp ESC       &win_cp          &mac_cp       &kp PG_UP            &kp HOME        &kp UP         &kp END          &kp DEL
+   &hml LALT TAB &hml LCTRL PSCRN &hml LGUI INS &hsl LSHFT PG_DN     &hsr LSHFT LEFT &hmr LGUI DOWN &hmr LCTRL RIGHT &hmr LALT RET
+                                  &kp K_APP     &kp BSPC             &kp SPACE       &kp LSHFT
+                        >;
+                };
                 
 //                 sym_layer {
 // // -------------------------------    -------------------------------
@@ -482,15 +479,14 @@
 //                 };
 
                 bt_layer {
-// ----------------------------    ----------------------------------
-// | F11 | F7 | F8 | F9 | F12 |    | BT1 | BT2  | BT3 |  BT4  | BT5 |
-// | F10 | F4 | F5 | F6 | RST |    | RST | SHFT | GUI | CTRL  | ALT |
-//       | F1 | F2 | F3 |                | USB  |     | BTCLR |
-//                      |     |    |     |
+// -------------------------    ---------------------
+// | BT5 |     | OUT |     |    |    |    |    |    |
+// | BT1 | BT2 | BT3 | BT4 |    |    |    |    |    |
+//             | _A1 | CLR |    |    |    |
                         bindings = <
-   &bt BT_SEL 4 &bt BT_CLR   &out OUT_TOG &none                    &none  &none  &none  &none
+   &bt BT_SEL 4 &none        &out OUT_TOG &none                    &none  &none  &none  &none
    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3             &none  &none  &none  &none
-                                          &none     &none   &none  &none
+                                          &&tog _BT  &bt BT_CLR    &none  &none
                         >;
                 };                
     };
