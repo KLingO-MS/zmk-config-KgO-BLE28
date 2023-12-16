@@ -1,17 +1,17 @@
 # Copyright (c) 2021 The ZMK Contributors
 # SPDX-License-Identifier: MIT
 
-if SHIELD_BLE28_LEFT
+if SHIELD_BLE20_LEFT
 
 config ZMK_KEYBOARD_NAME
-    default "BLE28"
+    default "BLE20"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
 endif
 
-if SHIELD_BLE28_LEFT || SHIELD_BLE28_RIGHT
+if SHIELD_BLE20_LEFT || SHIELD_BLE20_RIGHT
 
 config ZMK_SPLIT
     default y

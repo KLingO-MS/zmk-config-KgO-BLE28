@@ -1,11 +1,11 @@
 file_format: "1"
-id: BLE28
-name: BLE28
+id: BLE20
+name: BLE20
 type: shield
-url: handwired 28 keys split
+url: handwired 20 keys split
 requires: [seeed_xiao_ble]
 features:
   - keys
 siblings:
-  - BLE28_left
-  - BLE28_right
+  - BLE20_left
+  - BLE20_right
