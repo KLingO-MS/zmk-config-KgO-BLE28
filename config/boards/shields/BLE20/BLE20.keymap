@@ -15,7 +15,8 @@
 #define _NV      2
 #define _NM      3
 #define _SM      4
-#define _BT      5
+#define _FS      5
+#define _BT      6
 
 // &sk {
 //     quick-release;
@@ -128,36 +129,42 @@
 
         combo_BT {
             timeout-ms = <50>;
-            key-positions = <LOT LTI>;
+            key-positions = <LOT LTP>;
             bindings = <&tog _BT>;
         };
 
-        combo_NAVR {
+        combo_FUN {
+            timeout-ms = <50>;
+            key-positions = <LIT RIT>;
+            bindings = <&mo _FS>;
+        };
+
+        combo_NAV {
             timeout-ms = <50>;
             key-positions = <RBI RBM RBR>;
             bindings = <&to _NV>;
             layers = <_A1>;
         };
 
-        // combo_NAVL {
-        //     timeout-ms = <50>;
-        //     key-positions = <LMI LMM LMR>;
-        //     bindings = <&to _NAV>;
-        //     layers = <_BASE _SYM>;
-        // };
+        combo_NUM {
+            timeout-ms = <50>;
+            key-positions = <LBI LBM LBR>;
+            bindings = <&to _NM>;
+            layers = <_A1>;
+        };
 
         combo_BASER {
             timeout-ms = <50>;
             key-positions = <RBI RBM RBR>;
             bindings = <&to _A1>;
-            layers = <_NV>;
+            layers = <_NV _NM>;
         };
 
         combo_BASEL {
             timeout-ms = <50>;
             key-positions = <LBI LBM LBR>;
             bindings = <&to _A1>;
-            layers = <_NV>;
+            layers = <_NV _NM>;
         };
 
 // ------------------------- VOLUME COMBOS --------------------------------
@@ -489,13 +496,25 @@
                         >;
                 };
 
+                fun_layer {
+// -------------------------------    --------------------------------
+// |  F5 |  F6 |  F7 |  F8 |                | F11 | F12 |  V+ |      |
+// |  F1 |  F2 |  F3 |  F4 |                |  F9 | F10 |  V- | Mute |
+//                   |     |     |    |     |     |
+                        bindings = <
+   &kp F5       &kp F6        &kp F7       &kp F8             &kp F11       &kp F12       &kp C_VOL_UP        &none
+   &hml LALT F1 &hml LCTRL F2 &hml LGUI F3 &hsl LSHFT F4      &hsr LSHFT F9 &hmr LGUI F10 &hmr LCTRL C_VOL_DN &hmr LALT C_MUTE
+                                            &none  &none      &none  &none
+                        >;
+                };
+
                 bt_layer {
 // -------------------------    ---------------------
-// | BT5 |     | OUT |     |    |    |    |    |    |
+// |     |     | OUT | BT5 |    |    |    |    |    |
 // | BT1 | BT2 | BT3 | BT4 |    |    |    |    |    |
 //             | _A1 | CLR |    |    |    |
                         bindings = <
-   &bt BT_SEL 4 &none        &out OUT_TOG &none                    &none  &none  &none  &none
+   &none        &none        &out OUT_TOG &bt BT_SEL 4             &none  &none  &none  &none
    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3             &none  &none  &none  &none
                                           &tog _BT  &bt BT_CLR     &none  &none
                         >;
