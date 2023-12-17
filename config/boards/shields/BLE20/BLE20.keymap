@@ -227,7 +227,7 @@
 
         combo_BSPC {
             timeout-ms = <40>;
-            key-positions = <LBM LBR>;
+            key-positions = <LTM LTI>;
             bindings = <&kp BSPC>;
             layers = <_NM>;
         };
@@ -563,7 +563,7 @@
 //                   |  7  |  8  |    | SPC | BSPC |
                         bindings = <
    &kp N9       &kp N4        &kp N5       &kp N6             &kp EQUAL        &kp PLUS        &kp STAR         &kp PIPE
-   &hml LALT N0 &hml LCTRL N1 &hml LGUI N2 &hsl LSHFT N4      &hsr LSHFT UNDER &hmr LGUI MINUS &hmr LCTRL SLASH &hmr LALT BSLH
+   &hml LALT N0 &hml LCTRL N1 &hml LGUI N2 &hsl LSHFT N3      &hsr LSHFT UNDER &hmr LGUI MINUS &hmr LCTRL SLASH &hmr LALT BSLH
                                    &kp N7  &kp N8             &kp SPACE        &kp BSPC
                         >;
                 };
