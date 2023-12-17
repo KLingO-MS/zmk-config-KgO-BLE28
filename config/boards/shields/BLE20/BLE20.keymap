@@ -170,7 +170,7 @@
 // ------------------------- VOLUME COMBOS --------------------------------
         combo_V_UP {
             timeout-ms = <40>;
-            key-positions = <LOT LTI>;
+            key-positions = <LTI LTM>;
             bindings = <&kp C_VOL_UP>;
             require-prior-idle-ms = <200>;
             // layers = <_NAV>;
@@ -178,7 +178,7 @@
 
         combo_V_DN {
             timeout-ms = <40>;
-            key-positions = <LOT LBI>;
+            key-positions = <LBM LBI>;
             bindings = <&kp C_VOL_DN>;
             require-prior-idle-ms = <200>;
             // layers = <_NAV>;
@@ -524,14 +524,14 @@
 // -------------------------------    -------------------------------
 // |  B  |  C  |  L  |  D  |                |  P  |  O  |  U  |  Y  |
 // |  N  |  S  |  R  |  T  |                |  H  |  A  |  E  |  I  |
-//             | TAB | _A2(BSPC) |    | _NV(SPC) | RET |
+//        | _SM(TAB) | _A2(BSPC) |    | _NM(SPC) | _NV(RET) |
                         bindings = <
    &kp B       &kp C        &kp L       &kp D             &kp P        &kp O       &kp U        &kp Y
    &hml LALT N &hml LCTRL S &hml LGUI R &hsl LSHFT T      &hsr LSHFT H &hmr LGUI A &hmr LCTRL E &hmr LALT I 
-                          &bst _SM TAB  &bst _A2 BSPC     &spt _NV SPACE  &spt _NM RET
+                          &bst _SM TAB  &bst _A2 BSPC     &spt _NM SPACE  &spt _NV RET
                         >;
                 };
-
+    
                 alpha_2_layer{
 // -------------------------------    -------------------------------
 // |  !  |  X  |  J  |  W  |                |  F  |  Q  |  '  |  "  |
