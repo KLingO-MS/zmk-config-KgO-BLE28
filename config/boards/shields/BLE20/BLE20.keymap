@@ -173,7 +173,7 @@
             key-positions = <LTI LTM>;
             bindings = <&kp C_VOL_UP>;
             require-prior-idle-ms = <200>;
-            // layers = <_NAV>;
+            layers = <_A1>;
         };
 
         combo_V_DN {
@@ -181,7 +181,7 @@
             key-positions = <LBM LBI>;
             bindings = <&kp C_VOL_DN>;
             require-prior-idle-ms = <200>;
-            // layers = <_NAV>;
+            layers = <_A1>;
         };
 
         combo_MUTE {
@@ -189,7 +189,7 @@
             key-positions = <LOT LIT>;
             bindings = <&kp C_MUTE>;
             require-prior-idle-ms = <200>;
-            // layers = <_NAV>;
+            layers = <_A1>;
         };
 
 // ------------------------- MODS COMBOS --------------------------------
