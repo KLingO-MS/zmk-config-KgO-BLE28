@@ -218,6 +218,76 @@
         // };
 
 // ------------------------- CHARACTER COMBOS --------------------------------
+        combo_Z {
+            timeout-ms = <40>;
+            key-positions = <LBP LBR>;
+            bindings = <&kp Z>;
+            layers = <_A1>;
+        };
+
+        combo_V {
+            timeout-ms = <40>;
+            key-positions = <LBR LBM>;
+            bindings = <&kp V>;
+            layers = <_A1>;
+        };
+
+        combo_M {
+            timeout-ms = <40>;
+            key-positions = <LBM LBI>;
+            bindings = <&kp M>;
+            layers = <_A1>;
+        };
+
+        combo_J {
+            timeout-ms = <40>;
+            key-positions = <LTR LTM>;
+            bindings = <&kp J>;
+            layers = <_A1>;
+        };
+
+        combo_W {
+            timeout-ms = <40>;
+            key-positions = <LTM LTI>;
+            bindings = <&kp W>;
+            layers = <_A1>;
+        };
+
+        combo_K {
+            timeout-ms = <40>;
+            key-positions = <RBI RBM>;
+            bindings = <&kp K>;
+            layers = <_A1>;
+        };
+
+        combo_G {
+            timeout-ms = <40>;
+            key-positions = <RBM RBR>;
+            bindings = <&kp G>;
+            layers = <_A1>;
+        };
+
+        combo_X {
+            timeout-ms = <40>;
+            key-positions = <RBM RBR>;
+            bindings = <&kp X>;
+            layers = <_A1>;
+        };
+
+        combo_F {
+            timeout-ms = <40>;
+            key-positions = <RTI RTM>;
+            bindings = <&kp F>;
+            layers = <_A1>;
+        };
+
+        combo_Q {
+            timeout-ms = <40>;
+            key-positions = <RTM RTR>;
+            bindings = <&kp Q>;
+            layers = <_A1>;
+        };
+
         // combo_LPAR {
         //     timeout-ms = <40>;
         //     key-positions = <LMM LMI>;
