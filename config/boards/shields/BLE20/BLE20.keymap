@@ -218,17 +218,17 @@
         // };
 
 // ------------------------- CHARACTER COMBOS --------------------------------
-        combo_8 {
+        combo_SPC {
             timeout-ms = <40>;
-            key-positions = <LTM LTI>;
-            bindings = <&kp N7>;
+            key-positions = <LBM LBI>;
+            bindings = <&kp SPACE>;
             layers = <_NM>;
         };
 
-        combo_7 {
+        combo_BSPC {
             timeout-ms = <40>;
-            key-positions = <LBM LBI>;
-            bindings = <&kp N8>;
+            key-positions = <LBM LBR>;
+            bindings = <&kp BSPC>;
             layers = <_NM>;
         };
 
