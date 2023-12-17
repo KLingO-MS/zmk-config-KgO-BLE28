@@ -220,14 +220,14 @@
 // ------------------------- CHARACTER COMBOS --------------------------------
         combo_0 {
             timeout-ms = <40>;
-            key-positions = <LBM LBI>;
+            key-positions = <LTM LTI>;
             bindings = <&kp N0>;
             layers = <_NM>;
         };
 
         combo_9 {
             timeout-ms = <40>;
-            key-positions = <LTM LTI>;
+            key-positions = <LBM LBI>;
             bindings = <&kp N9>;
             layers = <_NM>;
         };
@@ -534,12 +534,12 @@
 
                 alpha_2_layer{
 // -------------------------------    -------------------------------
-// |  :  |  "  |  J  |  W  |                |  F  |  Q  |  '  |  .  |
-// |  ;  |  Z  |  V  |  M  |                |  K  |  G  |  X  |  ,  |
+// |  :  |  X  |  J  |  W  |                |  F  |  Q  |  '  |  "  |
+// |  ;  |  Z  |  V  |  M  |                |  K  |  G  |  ,  |  .  |
 //                   |     |     |    | SPC | RET |
                         bindings = <
-   &kp COLON      &kp DQT      &kp J       &kp W             &kp F        &kp Q       &kp SQT      &kp DOT
-   &hml LALT SEMI &hml LCTRL Z &hml LGUI V &hsl LSHFT M      &hsr LSHFT K &hmr LGUI G &hmr LCTRL X &hmr LALT COMMA
+   &kp COLON      &kp X        &kp J       &kp W             &kp F        &kp Q       &kp SQT          &kp DQT
+   &hml LALT SEMI &hml LCTRL Z &hml LGUI V &hsl LSHFT M      &hsr LSHFT K &hmr LGUI G &hmr LCTRL COMMA &hmr LALT DOT
                                &none       &none             &kp SPACE    &kp RET
                         >;
                 };
@@ -558,13 +558,13 @@
                 
                 num_layer {
 // -------------------------------    -------------------------------
-// |  1  |  3  |  5 (9) 7  |                |  =  |  +  |  *  |  |  |
-// |  2  |  4  |  6 (0) 8  |                |  _  |  -  |  /  |  \  |
-//                  |  9  | BSPC |    | SPC | BSPC |
+// |  2  |  4  |  6 (0) 8  |                |  =  |  +  |  *  |  |  |
+// |  1  |  3  |  5 (9) 7  |                |  _  |  -  |  /  |  \  |
+//                  | SPC | BSPC |    | SPC | BSPC |
                         bindings = <
-   &kp N1       &kp N3        &kp N5       &kp N7             &kp EQUAL        &kp PLUS        &kp STAR         &kp PIPE
-   &hml LALT N2 &hml LCTRL N4 &hml LGUI N6 &hsl LSHFT N8      &hsr LSHFT UNDER &hmr LGUI MINUS &hmr LCTRL SLASH &hmr LALT BSLH
-                                       &kp N9  &kp BSPC       &kp SPACE        &kp BSPC
+   &kp N2       &kp N4        &kp N6       &kp N8             &kp EQUAL        &kp PLUS        &kp STAR         &kp PIPE
+   &hml LALT N1 &hml LCTRL N3 &hml LGUI N5 &hsl LSHFT N7      &hsr LSHFT UNDER &hmr LGUI MINUS &hmr LCTRL SLASH &hmr LALT BSLH
+                                    &kp SPACE  &kp BSPC       &kp SPACE        &kp BSPC
                         >;
                 };
 
@@ -582,12 +582,12 @@
 
                 fun_layer {
 // -------------------------------    -------------------------------
-// |  F1 |  F3 |  F5 |  F7 |                |  F9 | F11 |     |     |
 // |  F2 |  F4 |  F6 |  F8 |                | F10 | F12 |     |     |
+// |  F1 |  F3 |  F5 |  F7 |                |  F9 | F11 |     |     |
 //                   |     |     |    |     |     |
                         bindings = <
-   &kp F1       &kp F3        &kp F5       &kp F7             &kp F9         &kp F11       &none     &none
-   &hml LALT F2 &hml LCTRL F4 &hml LGUI F6 &hsl LSHFT F8      &hsr LSHFT F10 &hmr LGUI F12 &kp LCTRL &kp LALT
+   &kp F2       &kp F4        &kp F6       &kp F8             &kp F10       &kp F12       &none     &none
+   &hml LALT F1 &hml LCTRL F3 &hml LGUI F5 &hsl LSHFT F7      &hsr LSHFT F9 &hmr LGUI F11 &kp LCTRL &kp LALT
                                             &none  &none      &none  &none
                         >;
                 };
