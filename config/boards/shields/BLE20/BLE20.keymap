@@ -220,7 +220,7 @@
 // ------------------------- CHARACTER COMBOS --------------------------------
         combo_Z {
             timeout-ms = <40>;
-            key-positions = <LBP LBR>;
+            key-positions = <LBI LBR>;
             bindings = <&kp Z>;
             layers = <_A1>;
         };
@@ -269,7 +269,7 @@
 
         combo_X {
             timeout-ms = <40>;
-            key-positions = <RBM RBR>;
+            key-positions = <RBI RBR>;
             bindings = <&kp X>;
             layers = <_A1>;
         };
