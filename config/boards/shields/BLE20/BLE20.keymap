@@ -220,21 +220,21 @@
 // ------------------------- CHARACTER COMBOS --------------------------------
         combo_Z {
             timeout-ms = <40>;
-            key-positions = <LBI LBR>;
+            key-positions = <LTR LBR>;
             bindings = <&kp Z>;
             layers = <_A1>;
         };
 
         combo_V {
             timeout-ms = <40>;
-            key-positions = <LBR LBM>;
+            key-positions = <LTM LBM>;
             bindings = <&kp V>;
             layers = <_A1>;
         };
 
         combo_M {
             timeout-ms = <40>;
-            key-positions = <LBM LBI>;
+            key-positions = <LTI LBI>;
             bindings = <&kp M>;
             layers = <_A1>;
         };
@@ -255,21 +255,21 @@
 
         combo_K {
             timeout-ms = <40>;
-            key-positions = <RBI RBM>;
+            key-positions = <RBI RTI>;
             bindings = <&kp K>;
             layers = <_A1>;
         };
 
         combo_G {
             timeout-ms = <40>;
-            key-positions = <RBM RBR>;
+            key-positions = <RBM RTM>;
             bindings = <&kp G>;
             layers = <_A1>;
         };
 
         combo_X {
             timeout-ms = <40>;
-            key-positions = <RBI RBR>;
+            key-positions = <RTR RBR>;
             bindings = <&kp X>;
             layers = <_A1>;
         };
