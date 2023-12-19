@@ -302,47 +302,61 @@
         //     layers = <_A1>;
         // };
 
-        // combo_LPAR {
-        //     timeout-ms = <40>;
-        //     key-positions = <LMM LMI>;
-        //     bindings = <&kp LPAR>;
-        //     layers = <_BASE _SYM>;
-        // };
+        combo_LPAR {
+            timeout-ms = <40>;
+            key-positions = <LTI LBI>;
+            bindings = <&kp LPAR>;
+            layers = <_A1>;
+        };
 
-        // combo_RPAR {
-        //     timeout-ms = <40>;
-        //     key-positions = <RMI RMM>;
-        //     bindings = <&kp RPAR>;
-        //     layers = <_BASE _SYM>;
-        // };
+        combo_RPAR {
+            timeout-ms = <40>;
+            key-positions = <RTI RBI>;
+            bindings = <&kp RPAR>;
+            layers = <_A1>;
+        };
 
-        // combo_LBRC {
-        //     timeout-ms = <40>;
-        //     key-positions = <LTM LTI>;
-        //     bindings = <&kp LBRC>;
-        //     layers = <_BASE _SYM>;
-        // };
+        combo_LBRC {
+            timeout-ms = <40>;
+            key-positions = <LTR LBR>;
+            bindings = <&kp LBRC>;
+            layers = <_A1>;
+        };
 
-        // combo_RBRC {
-        //     timeout-ms = <40>;
-        //     key-positions = <RTI RTM>;
-        //     bindings = <&kp RBRC>;
-        //     layers = <_BASE _SYM>;
-        // };
+        combo_RBRC {
+            timeout-ms = <40>;
+            key-positions = <RTR RBR>;
+            bindings = <&kp RBRC>;
+            layers = <_A1>;
+        };
 
-        // combo_LBKT {
-        //     timeout-ms = <40>;
-        //     key-positions = <LBM LBI>;
-        //     bindings = <&kp LBKT>;
-        //     layers = <_BASE _SYM>;
-        // };
+        combo_LBKT {
+            timeout-ms = <40>;
+            key-positions = <LBM LTM>;
+            bindings = <&kp LBKT>;
+            layers = <_A1>;
+        };
 
-        // combo_RBKT {
-        //     timeout-ms = <40>;
-        //     key-positions = <RBI RBM>;
-        //     bindings = <&kp RBKT>;
-        //     layers = <_BASE _SYM>;
-        // };
+        combo_RBKT {
+            timeout-ms = <40>;
+            key-positions = <RTM RBM>;
+            bindings = <&kp RBKT>;
+            layers = <_A1>;
+        };
+
+        combo_LT {
+            timeout-ms = <45>;
+            key-positions = <LBP LTP>;
+            bindings = <&kp LT>;
+            layers = <_A1>;
+        };
+
+        combo_GT {
+            timeout-ms = <45>;
+            key-positions = <RBP RTP>;
+            bindings = <&kp GT>;
+            layers = <_A1>;
+        };
 
         // combo_PSCRN {
         //     timeout-ms = <40>;
@@ -382,20 +396,6 @@
         //     bindings = <&kp LC(V)>;
         //     layers = <_BASE>;
         //     require-prior-idle-ms = <200>;
-        // };
-
-        // combo_GT {
-        //     timeout-ms = <45>;
-        //     key-positions = <RBM RBR>;
-        //     bindings = <&kp GT>;
-        //     layers = <_BASE _SYM>;
-        // };
-
-        // combo_LT {
-        //     timeout-ms = <45>;
-        //     key-positions = <LBM LBR>;
-        //     bindings = <&kp LT>;
-        //     layers = <_BASE _SYM>;
         // };
 
         // combo_FSLH {
@@ -524,11 +524,11 @@
 // -------------------------------    -------------------------------
 // |  B  |  C  |  L  |  D  |                |  P  |  O  |  U  |  Y  |
 // |  N  |  S  |  R  |  T  |                |  H  |  A  |  E  |  I  |
-//        | _SM(TAB) | _A2(BSPC) |    | _NM(SPC) | _NV(RET) |
+//       | _SM(BSPC) | _A2(BSPC) |    | _NM(SPC) | _NV(RET) |
                         bindings = <
    &kp B       &kp C        &kp L       &kp D             &kp P        &kp O       &kp U        &kp Y
    &hml LALT N &hml LCTRL S &hml LGUI R &hsl LSHFT T      &hsr LSHFT H &hmr LGUI A &hmr LCTRL E &hmr LALT I 
-                          &bst _SM TAB  &bst _A2 BSPC     &spt _NM SPACE  &spt _NV RET
+                         &bst _SM BSPC  &bst _A2 BSPC     &spt _NM SPACE  &spt _NV RET
                         >;
                 };
     
@@ -558,25 +558,25 @@
                 
                 num_layer {
 // -------------------------------    -------------------------------
-// |  9  |  4  |  5  |  6  |                |  =  |  +  |  *  |  |  |
-// |  0  |  1  |  2  |  3  |                |  _  |  -  |  /  |  \  |
-//                   |  7  |  8  |    | SPC | BSPC |
+// |  /  |  =  |  _  |  5  |                |  6  |  -  |  +  |  *  |
+// |  1  |  2  |  3  |  4  |                |  7  |  8  |  9  |  0  |
+//                  | BSPC | SPC |    | SPC | BSPC |
                         bindings = <
-   &kp N9       &kp N4        &kp N5       &kp N6             &kp EQUAL        &kp PLUS        &kp STAR         &kp PIPE
-   &hml LALT N0 &hml LCTRL N1 &hml LGUI N2 &hsl LSHFT N3      &hsr LSHFT UNDER &hmr LGUI MINUS &hmr LCTRL SLASH &hmr LALT BSLH
-                                   &kp N7  &kp N8             &kp SPACE        &kp BSPC
+   &kp SLASH    &kp EQUAL     &kp UNDER    &kp N5             &kp N6        &kp MINUS    &kp PLUS      &kp STAR
+   &hml LALT N1 &hml LCTRL N2 &hml LGUI N3 &hsl LSHFT N4      &hsr LSHFT N7 &hmr LGUI N8 &hmr LCTRL N9 &hmr LALT N0
+                                 &kp BSPC  &kp SPACE          &kp SPACE     &kp BSPC
                         >;
                 };
 
                 sym_layer {
 // -------------------------------    -------------------------------
-// |  %  |  ^  |  <  |  {  |                |  }  |  >  |  $  |  &  |
-// |  @  |  #  |  (  |  [  |                |  ]  |  )  |  ;  |  :  |
-//                   |     |     |    |  `  |  ~  |
+// |     |     |     |     |                |  \  |  |  |  ~  |  `  |
+// |  @  |  #  |  $  |  %  |                |  ^  |  &  |  ;  |  :  |
+//                   |     |     |    | SPC | BSPC |
                         bindings = <
-   &kp PRCNT    &kp CARET       &kp LT         &kp LBRC              &kp RBRC        &kp GT         &kp DLLR        &kp AMPS
-   &hml LALT AT &hml LCTRL HASH &hml LGUI LPAR &hsl LSHFT LBKT       &hsr LSHFT RBKT &hmr LGUI RPAR &hmr LCTRL SEMI &hmr LALT COLON
-                                               &none    &none        &kp GRAVE &kp TILDE
+   &none        &none           &none          &none                 &kp BSLH         &kp PIPE       &kp TILDE       &kp GRAVE
+   &hml LALT AT &hml LCTRL HASH &hml LGUI DLLR &hsl LSHFT PRCNT      &hsr LSHFT CARET &hmr LGUI AMPS &hmr LCTRL SEMI &hmr LALT COLON
+                                               &none    &none        &kp SPACE     &kp BSPC
                         >;
                 };
 
