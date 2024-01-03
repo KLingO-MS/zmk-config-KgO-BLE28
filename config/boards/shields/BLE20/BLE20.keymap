@@ -570,11 +570,11 @@
 
                 sym_layer {
 // -------------------------------    -------------------------------
-// |  \  |  V. |  V+ |  V- |                |  \  |  |  |  ~  |  `  |
+// |  \  |  V. |  V- |  V+ |                |  \  |  |  |  ~  |  `  |
 // |  @  |  #  |  $  |  %  |                |  ^  |  &  |  ;  |  :  |
 //                   |     |     |    | SPC | BSPC |
                         bindings = <
-   &kp BSLH     &kp C_MUTE      &kp C_VOL_UP   &kp C_VOL_DN          &kp BSLH         &kp PIPE       &kp TILDE       &kp GRAVE
+   &kp BSLH     &kp C_MUTE      &kp C_VOL_DN   &kp C_VOL_UP          &kp BSLH         &kp PIPE       &kp TILDE       &kp GRAVE
    &hml LALT AT &hml LCTRL HASH &hml LGUI DLLR &hsl LSHFT PRCNT      &hsr LSHFT CARET &hmr LGUI AMPS &hmr LCTRL SEMI &hmr LALT COLON
                                                &none    &none        &kp SPACE     &kp BSPC
                         >;
