@@ -129,7 +129,7 @@
 
         combo_BT {
             timeout-ms = <50>;
-            key-positions = <LOT LTP>;
+            key-positions = <LOT LIT LTP>;
             bindings = <&tog _BT>;
         };
 
@@ -594,13 +594,13 @@
 
                 bt_layer {
 // -------------------------    ---------------------
-// |     |     | OUT | BT5 |    |    |    |    |    |
+// | _A1 | CLR | OUT | BT5 |    |    |    |    |    |
 // | BT1 | BT2 | BT3 | BT4 |    |    |    |    |    |
-//             | _A1 | CLR |    |    |    |
+//             |     |     |    |    |    |
                         bindings = <
-   &none        &none        &out OUT_TOG &bt BT_SEL 4             &none  &none  &none  &none
-   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3             &none  &none  &none  &none
-                                          &tog _BT  &bt BT_CLR     &none  &none
+   &tog _BT     &bt BT_CLR   &out OUT_TOG &bt BT_SEL 4        &none  &none  &none  &none
+   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3        &none  &none  &none  &none
+                                          &none  &none        &none  &none
                         >;
                 };                
     };
