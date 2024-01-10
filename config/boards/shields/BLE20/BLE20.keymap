@@ -123,14 +123,14 @@
 // ------------------------- LAYER COMBOS --------------------------------
         combo_BOOT {
             timeout-ms = <50>;
-            key-positions = <LOT LIT LBP>;
+            key-positions = <LOT LIT LTP>;
             bindings = <&bootloader>;
         };
 
         combo_BT {
             timeout-ms = <50>;
-            key-positions = <LOT LIT LTP>;
-            bindings = <&tog _BT>;
+            key-positions = <LOT LIT>;
+            bindings = <&mo _BT>;
         };
 
         combo_FUN {
@@ -598,7 +598,7 @@
 // | BT1 | BT2 | BT3 | BT4 |    |    |    |    |    |
 //             |     |     |    |    |    |
                         bindings = <
-   &tog _BT     &bt BT_CLR   &out OUT_TOG &bt BT_SEL 4        &none  &none  &none  &none
+   &bootloader  &bt BT_CLR   &out OUT_TOG &bt BT_SEL 4        &none  &none  &none  &none
    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3        &none  &none  &none  &none
                                           &none  &none        &none  &none
                         >;
