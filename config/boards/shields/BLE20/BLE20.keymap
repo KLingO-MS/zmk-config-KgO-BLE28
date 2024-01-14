@@ -121,11 +121,11 @@
     combos {
         compatible = "zmk,combos";
 // ------------------------- LAYER COMBOS --------------------------------
-        combo_BOOT {
-            timeout-ms = <40>;
-            key-positions = <LOT LIT LTP LBP>;
-            bindings = <&bootloader>;
-        };
+        // combo_BOOT {
+        //     timeout-ms = <40>;
+        //     key-positions = <LOT LIT LTP LBP>;
+        //     bindings = <&bootloader>;
+        // };
 
         combo_BT {
             timeout-ms = <50>;
