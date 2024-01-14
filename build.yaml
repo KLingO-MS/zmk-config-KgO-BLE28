@@ -15,7 +15,5 @@
 include:
   - board: seeeduino_xiao_ble
    shield: BLE20_left rgbled_adapter
-    # shield: BLE20_left
   - board: seeeduino_xiao_ble
    shield: BLE20_right rgbled_adapter
-    # shield: BLE20_right

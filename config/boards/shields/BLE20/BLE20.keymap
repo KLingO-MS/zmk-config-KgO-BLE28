@@ -121,11 +121,12 @@
     combos {
         compatible = "zmk,combos";
 // ------------------------- LAYER COMBOS --------------------------------
-        // combo_BOOT {
-        //     timeout-ms = <40>;
-        //     key-positions = <LOT LIT LTP LBP>;
-        //     bindings = <&bootloader>;
-        // };
+        combo_BT_CLR {
+            timeout-ms = <40>;
+            key-positions = <LTP LTR>;
+            bindings = <&bt BT_CLR>;
+            layers = <_BT>
+        };
 
         combo_BT {
             timeout-ms = <50>;
@@ -594,11 +595,11 @@
 
                 bt_layer {
 // -------------------------    ---------------------
-// |     | CLR | OUT | BT5 |    |    |    |    |    |
+// |    CLR    | OUT | BT5 |    |    |    |    |    |
 // | BT1 | BT2 | BT3 | BT4 |    |    |    |    |    |
 //             |     |     |    |    |    |
                         bindings = <
-   &none        &bt BT_CLR   &out OUT_TOG &bt BT_SEL 4        &none  &none  &none  &none
+   &none        &none        &out OUT_TOG &bt BT_SEL 4        &none  &none  &none  &none
    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3        &none  &none  &none  &none
                                           &none  &none        &none  &none
                         >;
