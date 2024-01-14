@@ -606,4 +606,6 @@
     };
 };
 
+&qspi {status = "disabled"; };
+
 /delete-node/ &gd25q16;
