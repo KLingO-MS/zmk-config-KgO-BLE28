@@ -125,7 +125,7 @@
             timeout-ms = <40>;
             key-positions = <LTP LTR>;
             bindings = <&bt BT_CLR>;
-            layers = <_BT>
+            layers = <_BT>;
         };
 
         combo_BT {
