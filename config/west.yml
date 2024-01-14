@@ -15,8 +15,8 @@ manifest:
 #      revision: custom-wq-pr
       revision: main
       import: app/west.yml
-    - name: zmk-rgbled-widget
-      remote: caksoylar
-      revision: main
+    # - name: zmk-rgbled-widget
+    #   remote: caksoylar
+    #   revision: main
   self:
     path: config
