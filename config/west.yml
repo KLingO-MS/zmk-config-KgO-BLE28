@@ -8,10 +8,12 @@ manifest:
       url-base: https://github.com/xudongzheng
     - name: urob
       url-base: https://github.com/urob
+    - name: zephyr35
+      url-base: https://github.com/petejohanson
   projects:
     - name: zmk
-      remote: zmkfirmware
-      revision: main
+      remote: zephyr35 #zmkfirmware
+      revision: core/zephyr-3.5-update  #main
       import: app/west.yml
     - name: zmk-rgbled-widget
       remote: caksoylar
