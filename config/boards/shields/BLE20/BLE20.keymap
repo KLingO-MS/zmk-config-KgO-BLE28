@@ -535,12 +535,12 @@
     
                 alpha_2_layer{
 // -------------------------------    -------------------------------
-// |  Q  |  G  |  J  |  W  |                |  F  |  '  |  "  |  !  |
-// |  X  |  Z  |  V  |  M  |                |  K  |  ,  |  .  |  ?  |
+// |  Q  |  G  |  W  |  V  |                |  F  |  '  |  "  |  !  |
+// |  X  |  Z  |  J  |  M  |                |  K  |  ,  |  .  |  ?  |
 //                   |     |     |    | SPC | RET |
                         bindings = <
-   &kp Q       &kp G        &kp J       &kp W             &kp F        &kp SQT         &kp DQT        &kp EXCL
-   &hml LALT X &hml LCTRL Z &hml LGUI V &hsl LSHFT M      &hsr LSHFT K &hmr LGUI COMMA &hmr LCTRL DOT &hmr LALT QMARK
+   &kp Q       &kp G        &kp W       &kp V             &kp F        &kp SQT         &kp DQT        &kp EXCL
+   &hml LALT X &hml LCTRL Z &hml LGUI J &hsl LSHFT M      &hsr LSHFT K &hmr LGUI COMMA &hmr LCTRL DOT &hmr LALT QMARK
                             &none       &none             &kp SPACE    &kp RET
                         >;
                 };
