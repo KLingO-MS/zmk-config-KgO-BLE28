@@ -535,13 +535,13 @@
     
                 alpha_2_layer{
 // -------------------------------    -------------------------------
-// |  !  |  G  |  J  |  W  |                |  F  |  Q  |  '  |  "  |
-// |  ?  |  Z  |  V  |  M  |                |  K  |  X  |  ,  |  .  |
+// |  Q  |  G  |  J  |  W  |                |  F  |  '  |  "  |  !  |
+// |  X  |  Z  |  V  |  M  |                |  K  |  ,  |  .  |  ?  |
 //                   |     |     |    | SPC | RET |
                         bindings = <
-   &kp EXCL        &kp G        &kp J       &kp W             &kp F        &kp Q       &kp SQT          &kp DQT
-   &hml LALT QMARK &hml LCTRL Z &hml LGUI V &hsl LSHFT M      &hsr LSHFT K &hmr LGUI X &hmr LCTRL COMMA &hmr LALT DOT
-                               &none       &none             &kp SPACE    &kp RET
+   &kp Q       &kp G        &kp J       &kp W             &kp F        &kp SQT         &kp DQT        &kp EXCL
+   &hml LALT X &hml LCTRL Z &hml LGUI V &hsl LSHFT M      &hsr LSHFT K &hmr LGUI COMMA &hmr LCTRL DOT &hmr LALT QMARK
+                            &none       &none             &kp SPACE    &kp RET
                         >;
                 };
 
@@ -559,11 +559,11 @@
                 
                 num_layer {
 // -------------------------------    -------------------------------
-// |  /  |  =  |  _  |  5  |                |  6  |  -  |  +  |  *  |
+// |  /  |  _  |  -  |  5  |                |  6  |  =  |  +  |  *  |
 // |  1  |  2  |  3  |  4  |                |  7  |  8  |  9  |  0  |
 //                  | SPC | BSPC |    | SPC | BSPC |
                         bindings = <
-   &kp SLASH    &kp EQUAL     &kp UNDER    &kp N5             &kp N6        &kp MINUS    &kp PLUS      &kp STAR
+   &kp SLASH    &kp UNDER     &kp MINUS    &kp N5             &kp N6        &kp EQUAL    &kp PLUS      &kp STAR
    &hml LALT N1 &hml LCTRL N2 &hml LGUI N3 &hsl LSHFT N4      &hsr LSHFT N7 &hmr LGUI N8 &hmr LCTRL N9 &hmr LALT N0
                                 &kp SPACE  &kp BSPC           &kp SPACE     &kp BSPC
                         >;
@@ -571,12 +571,12 @@
 
                 sym_layer {
 // -------------------------------    -------------------------------
-// |  \  |  V. |  V- |  V+ |                |  \  |  |  |  ~  |  `  |
-// |  @  |  #  |  $  |  %  |                |  ^  |  &  |  ;  |  :  |
+// |  V. |  V- |  V+ |  ^  |                |  &  |  `  |  ~  |  |  |
+// |  @  |  #  |  $  |  %  |                |  /  |  ;  |  :  |  \  |
 //                   |     |     |    | SPC | BSPC |
                         bindings = <
-   &kp BSLH     &kp C_MUTE      &kp C_VOL_DN   &kp C_VOL_UP          &kp BSLH         &kp PIPE       &kp TILDE       &kp GRAVE
-   &hml LALT AT &hml LCTRL HASH &hml LGUI DLLR &hsl LSHFT PRCNT      &hsr LSHFT CARET &hmr LGUI AMPS &hmr LCTRL SEMI &hmr LALT COLON
+   &kp C_MUTE   &kp C_VOL_DN    &kp C_VOL_UP   &kp CARET             &kp AMPS         &kp GRAVE      &kp TILDE        &kp PIPE
+   &hml LALT AT &hml LCTRL HASH &hml LGUI DLLR &hsl LSHFT PRCNT      &hsr LSHFT SLASH &hmr LGUI SEMI &hmr LCTRL COLON &hmr LALT BSLH
                                                &none    &none        &kp SPACE     &kp BSPC
                         >;
                 };
