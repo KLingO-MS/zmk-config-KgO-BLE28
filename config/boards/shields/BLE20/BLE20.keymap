@@ -467,7 +467,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
-            tapping-term-ms = <300>;
+            tapping-term-ms = <250>;
             quick-tap-ms = <170>;                // repeat on tap-into-hold
             require-prior-idle-ms = <120>;
             bindings = <&kp>, <&kp>;
@@ -479,7 +479,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
-            tapping-term-ms = <300>;
+            tapping-term-ms = <250>;
             quick-tap-ms = <170>;                // repeat on tap-into-hold
             require-prior-idle-ms = <120>;
             bindings = <&kp>, <&kp>;
@@ -577,13 +577,13 @@
 
                 sym_layer {
 // -------------------------------    -------------------------------
-// |  V. |  V- |  V+ |  ^  |                |  &  |  `  |  ~  |  |  |
-// |  @  |  #  |  $  |  %  |                |  /  |  ;  |  :  |  \  |
+// |  V. |  V- |  V+ |  %  |                |  ^  |  `  |  ~  |  |  |
+// |  /  |  @  |  #  |  $  |                |  &  |  ;  |  :  |  \  |
 //                   |     |     |    | SPC | BSPC |
                         bindings = <
-   &kp C_MUTE   &kp C_VOL_DN    &kp C_VOL_UP   &kp CARET             &kp AMPS         &kp GRAVE      &kp TILDE        &kp PIPE
-   &hml LALT AT &hml LCTRL HASH &hml LGUI DLLR &hsl LSHFT PRCNT      &hsr LSHFT SLASH &hmr LGUI SEMI &hmr LCTRL COLON &hmr LALT BSLH
-                                               &none    &none        &kp SPACE     &kp BSPC
+   &kp C_MUTE      &kp C_VOL_DN  &kp C_VOL_UP   &kp PRCNT            &kp CARET       &kp GRAVE      &kp TILDE        &kp PIPE
+   &hml LALT SLASH &hml LCTRL AT &hml LGUI HASH &hsl LSHFT DLLR      &hsr LSHFT AMPS &hmr LGUI SEMI &hmr LCTRL COLON &hmr LALT BSLH
+                                                &none    &none       &kp SPACE     &kp BSPC
                         >;
                 };
 
