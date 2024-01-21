@@ -121,6 +121,12 @@
     combos {
         compatible = "zmk,combos";
 // ------------------------- LAYER COMBOS --------------------------------
+        combo_BOOT {
+            timeout-ms = <40>;
+            key-positions = <LOT LIT LTP LBP>;
+            bindings = <&bootloader>;
+        };
+
         combo_BT_CLR {
             timeout-ms = <40>;
             key-positions = <LTP LTR>;
@@ -486,7 +492,7 @@
             #binding-cells = <2>;
             flavor = "hold-preferred";
             tapping-term-ms = <200>;
-            quick-tap-ms = <170>;
+            quick-tap-ms = <150>;
             //require-prior-idle-ms = <100>;
             bindings = <&mo>, <&kp>;
         };
