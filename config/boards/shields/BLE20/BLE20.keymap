@@ -490,7 +490,7 @@
         bst: backspace-tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "balnced";
+            flavor = "balanced";
             tapping-term-ms = <180>;
             quick-tap-ms = <120>;
             //require-prior-idle-ms = <100>;
