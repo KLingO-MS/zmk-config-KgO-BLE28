@@ -497,7 +497,7 @@
             bindings = <&mo>, <&kp>;
         };
 
-        bss: backspace-tap {
+        bss: backspace-sticky {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "hold-preferred";
