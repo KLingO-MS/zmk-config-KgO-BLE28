@@ -22,9 +22,9 @@
 //     quick-release;
 // };
 
-// &sl {
-//     release-after-ms = <300>;
-// };
+&sl {
+    release-after-ms = <300>;
+};
 
 / {
 // ------------------------- MACROS --------------------------------
@@ -535,10 +535,12 @@
                         bindings = <
    &kp B       &kp C        &kp L       &kp D             &kp P        &kp O       &kp U        &kp Y
    &hml LALT N &hml LCTRL S &hml LGUI R &hsl LSHFT T      &hsr LSHFT H &hmr LGUI A &hmr LCTRL E &hmr LALT I 
-                         &bst _SM BSPC  &bst _A2 BSPC     &spt _NM SPACE  &spt _NV RET
+                         &bst _SM BSPC  &sl _A2           &spt _NM SPACE  &spt _NV RET
                         >;
                 };
-    
+                        //  &bst _SM BSPC  &bst _A2 BSPC     &spt _NM SPACE  &spt _NV RET
+
+
                 alpha_2_layer{
 // -------------------------------    -------------------------------
 // |  Q  |  G  |  W  |  V  |                |  F  |  '  |  "  |  !  |
