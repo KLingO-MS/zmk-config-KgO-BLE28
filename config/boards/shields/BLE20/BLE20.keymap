@@ -311,56 +311,56 @@
 
         combo_LPAR {
             timeout-ms = <40>;
-            key-positions = <RBI RBM>;
+            key-positions = <LBI LBM>;
             bindings = <&kp LPAR>;
             layers = <_A1>;
         };
 
         combo_RPAR {
             timeout-ms = <40>;
-            key-positions = <RBM RBR>;
+            key-positions = <RBM RBI>;
             bindings = <&kp RPAR>;
             layers = <_A1>;
         };
 
         combo_LBRC {
             timeout-ms = <40>;
-            key-positions = <RTI RTM>;
+            key-positions = <LTI LTM>;
             bindings = <&kp LBRC>;
             layers = <_A1>;
         };
 
         combo_RBRC {
             timeout-ms = <40>;
-            key-positions = <RTM RTR>;
+            key-positions = <RTM RTI>;
             bindings = <&kp RBRC>;
             layers = <_A1>;
         };
 
         combo_LBKT {
             timeout-ms = <40>;
-            key-positions = <LBM LBR>;
+            key-positions = <LTM LTR>;
             bindings = <&kp LBKT>;
             layers = <_A1>;
         };
 
         combo_RBKT {
             timeout-ms = <40>;
-            key-positions = <LBM LBI>;
+            key-positions = <RTM RTR>;
             bindings = <&kp RBKT>;
             layers = <_A1>;
         };
 
         combo_LT {
             timeout-ms = <45>;
-            key-positions = <LTR LTM>;
+            key-positions = <LBR LBM>;
             bindings = <&kp LT>;
             layers = <_A1>;
         };
 
         combo_GT {
             timeout-ms = <45>;
-            key-positions = <LTM LTI>;
+            key-positions = <RBM RBR>;
             bindings = <&kp GT>;
             layers = <_A1>;
         };
@@ -497,16 +497,6 @@
             bindings = <&mo>, <&kp>;
         };
 
-        // bss: backspace-sticky {
-        //     compatible = "zmk,behavior-hold-tap";
-        //     #binding-cells = <2>;
-        //     flavor = "hold-preferred";
-        //     tapping-term-ms = <150>;
-        //     quick-tap-ms = <125>;
-        //     //require-prior-idle-ms = <100>;
-        //     bindings = <&sl>, <&kp>;
-        // };
-
         spt: space-tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -564,14 +554,14 @@
                 };
 
                 nav_layer {
-// ---------------------------------    ----------------------------------
-// | ESC | wCP  | mCP  | INS  |               | HOME |  UP  | END  | DEL |
-// | TAB | PSCR | PGUP | PGDN |               | LEFT | DOWN | RGHT | RET |
+// ---------------------------------    ---------------------------------
+// | ESC | wCP  | mCP | PGUP |               | HOME |  UP  | END  | DEL |
+// | TAB | PSCR | INS | PGDN |               | LEFT | DOWN | RGHT | RET |
 //                    | APP | BSPC |    | SPC | LSFT |
                         bindings = <
-   &kp ESC       &win_cp          &mac_cp         &kp INS            &kp HOME        &kp UP         &kp END          &kp DEL
-   &hml LALT TAB &hml LCTRL PSCRN &hml LGUI PG_UP &hsl LSHFT PG_DN   &hsr LSHFT LEFT &hmr LGUI DOWN &hmr LCTRL RIGHT &hmr LALT RET
-                                  &kp K_APP       &kp BSPC           &kp SPACE       &kp LSHFT
+   &kp ESC       &win_cp          &mac_cp       &kp PG_UP          &kp HOME        &kp UP         &kp END          &kp DEL
+   &hml LALT TAB &hml LCTRL PSCRN &hml LGUI INS &hsl LSHFT PG_DN   &hsr LSHFT LEFT &hmr LGUI DOWN &hmr LCTRL RIGHT &hmr LALT RET
+                                  &kp K_APP     &kp BSPC           &kp SPACE       &kp LSHFT
                         >;
                 };
                 
