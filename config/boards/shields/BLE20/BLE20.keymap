@@ -490,9 +490,9 @@
         bst: backspace-tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <140>;
-            quick-tap-ms = <125>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <140>;
             //require-prior-idle-ms = <100>;
             bindings = <&mo>, <&kp>;
         };
@@ -502,7 +502,7 @@
             #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <200>;
-            quick-tap-ms = <150>;
+            quick-tap-ms = <140>;
             //require-prior-idle-ms = <100>;
             bindings = <&mo>, <&kp>;
         };
@@ -535,7 +535,7 @@
                         bindings = <
    &kp B       &kp C        &kp L       &kp D             &kp P        &kp O       &kp U        &kp Y
    &hml LALT N &hml LCTRL S &hml LGUI R &hsl LSHFT T      &hsr LSHFT H &hmr LGUI A &hmr LCTRL E &hmr LALT I 
-                         &bst _SM BSPC  &bst _A2 BSPC     &spt _NM SPACE  &spt _NV RET
+                         &bst _SM BSPC  &bst _NM BSPC     &spt _A2 SPACE  &spt _NV RET
                         >;
                 };
                         //  &bst _SM BSPC  &bst _A2 BSPC     &spt _NM SPACE  &spt _NV RET
@@ -549,7 +549,7 @@
                         bindings = <
    &kp Q       &kp G        &kp W       &kp V             &kp F        &kp SEMI        &kp COLON      &kp EXCL
    &hml LALT X &hml LCTRL Z &hml LGUI J &hsl LSHFT M      &hsr LSHFT K &hmr LGUI COMMA &hmr LCTRL DOT &hmr LALT QMARK
-                            &none       &none             &kp SPACE    &kp RET
+                            &kp SPACE   &kp BSPC          &kp SPACE    &kp RET
                         >;
                 };
 
