@@ -491,7 +491,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "hold-preferred";
-            tapping-term-ms = <150>;
+            tapping-term-ms = <140>;
             quick-tap-ms = <125>;
             //require-prior-idle-ms = <100>;
             bindings = <&mo>, <&kp>;
@@ -502,7 +502,7 @@
             #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <200>;
-            quick-tap-ms = <130>;
+            quick-tap-ms = <150>;
             //require-prior-idle-ms = <100>;
             bindings = <&mo>, <&kp>;
         };
@@ -531,11 +531,11 @@
 // -------------------------------    -------------------------------
 // |  B  |  C  |  L  |  D  |                |  P  |  O  |  U  |  Y  |
 // |  N  |  S  |  R  |  T  |                |  H  |  A  |  E  |  I  |
-//       | _SM(BSPC) | _A2(BSPC) |    | _A2(SPC) | _NM(RET) |
+//       | _SM(BSPC) | _A2(BSPC) |    | _NM(SPC) | _NV(RET) |
                         bindings = <
    &kp B       &kp C        &kp L       &kp D             &kp P        &kp O       &kp U        &kp Y
    &hml LALT N &hml LCTRL S &hml LGUI R &hsl LSHFT T      &hsr LSHFT H &hmr LGUI A &hmr LCTRL E &hmr LALT I 
-                         &bst _SM BSPC  &bst _A2 BSPC     &spt _A2 SPACE  &spt _NM RET
+                         &bst _SM BSPC  &bst _A2 BSPC     &spt _NM SPACE  &spt _NV RET
                         >;
                 };
                         //  &bst _SM BSPC  &bst _A2 BSPC     &spt _NM SPACE  &spt _NV RET
