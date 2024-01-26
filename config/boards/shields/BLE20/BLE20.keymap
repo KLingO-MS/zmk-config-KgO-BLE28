@@ -491,7 +491,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "hold-preferred";
-            tapping-term-ms = <140>;
+            tapping-term-ms = <150>;
             quick-tap-ms = <125>;
             //require-prior-idle-ms = <100>;
             bindings = <&mo>, <&kp>;
@@ -502,7 +502,7 @@
             #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <200>;
-            quick-tap-ms = <150>;
+            quick-tap-ms = <130>;
             //require-prior-idle-ms = <100>;
             bindings = <&mo>, <&kp>;
         };
@@ -531,11 +531,11 @@
 // -------------------------------    -------------------------------
 // |  B  |  C  |  L  |  D  |                |  P  |  O  |  U  |  Y  |
 // |  N  |  S  |  R  |  T  |                |  H  |  A  |  E  |  I  |
-//       | _SM(BSPC) | _A2(BSPC) |    | _NM(SPC) | _NV(RET) |
+//       | _SM(BSPC) | _A2(BSPC) |    | _A2(SPC) | _NM(RET) |
                         bindings = <
    &kp B       &kp C        &kp L       &kp D             &kp P        &kp O       &kp U        &kp Y
    &hml LALT N &hml LCTRL S &hml LGUI R &hsl LSHFT T      &hsr LSHFT H &hmr LGUI A &hmr LCTRL E &hmr LALT I 
-                         &bst _SM BSPC  &bst _A2 BSPC     &spt _NM SPACE  &spt _NV RET
+                         &bst _SM BSPC  &bst _A2 BSPC     &spt _A2 SPACE  &spt _NM RET
                         >;
                 };
                         //  &bst _SM BSPC  &bst _A2 BSPC     &spt _NM SPACE  &spt _NV RET
@@ -543,11 +543,11 @@
 
                 alpha_2_layer{
 // -------------------------------    -------------------------------
-// |  Q  |  G  |  W  |  V  |                |  F  |  '  |  "  |  !  |
+// |  Q  |  G  |  W  |  V  |                |  F  |  ;  |  :  |  !  |
 // |  X  |  Z  |  J  |  M  |                |  K  |  ,  |  .  |  ?  |
 //                   |     |     |    | SPC | RET |
                         bindings = <
-   &kp Q       &kp G        &kp W       &kp V             &kp F        &kp SQT         &kp DQT        &kp EXCL
+   &kp Q       &kp G        &kp W       &kp V             &kp F        &kp SEMI        &kp COLON      &kp EXCL
    &hml LALT X &hml LCTRL Z &hml LGUI J &hsl LSHFT M      &hsr LSHFT K &hmr LGUI COMMA &hmr LCTRL DOT &hmr LALT QMARK
                             &none       &none             &kp SPACE    &kp RET
                         >;
@@ -580,11 +580,11 @@
                 sym_layer {
 // -------------------------------    -------------------------------
 // |  V. |  V- |  V+ |  %  |                |  ^  |  `  |  ~  |  |  |
-// |  /  |  @  |  #  |  $  |                |  &  |  ;  |  :  |  \  |
+// |  /  |  @  |  #  |  $  |                |  &  |  '  |  "  |  \  |
 //                   |     |     |    | SPC | BSPC |
                         bindings = <
-   &kp C_MUTE      &kp C_VOL_DN  &kp C_VOL_UP   &kp PRCNT            &kp CARET       &kp GRAVE      &kp TILDE        &kp PIPE
-   &hml LALT SLASH &hml LCTRL AT &hml LGUI HASH &hsl LSHFT DLLR      &hsr LSHFT AMPS &hmr LGUI SEMI &hmr LCTRL COLON &hmr LALT BSLH
+   &kp C_MUTE      &kp C_VOL_DN  &kp C_VOL_UP   &kp PRCNT            &kp CARET       &kp GRAVE     &kp TILDE      &kp PIPE
+   &hml LALT SLASH &hml LCTRL AT &hml LGUI HASH &hsl LSHFT DLLR      &hsr LSHFT AMPS &hmr LGUI SQT &hmr LCTRL DQT &hmr LALT BSLH
                                                 &none    &none       &kp SPACE     &kp BSPC
                         >;
                 };
