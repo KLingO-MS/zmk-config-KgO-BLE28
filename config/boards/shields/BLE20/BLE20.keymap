@@ -17,6 +17,7 @@
 #define _SM      4
 #define _FS      5
 #define _BT      6
+#define _NP      7
 
 // &sk {
 //     quick-release;
@@ -148,30 +149,30 @@
 
         combo_NAV {
             timeout-ms = <50>;
-            key-positions = <RBI RBM RBR>;
+            key-positions = <RBI RTM RBR>;
             bindings = <&to _NV>;
             layers = <_A1>;
         };
 
-        combo_NUM {
+        combo_NUMPAD {
             timeout-ms = <50>;
-            key-positions = <LBI LBM LBR>;
-            bindings = <&to _NM>;
+            key-positions = <LBI LTM LBR>;
+            bindings = <&to _NP>;
             layers = <_A1>;
         };
 
         combo_BASER {
             timeout-ms = <50>;
-            key-positions = <RBI RBM RBR>;
+            key-positions = <RBI RTM RBR>;
             bindings = <&to _A1>;
-            layers = <_NV _NM>;
+            layers = <_NV _NP>;
         };
 
         combo_BASEL {
             timeout-ms = <50>;
-            key-positions = <LBI LBM LBR>;
+            key-positions = <LBI LTM LBR>;
             bindings = <&to _A1>;
-            layers = <_NV _NM>;
+            layers = <_NV _NP>;
         };
 
 // ------------------------- VOLUME COMBOS --------------------------------
@@ -225,54 +226,54 @@
         // };
 
 // ------------------------- CHARACTER COMBOS --------------------------------
-        // combo_SPC {
-        //     timeout-ms = <40>;
-        //     key-positions = <LBM LBI>;
-        //     bindings = <&kp SPACE>;
-        //     layers = <_NM>;
-        // };
+        combo_RET {
+            timeout-ms = <50>;
+            key-positions = <LBM LBI LBR>;
+            bindings = <&kp KP_ENTER>;
+            layers = <_NP>;
+        };
 
-        // combo_BSPC {
-        //     timeout-ms = <40>;
-        //     key-positions = <LTM LTI>;
-        //     bindings = <&kp BSPC>;
-        //     layers = <_NM>;
-        // };
+        combo_BSPC {
+            timeout-ms = <50>;
+            key-positions = <LTM LTI LTR>;
+            bindings = <&kp BSPC>;
+            layers = <_NP>;
+        };
 
-        // combo_Z {
-        //     timeout-ms = <40>;
-        //     key-positions = <LTR LBR>;
-        //     bindings = <&kp Z>;
-        //     layers = <_A1>;
-        // };
+        combo_KPDOT {
+            timeout-ms = <50>;
+            key-positions = <LTP LBP>;
+            bindings = <&kp KP_DOT>;
+            layers = <_NP>;
+        };
 
-        // combo_V {
-        //     timeout-ms = <40>;
-        //     key-positions = <LTM LBM>;
-        //     bindings = <&kp V>;
-        //     layers = <_A1>;
-        // };
+        combo_KPPLUS {
+            timeout-ms = <50>;
+            key-positions = <LTM LTI>;
+            bindings = <&kp KP_PLUS>;
+            layers = <_NP>;
+        };
 
-        // combo_M {
-        //     timeout-ms = <40>;
-        //     key-positions = <LTI LBI>;
-        //     bindings = <&kp M>;
-        //     layers = <_A1>;
-        // };
+        combo_KPMINUS {
+            timeout-ms = <50>;
+            key-positions = <LBM LBI>;
+            bindings = <&kp KP_MINUS>;
+            layers = <_NP>;
+        };
 
-        // combo_J {
-        //     timeout-ms = <40>;
-        //     key-positions = <LTR LTM>;
-        //     bindings = <&kp J>;
-        //     layers = <_A1>;
-        // };
+        combo_KPSTAR {
+            timeout-ms = <50>;
+            key-positions = <LTR LTM>;
+            bindings = <&kp KP_MULTIPLY>;
+            layers = <_NP>;
+        };
 
-        // combo_W {
-        //     timeout-ms = <40>;
-        //     key-positions = <LTM LTI>;
-        //     bindings = <&kp W>;
-        //     layers = <_A1>;
-        // };
+        combo_KPSLASH {
+            timeout-ms = <50>;
+            key-positions = <LBR LBM>;
+            bindings = <&kp KP_DIVIDE>;
+            layers = <_NP>;
+        };
 
         // combo_K {
         //     timeout-ms = <40>;
@@ -490,8 +491,8 @@
         bst: backspace-tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <200>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <150>;
             quick-tap-ms = <140>;
             //require-prior-idle-ms = <100>;
             bindings = <&mo>, <&kp>;
@@ -535,7 +536,7 @@
                         bindings = <
    &kp B       &kp C        &kp L       &kp D             &kp P        &kp O       &kp U        &kp Y
    &hml LALT N &hml LCTRL S &hml LGUI R &hsl LSHFT T      &hsr LSHFT H &hmr LGUI A &hmr LCTRL E &hmr LALT I 
-                         &bst _SM BSPC  &bst _NM BSPC     &spt _A2 SPACE  &spt _NV RET
+                         &bst _SM BSPC  &bst _A2 BSPC     &spt _NM SPACE  &spt _NV RET
                         >;
                 };
                         //  &bst _SM BSPC  &bst _A2 BSPC     &spt _NM SPACE  &spt _NV RET
@@ -612,6 +613,19 @@
                                           &none  &none        &none  &none
                         >;
                 };                
+
+                num_pad {
+// -------------------------    ---------------------
+// |  5  |  6  |  7  |  8  |    |    |    |    |    |
+// |  1  |  2  |  3  |  4  |    |    |    |    |    |
+//             |  9  |  0  |    |    |    |
+                        bindings = <
+   &kp KP_N5 &kp KP_N6 &kp KP_N7 &kp KP_N8        &none  &none  &none  &none
+   &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp KP_N4        &none  &none  &none  &none
+                       &kp KP_N9 &kp KP_N0        &none  &none
+                        >;
+                };                
+
     };
 };
 
