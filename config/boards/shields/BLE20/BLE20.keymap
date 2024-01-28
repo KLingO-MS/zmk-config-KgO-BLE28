@@ -296,19 +296,19 @@
         //     layers = <_A1>;
         // };
 
-        // combo_F {
-        //     timeout-ms = <40>;
-        //     key-positions = <RTI RTM>;
-        //     bindings = <&kp F>;
-        //     layers = <_A1>;
-        // };
+        combo_SQT {
+            timeout-ms = <50>;
+            key-positions = <RTI RBM>;
+            bindings = <&kp SQT>;
+            layers = <_A1>;
+        };
 
-        // combo_Q {
-        //     timeout-ms = <40>;
-        //     key-positions = <RTM RTR>;
-        //     bindings = <&kp Q>;
-        //     layers = <_A1>;
-        // };
+        combo_DQT {
+            timeout-ms = <40>;
+            key-positions = <RTI RTR>;
+            bindings = <&kp DQT>;
+            layers = <_A1>;
+        };
 
         combo_LPAR {
             timeout-ms = <40>;
