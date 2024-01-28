@@ -544,11 +544,11 @@
 
                 alpha_2_layer{
 // -------------------------------    -------------------------------
-// |  Q  |  G  |  W  |  V  |                |  F  |  ;  |  :  |  !  |
+// |  Q  |  W  |  G  |  V  |                |  F  |  ;  |  :  |  !  |
 // |  X  |  Z  |  J  |  M  |                |  K  |  ,  |  .  |  ?  |
 //                   |     |     |    | SPC | RET |
                         bindings = <
-   &kp Q       &kp G        &kp W       &kp V             &kp F        &kp SEMI        &kp COLON      &kp EXCL
+   &kp Q       &kp W        &kp G       &kp V             &kp F        &kp SEMI        &kp COLON      &kp EXCL
    &hml LALT X &hml LCTRL Z &hml LGUI J &hsl LSHFT M      &hsr LSHFT K &hmr LGUI COMMA &hmr LCTRL DOT &hmr LALT QMARK
                             &kp SPACE   &kp BSPC          &kp SPACE    &kp RET
                         >;
