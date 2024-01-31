@@ -536,7 +536,7 @@
                         bindings = <
    &kp B       &kp C        &kp L       &kp D             &kp P        &kp O       &kp U        &kp Y
    &hml LALT N &hml LCTRL S &hml LGUI R &hsl LSHFT T      &hsr LSHFT H &hmr LGUI A &hmr LCTRL E &hmr LALT I 
-                         &bst _SM BSPC  &bst _A2 BSPC     &spt _NM SPACE  &spt _NV RET
+                         &bst _SM BSPC  &sl _A2           &spt _NM SPACE  &spt _NV RET
                         >;
                 };
                         //  &bst _SM BSPC  &bst _A2 BSPC     &spt _NM SPACE  &spt _NV RET
@@ -550,7 +550,7 @@
                         bindings = <
    &kp Q       &kp W        &kp G       &kp V             &kp F        &kp SEMI        &kp COLON      &kp EXCL
    &hml LALT X &hml LCTRL Z &hml LGUI J &hsl LSHFT M      &hsr LSHFT K &hmr LGUI COMMA &hmr LCTRL DOT &hmr LALT QMARK
-                            &kp SPACE   &kp BSPC          &kp SPACE    &kp RET
+                            &kp BSPC    &kp BSPC          &kp SPACE    &kp RET
                         >;
                 };
 
@@ -562,7 +562,7 @@
                         bindings = <
    &kp ESC       &win_cp          &mac_cp       &kp PG_UP          &kp HOME        &kp UP         &kp END          &kp DEL
    &hml LALT TAB &hml LCTRL PSCRN &hml LGUI INS &hsl LSHFT PG_DN   &hsr LSHFT LEFT &hmr LGUI DOWN &hmr LCTRL RIGHT &hmr LALT RET
-                                  &kp K_APP     &kp BSPC           &kp SPACE       &kp LSHFT
+                                  &kp BSPC      &kp K_APP          &kp SPACE       &kp LSHFT
                         >;
                 };
                 
@@ -574,7 +574,7 @@
                         bindings = <
    &kp SLASH    &kp UNDER     &kp MINUS    &kp N5             &kp N6        &kp EQUAL    &kp PLUS      &kp STAR
    &hml LALT N1 &hml LCTRL N2 &hml LGUI N3 &hsl LSHFT N4      &hsr LSHFT N7 &hmr LGUI N8 &hmr LCTRL N9 &hmr LALT N0
-                                &kp SPACE  &kp BSPC           &kp SPACE     &kp BSPC
+                              &kp BSPC     &kp SPACE          &kp SPACE     &kp BSPC
                         >;
                 };
 
