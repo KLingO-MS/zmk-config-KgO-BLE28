@@ -200,6 +200,14 @@
         //     layers = <_A1>;
         // };
 
+        combo_ESC {
+            timeout-ms = <50>;
+            key-positions = <LTP LTR>;
+            bindings = <&kp ESC>;
+            require-prior-idle-ms = <200>;
+        };
+
+
 // ------------------------- MODS COMBOS --------------------------------
         combo_CAPS {
             timeout-ms = <50>;
