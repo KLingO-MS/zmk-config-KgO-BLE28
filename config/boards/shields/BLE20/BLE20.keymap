@@ -538,12 +538,12 @@
 
                 alpha_1_layer{
 // -------------------------------    -------------------------------
-// |  B  |  C  |  P  |  L  |                |  H  |  O  |  U  |  Y  |
-// |  N  |  S  |  T  |  R  |                |  D  |  A  |  E  |  I  |
+// |  B  |  C  |  P  |  L  |                |  D  |  O  |  U  |  Y  |
+// |  N  |  S  |  T  |  R  |                |  H  |  A  |  E  |  I  |
 //       | _SM(BSPC) | _A2(BSPC) |    | _NM(SPC) | _NV(RET) |
                         bindings = <
-   &kp B       &kp C        &kp P       &kp L             &kp H        &kp O       &kp U        &kp Y
-   &hml LALT N &hml LCTRL S &hml LGUI T &hsl LSHFT R      &hsr LSHFT D &hmr LGUI A &hmr LCTRL E &hmr LALT I 
+   &kp B       &kp C        &kp P       &kp L             &kp D        &kp O       &kp U        &kp Y
+   &hml LALT N &hml LCTRL S &hml LGUI T &hsl LSHFT R      &hsr LSHFT H &hmr LGUI A &hmr LCTRL E &hmr LALT I 
                          &bst _SM BSPC  &bst _A2 BSPC     &spt _NM SPACE  &spt _NV RET
                         >;
                 };
