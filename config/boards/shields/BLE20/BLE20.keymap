@@ -207,6 +207,14 @@
             require-prior-idle-ms = <200>;
         };
 
+        combo_BSPC {
+            timeout-ms = <50>;
+            key-positions = <RBI RBM RBR>;
+            bindings = <&kp BSPC>;
+            layers = <_A1>;
+        };
+
+
 
 // ------------------------- MODS COMBOS --------------------------------
         combo_CAPS {
@@ -241,7 +249,7 @@
             layers = <_NP>;
         };
 
-        combo_BSPC {
+        combo_NP_BSPC {
             timeout-ms = <50>;
             key-positions = <LTM LTI LTR>;
             bindings = <&kp BSPC>;
