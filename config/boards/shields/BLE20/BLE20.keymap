@@ -293,70 +293,70 @@
 
 // ------------------------- CHARACTER COMBOS --------------------------------
         combo_F {
-            timeout-ms = <60>;
+            timeout-ms = <50>;
             key-positions = <RTM RTI>;
             bindings = <&kp F>;
             layers = <_A1>;
         };
 
         combo_K {
-            timeout-ms = <60>;
+            timeout-ms = <50>;
             key-positions = <RBM RBI>;
             bindings = <&kp K>;
             layers = <_A1>;
         };
 
         combo_X {
-            timeout-ms = <60>;
+            timeout-ms = <50>;
             key-positions = <RTM RTR>;
             bindings = <&kp X>;
             layers = <_A1>;
         };
 
         combo_Q {
-            timeout-ms = <60>;
+            timeout-ms = <50>;
             key-positions = <RBI RBR>;
             bindings = <&kp Q>;
             layers = <_A1>;
         };
 
         combo_W {
-            timeout-ms = <60>;
+            timeout-ms = <50>;
             key-positions = <LBR LBI>;
             bindings = <&kp W>;
             layers = <_A1>;
         };
 
         combo_Z {
-            timeout-ms = <60>;
-            key-positions = <LTR LTM>;
+            timeout-ms = <50>;
+            key-positions = <LBR LBM>;
             bindings = <&kp Z>;
             layers = <_A1>;
         };
 
         combo_G {
-            timeout-ms = <60>;
+            timeout-ms = <50>;
             key-positions = <RBM RBR>;
             bindings = <&kp G>;
             layers = <_A1>;
         };
 
         combo_V {
-            timeout-ms = <60>;
-            key-positions = <LBM LBR>;
+            timeout-ms = <50>;
+            key-positions = <LTM LTI>;
             bindings = <&kp V>;
             layers = <_A1>;
         };
 
         combo_J {
-            timeout-ms = <60>;
-            key-positions = <LTI LTM>;
+            timeout-ms = <50>;
+            key-positions = <LTR LTM>;
             bindings = <&kp J>;
             layers = <_A1>;
         };
 
         combo_M {
-            timeout-ms = <60>;
+            timeout-ms = <50>;
             key-positions = <LBI LBM>;
             bindings = <&kp M>;
             layers = <_A1>;
@@ -737,6 +737,5 @@
     };
 };
 
-// &qspi {status = "disabled"; };
 
 /delete-node/ &gd25q16;
