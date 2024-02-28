@@ -24,7 +24,7 @@
 // };
 
 &sl {
-    release-after-ms = <250>;
+    release-after-ms = <300>;
 };
 
 / {
@@ -644,7 +644,7 @@
                         bindings = <
    &kp B       &kp C        &kp P       &kp L             &kp D        &kp O       &kp U        &kp Y
    &hml LALT N &hml LCTRL S &hml LGUI T &hsl LSHFT R      &hsr LSHFT H &hmr LGUI A &hmr LCTRL E &hmr LALT I 
-                         &bst _SM BSPC  &bst _A2 BSPC     &spt _NM SPACE  &spt _NV RET
+                         &bst _SM BSPC  &bst _NM BSPC     &sl _A2      &spt _NV RET
                         >;
                 };
                         //  &bst _SM BSPC  &bst _A2 BSPC     &spt _NM SPACE  &spt _NV RET
@@ -658,7 +658,7 @@
                         bindings = <
    &kp Q       &kp W        &kp G       &kp J             &kp F        &kp SEMI        &kp COLON      &kp EXCL
    &hml LALT X &hml LCTRL Z &hml LGUI V &hsl LSHFT M      &hsr LSHFT K &hmr LGUI COMMA &hmr LCTRL DOT &hmr LALT QMARK
-                            &none       &none             &kp SPACE    &kp RET
+                            &none       &kp BSPC          &kp SPACE    &kp RET
                         >;
                 };
 
