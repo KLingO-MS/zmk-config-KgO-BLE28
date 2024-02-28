@@ -550,7 +550,7 @@
         hml: hrm_left {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "tap-preferred";
+            flavor = "balanced";
             tapping-term-ms = <300>;
             quick-tap-ms = <170>;                // repeat on tap-into-hold
             require-prior-idle-ms = <120>;
@@ -563,7 +563,7 @@
         hmr: hrm_right {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "tap-preferred";
+            flavor = "balanced";
             tapping-term-ms = <300>;
             quick-tap-ms = <170>;                // repeat on tap-into-hold
             require-prior-idle-ms = <120>;
@@ -578,10 +578,10 @@
             flavor = "balanced";
             tapping-term-ms = <220>;
             quick-tap-ms = <170>;                // repeat on tap-into-hold
-            require-prior-idle-ms = <120>;
-            bindings = <&kp>, <&kp>;
+            require-prior-idle-ms = <60>;
+            bindings = <&mo>, <&kp>;
             hold-trigger-key-positions = <KEYS_R THUMBS>;
-            hold-trigger-on-release;             // delay positional check until key-release
+            // hold-trigger-on-release;             // delay positional check until key-release
         };
 
         hsr: hrs_right {
@@ -590,10 +590,10 @@
             flavor = "balanced";
             tapping-term-ms = <220>;
             quick-tap-ms = <170>;                // repeat on tap-into-hold
-            require-prior-idle-ms = <120>;
-            bindings = <&kp>, <&kp>;
+            require-prior-idle-ms = <60>;
+            bindings = <&mo>, <&kp>;
             hold-trigger-key-positions = <KEYS_L THUMBS>;
-            hold-trigger-on-release;             // delay positional check until key-release
+            // hold-trigger-on-release;             // delay positional check until key-release
         };
 
         bst: backspace-tap {
@@ -603,7 +603,7 @@
             tapping-term-ms = <150>;
             quick-tap-ms = <140>;
             //require-prior-idle-ms = <100>;
-            bindings = <&mo>, <&kp>;
+            bindings = <&kp>, <&kp>;
         };
 
         spt: space-tap {
@@ -643,8 +643,8 @@
 //       | _SM(BSPC) | _A2(BSPC) |    | _NM(SPC) | _NV(RET) |
                         bindings = <
    &kp B       &kp C        &kp P       &kp L             &kp D        &kp O       &kp U        &kp Y
-   &hml LALT N &hml LCTRL S &hml LGUI T &hsl LSHFT R      &hsr LSHFT H &hmr LGUI A &hmr LCTRL E &hmr LALT I 
-                         &bst _SM BSPC  &bst _A2 BSPC     &spt _NM SPACE  &spt _NV RET
+   &hml LALT N &hml LCTRL S &hml LGUI T &hsl _A2 R      &hsr _A2 H &hmr LGUI A &hmr LCTRL E &hmr LALT I 
+                         &bst _SM BSPC  &bst LSHFT BSPC     &spt _NM SPACE  &spt _NV RET
                         >;
                 };
                         //  &bst _SM BSPC  &bst _A2 BSPC     &spt _NM SPACE  &spt _NV RET
@@ -657,8 +657,8 @@
 //                   |     |     |    | SPC | RET |
                         bindings = <
    &kp Q       &kp W        &kp G       &kp J             &kp F        &kp SEMI        &kp COLON      &kp EXCL
-   &hml LALT X &hml LCTRL Z &hml LGUI V &hsl LSHFT M      &hsr LSHFT K &hmr LGUI COMMA &hmr LCTRL DOT &hmr LALT QMARK
-                            &none       &kp BSPC          &kp SPACE    &kp RET
+   &hml LALT X &hml LCTRL Z &hml LGUI V &kp M             &kp K &hmr LGUI COMMA &hmr LCTRL DOT &hmr LALT QMARK
+                            &none       &bst LSHFT BSPC   &kp SPACE    &kp RET
                         >;
                 };
 
@@ -669,7 +669,7 @@
 //                    | APP | BSPC |    | SPC | LSFT |
                         bindings = <
    &kp ESC       &win_cp          &mac_cp       &kp PG_UP          &kp HOME        &kp UP         &kp END          &kp DEL
-   &hml LALT TAB &hml LCTRL PSCRN &hml LGUI INS &hsl LSHFT PG_DN   &hsr LSHFT LEFT &hmr LGUI DOWN &hmr LCTRL RIGHT &hmr LALT RET
+   &hml LALT TAB &hml LCTRL PSCRN &hml LGUI INS &hml LSHFT PG_DN   &hmr LSHFT LEFT &hmr LGUI DOWN &hmr LCTRL RIGHT &hmr LALT RET
                                   &kp K_APP     &kp BSPC           &kp SPACE       &kp LSHFT
                         >;
                 };
@@ -681,7 +681,7 @@
 //                  | SPC | BSPC |    | SPC | BSPC |
                         bindings = <
    &kp SLASH    &kp UNDER     &kp MINUS    &kp N5             &kp N6        &kp EQUAL    &kp PLUS      &kp STAR
-   &hml LALT N1 &hml LCTRL N2 &hml LGUI N3 &hsl LSHFT N4      &hsr LSHFT N7 &hmr LGUI N8 &hmr LCTRL N9 &hmr LALT N0
+   &hml LALT N1 &hml LCTRL N2 &hml LGUI N3 &hml LSHFT N4      &hmr LSHFT N7 &hmr LGUI N8 &hmr LCTRL N9 &hmr LALT N0
                               &kp KP_DOT   &kp BSPC           &kp SPACE     &kp BSPC
                         >;
                 };
@@ -693,7 +693,7 @@
 //                   |     |     |    | SPC | BSPC |
                         bindings = <
    &kp C_MUTE      &kp C_VOL_DN  &kp C_VOL_UP   &kp PRCNT            &kp CARET       &kp GRAVE     &kp TILDE      &kp PIPE
-   &hml LALT SLASH &hml LCTRL AT &hml LGUI HASH &hsl LSHFT DLLR      &hsr LSHFT AMPS &hmr LGUI SQT &hmr LCTRL DQT &hmr LALT BSLH
+   &hml LALT SLASH &hml LCTRL AT &hml LGUI HASH &hml LSHFT DLLR      &hmr LSHFT AMPS &hmr LGUI SQT &hmr LCTRL DQT &hmr LALT BSLH
                                                 &none    &none       &kp SPACE     &kp BSPC
                         >;
                 };
@@ -705,7 +705,7 @@
 //                   |     |     |    |     |      |
                         bindings = <
    &kp F5       &kp F6        &kp F7       &kp F8             &kp F9    &kp F10  &kp F11   &kp F12
-   &hml LALT F1 &hml LCTRL F2 &hml LGUI F3 &hsl LSHFT F4      &kp LSHFT &kp LGUI &kp LCTRL &kp LALT
+   &hml LALT F1 &hml LCTRL F2 &hml LGUI F3 &hml LSHFT F4      &kp LSHFT &kp LGUI &kp LCTRL &kp LALT
                                             &none  &none      &none  &none
                         >;
                 };
