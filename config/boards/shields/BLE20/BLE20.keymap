@@ -299,10 +299,10 @@
             layers = <_A1>;
         };
 
-        combo_K {
+        combo_Z {
             timeout-ms = <50>;
             key-positions = <RBM RBI>;
-            bindings = <&kp K>;
+            bindings = <&kp Z>;
             layers = <_A1>;
         };
 
@@ -313,31 +313,17 @@
             layers = <_A1>;
         };
 
-        combo_Q {
-            timeout-ms = <50>;
-            key-positions = <RBI RBR>;
-            bindings = <&kp Q>;
-            layers = <_A1>;
-        };
-
-        combo_W {
-            timeout-ms = <50>;
-            key-positions = <LBR LBI>;
-            bindings = <&kp W>;
-            layers = <_A1>;
-        };
-
-        combo_Z {
-            timeout-ms = <50>;
-            key-positions = <LBR LBM>;
-            bindings = <&kp Z>;
-            layers = <_A1>;
-        };
-
         combo_G {
             timeout-ms = <50>;
             key-positions = <RBM RBR>;
             bindings = <&kp G>;
+            layers = <_A1>;
+        };
+
+        combo_Q {
+            timeout-ms = <50>;
+            key-positions = <RBI RBR>;
+            bindings = <&kp Q>;
             layers = <_A1>;
         };
 
@@ -348,6 +334,13 @@
             layers = <_A1>;
         };
 
+        combo_M {
+            timeout-ms = <50>;
+            key-positions = <LBI LBM>;
+            bindings = <&kp M>;
+            layers = <_A1>;
+        };
+
         combo_J {
             timeout-ms = <50>;
             key-positions = <LTR LTM>;
@@ -355,10 +348,17 @@
             layers = <_A1>;
         };
 
-        combo_M {
+        combo_B {
             timeout-ms = <50>;
-            key-positions = <LBI LBM>;
-            bindings = <&kp M>;
+            key-positions = <LBR LBM>;
+            bindings = <&kp B>;
+            layers = <_A1>;
+        };
+
+        combo_W {
+            timeout-ms = <50>;
+            key-positions = <LBR LBI>;
+            bindings = <&kp W>;
             layers = <_A1>;
         };
 
