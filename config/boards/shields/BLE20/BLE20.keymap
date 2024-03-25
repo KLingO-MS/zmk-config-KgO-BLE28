@@ -299,10 +299,10 @@
             layers = <_A1>;
         };
 
-        combo_Z {
+        combo_K {
             timeout-ms = <50>;
             key-positions = <RBM RBI>;
-            bindings = <&kp Z>;
+            bindings = <&kp K>;
             layers = <_A1>;
         };
 
@@ -348,10 +348,10 @@
             layers = <_A1>;
         };
 
-        combo_B {
+        combo_Z {
             timeout-ms = <50>;
             key-positions = <LBR LBM>;
-            bindings = <&kp B>;
+            bindings = <&kp Z>;
             layers = <_A1>;
         };
 
@@ -638,12 +638,12 @@
 
                 alpha_1_layer{
 // -------------------------------    -------------------------------
-// |  P  |  K  |  D  |  L  |                |  C  |  O  |  U  |  Y  |
-// |  N  |  H  |  T  |  R  |                |  S  |  A  |  E  |  I  |
+// |  B  |  C  |  P  |  L  |                |  D  |  O  |  U  |  Y  |
+// |  N  |  S  |  T  |  R  |                |  H  |  A  |  E  |  I  |
 //       | _SM(BSPC) | _A2(BSPC) |    | _NM(SPC) | _NV(RET) |
                         bindings = <
-   &kp P       &kp K        &kp D       &kp L             &kp C        &kp O       &kp U        &kp Y
-   &hml LALT N &hml LCTRL H &hml LGUI T &hsl LSHFT R      &hsr LSHFT S &hmr LGUI A &hmr LCTRL E &hmr LALT I 
+   &kp B       &kp C        &kp P       &kp L             &kp D        &kp O       &kp U        &kp Y
+   &hml LALT N &hml LCTRL S &hml LGUI T &hsl LSHFT R      &hsr LSHFT H &hmr LGUI A &hmr LCTRL E &hmr LALT I 
                          &bst _SM BSPC  &bst _A2 BSPC     &spt _NM SPACE  &spt _NV RET
                         >;
                 };
@@ -653,11 +653,11 @@
                 alpha_2_layer{
 // -------------------------------    -------------------------------
 // |  Q  |  J  |  G  |  W  |                |  F  |  ;  |  :  |  !  |
-// |  X  |  B  |  M  |  V  |                |  Z  |  ,  |  .  |  ?  |
+// |  X  |  Z  |  V  |  M  |                |  K  |  ,  |  .  |  ?  |
 //                   |     |     |    | SPC | RET |
                         bindings = <
    &kp Q       &kp J        &kp G       &kp W             &kp F        &kp SEMI        &kp COLON      &kp EXCL
-   &hml LALT X &hml LCTRL B &hml LGUI M &hsl LSHFT V      &hsr LSHFT Z &hmr LGUI COMMA &hmr LCTRL DOT &hmr LALT QMARK
+   &hml LALT X &hml LCTRL Z &hml LGUI V &hsl LSHFT M      &hsr LSHFT K &hmr LGUI COMMA &hmr LCTRL DOT &hmr LALT QMARK
                             &none       &kp BSPC          &kp SPACE    &kp RET
                         >;
                 };
