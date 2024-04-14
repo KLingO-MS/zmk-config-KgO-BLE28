@@ -369,28 +369,28 @@
             timeout-ms = <50>;
             key-positions = <RTI RTM RTR>;
             bindings = <&mlc_ould>;
-            layers = <_BASE>;
+            layers = <_A1>;
         };
 
         combo_ARE {
             timeout-ms = <50>;
             key-positions = <LTI LTM LTR>;
             bindings = <&mlc_are>;
-            layers = <_BASE>;
+            layers = <_A1>;
         };
 
         combo_YOU {
             timeout-ms = <50>;
             key-positions = <RBI RBM RBR>;
             bindings = <&mm_you>;
-            layers = <_BASE>;
+            layers = <_A1>;
         };
 
         combo_THE {
             timeout-ms = <50>;
             key-positions = <LBI LBM LBR>;
             bindings = <&mm_the>;
-            layers = <_BASE>;
+            layers = <_A1>;
         };
 
         // combo_COMMA {
