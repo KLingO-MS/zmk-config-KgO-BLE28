@@ -29,7 +29,80 @@
 
 / {
 // ------------------------- MACROS --------------------------------
-    // macros {
+    macros {
+            muc_you: macro_uc_you {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <5>;
+            bindings
+                = <&kp LS(Y)>
+                , <&kp O>
+                , <&kp U>
+                ;
+        };
+
+        mlc_you: macro_lc_you {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <5>;
+            bindings
+                = <&kp Y>
+                , <&kp O>
+                , <&kp U>
+                ;
+        };
+
+        muc_the: macro_uc_the {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <5>;
+            bindings
+                = <&kp LS(T)>
+                , <&kp H>
+                , <&kp E>
+                ;
+        };
+
+        mlc_the: macro_lc_the {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <5>;
+            bindings
+                = <&kp T>
+                , <&kp H>
+                , <&kp E>
+                ;
+        };
+
+        mlc_are: macro_lc_are {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <5>;
+            bindings
+                = <&kp A>
+                , <&kp R>
+                , <&kp E>
+                ;
+        };
+
+        mlc_ould: macro_lc_ould {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <5>;
+            bindings
+                = <&kp O>
+                , <&kp U>
+                , <&kp L>
+                , <&kp D>
+                ;
+        };
+
         // to_BASE: to_BASE {
         //     compatible = "zmk,behavior-macro";
         //     #binding-cells = <0>;
@@ -117,7 +190,7 @@
         //         , <&bootloader>
         //         ;
         // };
-    // };
+    };
 
     combos {
         compatible = "zmk,combos";
@@ -292,74 +365,32 @@
         };
 
 // ------------------------- CHARACTER COMBOS --------------------------------
-        combo_F {
+        combo_OULD {
             timeout-ms = <50>;
-            key-positions = <RTM RTI>;
-            bindings = <&kp F>;
-            layers = <_A1>;
+            key-positions = <RTI RTM RTR>;
+            bindings = <&mlc_ould>;
+            layers = <_BASE>;
         };
 
-        combo_K {
+        combo_ARE {
             timeout-ms = <50>;
-            key-positions = <RBM RBI>;
-            bindings = <&kp K>;
-            layers = <_A1>;
+            key-positions = <LTI LTM LTR>;
+            bindings = <&mlc_are>;
+            layers = <_BASE>;
         };
 
-        combo_X {
+        combo_YOU {
             timeout-ms = <50>;
-            key-positions = <RTM RTR>;
-            bindings = <&kp X>;
-            layers = <_A1>;
+            key-positions = <RBI RBM RBR>;
+            bindings = <&mm_you>;
+            layers = <_BASE>;
         };
 
-        combo_G {
+        combo_THE {
             timeout-ms = <50>;
-            key-positions = <RBM RBR>;
-            bindings = <&kp G>;
-            layers = <_A1>;
-        };
-
-        combo_Q {
-            timeout-ms = <50>;
-            key-positions = <RBI RBR>;
-            bindings = <&kp Q>;
-            layers = <_A1>;
-        };
-
-        combo_V {
-            timeout-ms = <50>;
-            key-positions = <LTM LTI>;
-            bindings = <&kp V>;
-            layers = <_A1>;
-        };
-
-        combo_M {
-            timeout-ms = <50>;
-            key-positions = <LBI LBM>;
-            bindings = <&kp M>;
-            layers = <_A1>;
-        };
-
-        combo_J {
-            timeout-ms = <50>;
-            key-positions = <LTR LTM>;
-            bindings = <&kp J>;
-            layers = <_A1>;
-        };
-
-        combo_Z {
-            timeout-ms = <50>;
-            key-positions = <LBR LBM>;
-            bindings = <&kp Z>;
-            layers = <_A1>;
-        };
-
-        combo_W {
-            timeout-ms = <50>;
-            key-positions = <LBR LBI>;
-            bindings = <&kp W>;
-            layers = <_A1>;
+            key-positions = <LBI LBM LBR>;
+            bindings = <&mm_the>;
+            layers = <_BASE>;
         };
 
         // combo_COMMA {
@@ -630,6 +661,20 @@
         //     bindings = <&kp DOT>, <&kp COLON>;
         //     mods = <(MOD_LSFT)>;
         // };
+
+        mm_you: mm_you {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&mlc_you>, <&muc_you>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        mm_the: mm_the {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&mlc_the>, <&muc_the>;
+            mods = <(MOD_LSFT)>;
+        };
         
     };
 
@@ -664,13 +709,13 @@
 
                 nav_layer {
 // ---------------------------------    ---------------------------------
-// | ESC | wCP  | mCP | PGUP |               | HOME |  UP  | END  | DEL |
-// | TAB | PSCR | INS | PGDN |               | LEFT | DOWN | RGHT | RET |
+// | INS | wCP  | mCP | PGUP |               | TAB  |  UP  | DEL  | ESC |
+// | PSC | HOME | END | PGDN |               | LEFT | DOWN | RGHT | RET |
 //                    | APP | BSPC |    | SPC | LSFT |
                         bindings = <
-   &kp ESC       &win_cp          &mac_cp       &kp PG_UP          &kp HOME        &kp UP         &kp END          &kp DEL
-   &hml LALT TAB &hml LCTRL PSCRN &hml LGUI INS &hsl LSHFT PG_DN   &hsr LSHFT LEFT &hmr LGUI DOWN &hmr LCTRL RIGHT &hmr LALT RET
-                                  &kp K_APP     &kp BSPC           &kp SPACE       &kp LSHFT
+   &kp INS         &win_cp         &mac_cp       &kp PG_UP          &kp TAB         &kp UP         &kp DEL          &kp ESC
+   &hml LALT PSCRN &hml LCTRL HOME &hml LGUI END &hsl LSHFT PG_DN   &hsr LSHFT LEFT &hmr LGUI DOWN &hmr LCTRL RIGHT &hmr LALT RET
+                                   &kp K_APP     &kp BSPC           &kp SPACE       &kp LSHFT
                         >;
                 };
                 
