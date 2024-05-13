@@ -683,12 +683,12 @@
 
                 alpha_1_layer{
 // -------------------------------    -------------------------------
-// |  B  |  C  |  P  |  L  |                |  D  |  O  |  U  |  Y  |
-// |  N  |  S  |  T  |  R  |                |  H  |  A  |  E  |  I  |
+// |  Z  |  P  |  D  |  L  |                |  V  |  O  |  U  |  Y  |
+// |  R  |  N  |  S  |  T  |                |  H  |  A  |  E  |  I  |
 //       | _SM(BSPC) | _A2(BSPC) |    | _NM(SPC) | _NV(RET) |
                         bindings = <
-   &kp B       &kp C        &kp P       &kp L             &kp D        &kp O       &kp U        &kp Y
-   &hml LALT N &hml LCTRL S &hml LGUI T &hsl LSHFT R      &hsr LSHFT H &hmr LGUI A &hmr LCTRL E &hmr LALT I 
+   &kp Z       &kp P        &kp D       &kp L             &kp V        &kp O       &kp U        &kp Y
+   &hml LALT R &hml LCTRL N &hml LGUI S &hsl LSHFT T      &hsr LSHFT H &hmr LGUI A &hmr LCTRL E &hmr LALT I 
                          &bst _SM BSPC  &bst _A2 BSPC     &spt _NM SPACE  &spt _NV RET
                         >;
                 };
@@ -698,11 +698,11 @@
                 alpha_2_layer{
 // -------------------------------    -------------------------------
 // |  Q  |  J  |  G  |  W  |                |  F  |  ;  |  :  |  !  |
-// |  X  |  Z  |  V  |  M  |                |  K  |  ,  |  .  |  ?  |
+// |  X  |  B  |  C  |  M  |                |  K  |  ,  |  .  |  ?  |
 //                   |     |     |    | SPC | RET |
                         bindings = <
    &kp Q       &kp J        &kp G       &kp W             &kp F        &kp SEMI        &kp COLON      &kp EXCL
-   &hml LALT X &hml LCTRL Z &hml LGUI V &hsl LSHFT M      &hsr LSHFT K &hmr LGUI COMMA &hmr LCTRL DOT &hmr LALT QMARK
+   &hml LALT X &hml LCTRL B &hml LGUI C &hsl LSHFT M      &hsr LSHFT K &hmr LGUI COMMA &hmr LCTRL DOT &hmr LALT QMARK
                             &none       &kp BSPC          &kp SPACE    &kp RET
                         >;
                 };
