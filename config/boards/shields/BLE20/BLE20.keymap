@@ -701,7 +701,7 @@
 // |  X  |  F  |  M  |  V  |                |  K  |  ,  |  .  |  ?  |
 //                   |     |     |    | SPC | RET |
                         bindings = <
-   &kp Q       &kp z        &kp J       &kp W             &kp G        &kp SEMI        &kp COLON      &kp EXCL
+   &kp Q       &kp Z        &kp J       &kp W             &kp G        &kp SEMI        &kp COLON      &kp EXCL
    &hml LALT X &hml LCTRL F &hml LGUI M &hsl LSHFT V      &hsr LSHFT K &hmr LGUI COMMA &hmr LCTRL DOT &hmr LALT QMARK
                             &none       &kp BSPC          &kp SPACE    &kp RET
                         >;
