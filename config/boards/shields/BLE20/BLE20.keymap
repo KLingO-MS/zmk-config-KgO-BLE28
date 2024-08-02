@@ -687,7 +687,7 @@
 // |  N  |  S  |  T  |  R  |                |  D  |  A  |  E  |  I  |
 //       | _SM(BSPC) | _A2(BSPC) |    | _NM(SPC) | _NV(RET) |
                         bindings = <
-   &kp P       &kp C        &kp M       &kp0 L             &kp H        &kp O       &kp U        &kp Y
+   &kp P       &kp C        &kp M       &kp L             &kp H        &kp O       &kp U        &kp Y
    &hml LALT N &hml LCTRL S &hml LGUI T &hsl LSHFT R      &hsr LSHFT D &hmr LGUI A &hmr LCTRL E &hmr LALT I 
                          &bst _SM BSPC  &bst _A2 BSPC     &spt _NM SPACE  &spt _NV RET
                         >;
