@@ -683,13 +683,13 @@
 
                 alpha_1_layer{
 // -------------------------------    -------------------------------
-// |  P  |  C  |  M  |  L  |                |  H  |  O  |  U  |  Y  |
-// |  N  |  S  |  T  |  R  |                |  D  |  A  |  E  |  I  |
+// |  P  |  L  |  M  |  D  |                |  C  |  O  |  U  |  Y  |
+// |  N  |  R  |  T  |  H  |                |  S  |  A  |  E  |  I  |
 //       | _SM(BSPC) | _A2(BSPC) |    | _NM(SPC) | _NV(RET) |
                         bindings = <
-   &kp P       &kp C        &kp M       &kp L             &kp H        &kp O       &kp U        &kp Y
-   &hml LALT N &hml LCTRL S &hml LGUI T &hsl LSHFT R      &hsr LSHFT D &hmr LGUI A &hmr LCTRL E &hmr LALT I 
-                         &bst _SM BSPC  &bst _A2 BSPC     &spt _NM SPACE  &spt _NV RET
+   &kp P       &kp L        &kp M       &kp D             &kp C        &kp O       &kp U        &kp Y
+   &hml LALT N &hml LCTRL R &hml LGUI T &hsl LSHFT H      &hsr LSHFT S &hmr LGUI A &hmr LCTRL E &hmr LALT I 
+                        &bst _SM EQUAL  &bst _A2 BSPC     &spt _NM SPACE  &spt _NV PLUS
                         >;
                 };
                         //  &bst _SM BSPC  &bst _A2 BSPC     &spt _NM SPACE  &spt _NV RET
@@ -697,12 +697,12 @@
 
                 alpha_2_layer{
 // -------------------------------    -------------------------------
-// |  Q  |  W  |  G  |  J  |                |  B  |  ;  |  :  |  !  |
-// |  X  |  F  |  V  |  Z  |                |  K  |  ,  |  .  |  ?  |
+// |  Q  |  W  |  F  |  B  |                |  G  |  ;  |  :  |  !  |
+// |  X  |  J  |  V  |  K  |                |  Z  |  ,  |  .  |  ?  |
 //                   |     |     |    | SPC | RET |
                         bindings = <
-   &kp Q       &kp W        &kp G       &kp J             &kp B        &kp SEMI        &kp COLON      &kp EXCL
-   &hml LALT X &hml LCTRL F &hml LGUI V &hsl LSHFT Z      &hsr LSHFT K &hmr LGUI COMMA &hmr LCTRL DOT &hmr LALT QMARK
+   &kp Q       &kp W        &kp F       &kp B             &kp G        &kp SEMI        &kp COLON      &kp EXCL
+   &hml LALT X &hml LCTRL J &hml LGUI V &hsl LSHFT K      &hsr LSHFT Z &hmr LGUI COMMA &hmr LCTRL DOT &hmr LALT QMARK
                             &none       &kp BSPC          &kp SPACE    &kp RET
                         >;
                 };
