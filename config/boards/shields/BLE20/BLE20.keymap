@@ -769,12 +769,12 @@
 
                 num_pad {
 // -------------------------    ---------------------
-// |  5  |  6  |  7  |  8  |    |    |    |    |    |
-// |  1  |  2  |  3  |  4  |    |    |    |    |    |
+// |  8  |  6  |  4  |  2  |    |    |    |    |    |
+// |  7  |  5  |  3  |  1  |    |    |    |    |    |
 //             |  9  |  0  |    |    |    |
                         bindings = <
-   &kp KP_N5 &kp KP_N6 &kp KP_N7 &kp KP_N8        &none  &none  &none  &none
-   &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp KP_N4        &none  &none  &none  &none
+   &kp KP_N8 &kp KP_N6 &kp KP_N4 &kp KP_N2        &none  &none  &none  &none
+   &kp KP_N7 &kp KP_N5 &kp KP_N3 &kp KP_N1        &none  &none  &none  &none
                        &kp KP_N9 &kp KP_N0        &none  &none
                         >;
                 };                
