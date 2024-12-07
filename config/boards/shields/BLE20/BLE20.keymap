@@ -214,6 +214,12 @@
             bindings = <&mo _BT>;
         };
 
+        combo_UNLOCK {
+            timeout-ms = <50>;
+            key-positions = <ROT RIT>;
+            bindings = <&studio_unlock>;
+        };
+
         combo_FUN {
             timeout-ms = <50>;
             key-positions = <LIT RIT>;
@@ -365,19 +371,19 @@
         };
 
 // ------------------------- CHARACTER COMBOS --------------------------------
-        combo_OULD {
-            timeout-ms = <50>;
-            key-positions = <RTI RTM RTR>;
-            bindings = <&mlc_ould>;
-            layers = <_A1>;
-        };
+        // combo_OULD {
+        //     timeout-ms = <50>;
+        //     key-positions = <RTI RTM RTR>;
+        //     bindings = <&mlc_ould>;
+        //     layers = <_A1>;
+        // };
 
-        combo_ARE {
-            timeout-ms = <50>;
-            key-positions = <LTI LTM LTR>;
-            bindings = <&mlc_are>;
-            layers = <_A1>;
-        };
+        // combo_ARE {
+        //     timeout-ms = <50>;
+        //     key-positions = <LTI LTM LTR>;
+        //     bindings = <&mlc_are>;
+        //     layers = <_A1>;
+        // };
 
         combo_YOU {
             timeout-ms = <50>;
