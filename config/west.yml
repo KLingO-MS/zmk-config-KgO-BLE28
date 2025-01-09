@@ -20,5 +20,8 @@ manifest:
     - name: zmk-rgbled-widget
       remote: caksoylar
       revision: main
+    - name: zmk-adaptive-key
+      remote: urob
+      revision: v0.1
   self:
     path: config
