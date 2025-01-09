@@ -261,7 +261,7 @@
         //     bindings = <&to _A1>;
         //     require-prior-idle-ms = <200>;
         //     layers = <_NV _NP>;
-        };
+        // };
 
 // ------------------------- VOLUME COMBOS --------------------------------
         // combo_V_UP {
