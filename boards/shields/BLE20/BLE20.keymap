@@ -27,7 +27,7 @@
 // };
 
 &sl {
-    release-after-ms = <300>;
+    release-after-ms = <1500>;
 };
 
 / {
@@ -235,7 +235,7 @@
             timeout-ms = <50>;
             key-positions = <RBI RBM RBR>;
             bindings = <&to _NV>;
-            require-prior-idle-ms = <200>;
+            require-prior-idle-ms = <300>;
             layers = <_A1>;
         };
 
@@ -243,15 +243,15 @@
             timeout-ms = <50>;
             key-positions = <LTI LTM LTR>;
             bindings = <&to _NP>;
-            require-prior-idle-ms = <200>;
+            require-prior-idle-ms = <300>;
             layers = <_A1>;
         };
 
         combo_BASER {
             timeout-ms = <50>;
-            key-positions = <RBI RTM RBR>;
+            key-positions = <RBI RBM RBR>;
             bindings = <&to _A1>;
-            require-prior-idle-ms = <200>;
+            require-prior-idle-ms = <300>;
             layers = <_NV _NP>;
         };
 
@@ -309,7 +309,7 @@
             timeout-ms = <50>;
             key-positions = <LBI RBI>;
             bindings = <&caps_word>;
-            require-prior-idle-ms = <200>;
+            require-prior-idle-ms = <300>;
             layers = <_A1 _A2>;
         };
 
@@ -582,7 +582,7 @@
             #binding-cells = <0>;
             bindings = <&sl _A2>;
 
-            akt_bspc { trigger-keys = <BSPC>; max-prior-idle-ms = <150>; bindings = <&kp BSPC>; };
+            akt_bspc { trigger-keys = <BSPC>; max-prior-idle-ms = <250>; bindings = <&kp BSPC>; };
         };
 
         ak_d: ak_d {
