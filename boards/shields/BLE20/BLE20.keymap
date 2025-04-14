@@ -189,14 +189,14 @@
 
         combo_NP_BSPC {
             timeout-ms = <50>;
-            key-positions = <LTM LTI LTR>;
+            key-positions = <LTP LTR>;
             bindings = <&kp BSPC>;
             layers = <_NP>;
         };
 
         combo_KPDOT {
             timeout-ms = <50>;
-            key-positions = <LTP LBP>;
+            key-positions = <LBR LBP>;
             bindings = <&kp KP_DOT>;
             layers = <_NP>;
         };
@@ -640,7 +640,7 @@
                         bindings = <
    &ak_b       &kp L        &kp M       &ak_p             &kp C        &kp O       &kp U        &ak_y
    &hml LALT N &rml LCTRL R &hml LGUI T &asl LSHFT D      &hsr LSHFT S &hmr LGUI A &hmr LCTRL E &hmr LALT I 
-                        &bst _SM EQUAL  &bst _A2 BSPC          &spt _NM SPACE  &spt _NV PLUS
+                        &bst _SM BSPC   &sl _A2           &spt _NM SPACE  &spt _NV BSPC
                         >;
                 };
                         //  &bst _SM BSPC  &bst _A2 BSPC     &spt _NM SPACE  &spt _NV RET
@@ -654,7 +654,7 @@
                         bindings = <
    &kp Q       &kp W        &kp F       &kp H             &kp G        &kp SEMI        &kp COLON      &kp EXCL
    &hml LALT X &hml LCTRL J &hml LGUI V &hsl LSHFT K      &hsr LSHFT Z &hmr LGUI COMMA &hmr LCTRL DOT &hmr LALT QMARK
-                            &none       &kp BSPC          &kp SPACE    &kp RET
+                            &kp BSPC    &none             &kp SPACE    &kp BSPC
                         >;
                 };
 
