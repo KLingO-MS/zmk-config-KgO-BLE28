@@ -578,6 +578,15 @@
             hold-trigger-on-release;             // delay positional check until key-release
         };
 
+        tht: thumb_holdtap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <250>;
+            quick-tap-ms = <170>;                // repeat on tap-into-hold
+            bindings = <&kp>, <&kp>;
+        };
+
         bst: backspace-tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -640,7 +649,7 @@
                         bindings = <
    &ak_b       &kp L        &kp M       &ak_p             &kp C        &kp O       &kp U        &ak_y
    &hml LALT N &rml LCTRL R &hml LGUI T &asl LSHFT D      &hsr LSHFT S &hmr LGUI A &hmr LCTRL E &hmr LALT I 
-                        &bst _SM BSPC   &ak_bspc          &spt _NM SPACE  &spt _NV BSPC
+                         &bst _SM ESC   &ak_bspc          &spt _NM SPACE  &spt _NV RET
                         >;
                 };
                         //  &bst _SM BSPC  &bst _A2 BSPC     &spt _NM SPACE  &spt _NV RET
@@ -654,7 +663,7 @@
                         bindings = <
    &kp Q       &kp W        &kp F       &kp H             &kp G        &kp SEMI        &kp COLON      &kp EXCL
    &hml LALT X &hml LCTRL J &hml LGUI V &hsl LSHFT K      &hsr LSHFT Z &hmr LGUI COMMA &hmr LCTRL DOT &hmr LALT QMARK
-                            &kp BSPC    &none             &kp SPACE    &kp BSPC
+                            &kp ESC     &kp BSPC          &kp SPACE    &kp RET
                         >;
                 };
 
@@ -666,17 +675,17 @@
                         bindings = <
    &kp INS         &win_cp         &mac_cp       &kp PG_UP          &kp TAB         &kp UP         &kp DEL          &kp ESC
    &hml LALT PSCRN &hml LCTRL HOME &hml LGUI END &hsl LSHFT PG_DN   &hsr LSHFT LEFT &hmr LGUI DOWN &hmr LCTRL RIGHT &hmr LALT RET
-                                   &kp K_APP     &kp BSPC           &kp SPACE       &kp LSHFT
+                                   &kp K_APP     &kp BSPC           &tht LSHFT SPACE  &kp BSPC
                         >;
                 };
                 
                 num_layer {
 // -------------------------------    -------------------------------
-// |  /  |  _  |  -  |  5  |                |  6  |  =  |  +  |  *  |
+// |  =  |  +  |  -  |  5  |                |  6  |  _  |  *  |  /  |
 // |  1  |  2  |  3  |  4  |                |  7  |  8  |  9  |  0  |
 //                  | SPC | BSPC |    | SPC | BSPC |
                         bindings = <
-   &kp SLASH    &kp UNDER     &kp MINUS    &kp N5             &kp N6        &kp EQUAL    &kp PLUS      &kp STAR
+   &kp EQUAL    &kp PLUS      &kp MINUS    &kp N5             &kp N6        &kp UNDER    &kp STAR      &kp SLASH
    &hml LALT N1 &hml LCTRL N2 &hml LGUI N3 &hsl LSHFT N4      &hsr LSHFT N7 &hmr LGUI N8 &hmr LCTRL N9 &hmr LALT N0
                               &kp KP_DOT   &kp BSPC           &kp SPACE     &kp BSPC
                         >;
@@ -720,12 +729,12 @@
 
                 num_pad {
 // -------------------------    ---------------------
-// |  8  |  6  |  4  |  2  |    |    |    |    |    |
-// |  7  |  5  |  3  |  1  |    |    |    |    |    |
+// |  8  |  7  |  6  |  5  |    |    |    |    |    |
+// |  4  |  3  |  2  |  1  |    |    |    |    |    |
 //             |  9  |  0  |    |    |    |
                         bindings = <
-   &kp KP_N8 &kp KP_N6 &kp KP_N4 &kp KP_N2        &none  &none  &none  &none
-   &kp KP_N7 &kp KP_N5 &kp KP_N3 &kp KP_N1        &none  &none  &none  &none
+   &kp KP_N8 &kp KP_N7 &kp KP_N6 &kp KP_N5        &none  &none  &none  &none
+   &kp KP_N4 &kp KP_N3 &kp KP_N2 &kp KP_N1        &none  &none  &none  &none
                        &kp KP_N9 &kp KP_N0        &none  &none
                         >;
                 };                
