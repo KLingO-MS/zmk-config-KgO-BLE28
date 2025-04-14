@@ -649,7 +649,7 @@
                         bindings = <
    &ak_b       &kp L        &kp M       &ak_p             &kp C        &kp O       &kp U        &ak_y
    &hml LALT N &rml LCTRL R &hml LGUI T &asl LSHFT D      &hsr LSHFT S &hmr LGUI A &hmr LCTRL E &hmr LALT I 
-                         &bst _SM ESC   &ak_bspc          &spt _NM SPACE  &spt _NV RET
+                         &bst _SM ESC   &bst _A2 BSPC          &spt _NM SPACE  &spt _NV RET
                         >;
                 };
                         //  &bst _SM BSPC  &bst _A2 BSPC     &spt _NM SPACE  &spt _NV RET
