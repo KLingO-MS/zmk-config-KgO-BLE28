@@ -638,7 +638,7 @@
 // |  N  |  R  |  T  |  D  |                |  S  |  A  |  E  |  I  |
 //       | _SM(BSPC) | _A2(BSPC) |    | _NM(SPC) | _NV(RET) |
                         bindings = <
-   &ak_b       &kp L        &kp M       &ak_p             &kp C        &ak_o       &ak_u        &ak_y
+   &ak_b       &kp L        &kp M       &ak_p             &kp C        &kp O       &kp U        &ak_y
    &hml LALT N &rml LCTRL R &hml LGUI T &asl LSHFT D      &hsr LSHFT S &hmr LGUI A &hmr LCTRL E &hmr LALT I 
                         &bst _SM EQUAL  &ak_bspc          &spt _NM SPACE  &spt _NV PLUS
                         >;
