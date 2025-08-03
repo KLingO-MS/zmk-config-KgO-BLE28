@@ -473,8 +473,8 @@
             bindings = <&kp P>;
 
             akt_tv { trigger-keys = <T>; max-prior-idle-ms = <300>; bindings = <&kp V>; };
-            akt_br { trigger-keys = <B>; max-prior-idle-ms = <300>; bindings = <&kp R>; };
-            akt_cr { trigger-keys = <C>; max-prior-idle-ms = <300>; bindings = <&kp R>; };
+            // akt_br { trigger-keys = <B>; max-prior-idle-ms = <300>; bindings = <&kp R>; };
+            // akt_cr { trigger-keys = <C>; max-prior-idle-ms = <300>; bindings = <&kp R>; };
         };
 
         ak_y: ak_y {
@@ -587,8 +587,8 @@
         bst: backspace-tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <250>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
             quick-tap-ms = <170>;
             //require-prior-idle-ms = <100>;
             bindings = <&mo>, <&kp>;
@@ -646,7 +646,7 @@
                         bindings = <
    &ak_b       &kp L        &kp M       &ak_p             &kp C        &kp O       &kp U        &ak_y
    &hml LALT N &rml LCTRL R &hml LGUI T &asl LSHFT D      &hsr LSHFT S &hmr LGUI A &hmr LCTRL E &hmr LALT I 
-                         &bst _SM BSPC  &sl _A2           &spt _NM SPACE  &spt _NV DEL
+                    &bst _SM BSPC  &bst _A2 BSPC          &spt _NM SPACE  &spt _NV DEL
                         >;
                 };
                         //  &bst _SM BSPC  &bst _A2 BSPC     &spt _NM SPACE  &spt _NV RET
@@ -666,13 +666,13 @@
 
                 nav_layer {
 // ---------------------------------    ---------------------------------
-// | INS | wCP  | mCP | PGUP |               | TAB  |  UP  | SPC  | ESC |
+// | INS | wCP  | mCP | PGUP |               | TAB  |  UP  | DEL  | ESC |
 // | PSC | HOME | END | PGDN |               | LEFT | DOWN | RGHT | RET |
-//                    | BSPC | DEL |    | LS(BSPC) | DEL |
+//                   | SPC  | BSPC |    | LS(SPC) | DEL |
                         bindings = <
-   &kp INS         &win_cp         &mac_cp       &kp PG_UP          &kp TAB         &kp UP         &kp SPACE        &kp ESC
-   &hml LALT PSCRN &hml LCTRL HOME &hml LGUI END &hsl LSHFT PG_DN   &hsr LSHFT LEFT &hmr LGUI DOWN &hmr LCTRL RIGHT &hmr LALT RET
-                                   &kp BSPC      &kp DEL            &tht LSHFT BSPC &kp DEL
+   &kp INS         &win_cp         &mac_cp       &kp PG_UP          &kp TAB          &kp UP         &kp DEL          &kp ESC
+   &hml LALT PSCRN &hml LCTRL HOME &hml LGUI END &hsl LSHFT PG_DN   &hsr LSHFT LEFT  &hmr LGUI DOWN &hmr LCTRL RIGHT &hmr LALT RET
+                                   &kp SPACE     &kp BSPC           &tht LSHFT SPACE &kp DEL
                         >;
                 };
                 
@@ -680,11 +680,11 @@
 // -------------------------------    -------------------------------
 // |  =  |  +  |  -  |  5  |                |  6  |  _  |  *  |  /  |
 // |  1  |  2  |  3  |  4  |                |  7  |  8  |  9  |  0  |
-//                  | BSPC | DOT |    | SPC | DEL |
+//                  | DOT | BSPC |    |     |     |
                         bindings = <
    &kp EQUAL    &kp PLUS      &kp MINUS    &kp N5             &kp N6        &kp UNDER    &kp STAR      &kp SLASH
    &hml LALT N1 &hml LCTRL N2 &hml LGUI N3 &hsl LSHFT N4      &hsr LSHFT N7 &hmr LGUI N8 &hmr LCTRL N9 &hmr LALT N0
-                              &kp BSPC     &kp KP_DOT         &none     &none
+                              &kp KP_DOT   &kp BSPC           &none     &none
                         >;
                 };
 
