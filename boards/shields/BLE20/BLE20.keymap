@@ -467,13 +467,21 @@
             akt_ng { trigger-keys = <N>; max-prior-idle-ms = <300>; bindings = <&kp G>; };
         };
 
+        ak_t: ak_t {
+            compatible = "zmk,behavior-adaptive-key";
+            #binding-cells = <0>;
+            bindings = <&kp T>;
+
+            akt_dv { trigger-keys = <D>; max-prior-idle-ms = <300>; bindings = <&kp V>; };
+        };
+
         ak_p: ak_p {
             compatible = "zmk,behavior-adaptive-key";
             #binding-cells = <0>;
             bindings = <&kp P>;
 
             akt_tv { trigger-keys = <T>; max-prior-idle-ms = <300>; bindings = <&kp V>; };
-            // akt_br { trigger-keys = <B>; max-prior-idle-ms = <300>; bindings = <&kp R>; };
+            akt_vt { trigger-keys = <V>; max-prior-idle-ms = <300>; bindings = <&kp T>; };
             akt_ck { trigger-keys = <C>; max-prior-idle-ms = <300>; bindings = <&kp K>; };
         };
 
@@ -535,6 +543,18 @@
             quick-tap-ms = <170>;                // repeat on tap-into-hold
             require-prior-idle-ms = <120>;
             bindings = <&kp>, <&ak_r>;
+            hold-trigger-key-positions = <KEYS_R THUMBS>;
+            hold-trigger-on-release;             // delay positional check until key-release
+        };
+
+        tml: akt_left {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <300>;
+            quick-tap-ms = <170>;                // repeat on tap-into-hold
+            require-prior-idle-ms = <120>;
+            bindings = <&kp>, <&ak_t>;
             hold-trigger-key-positions = <KEYS_R THUMBS>;
             hold-trigger-on-release;             // delay positional check until key-release
         };
@@ -642,11 +662,11 @@
 // -------------------------------    -------------------------------
 // |  B  |  L  |  M  |  P  |                |  C  |  O  |  U  |  Y  |
 // |  N  |  R  |  T  |  D  |                |  S  |  A  |  E  |  I  |
-//             | _SM(BSPC) | _A2 |    | _NM(SPC) | _NV(DEL) |
+//             | _SM(BSPC) | _A2 |    | _NV(SPC) | _NM(DEL) |
                         bindings = <
    &ak_b       &kp L        &kp M       &ak_p             &kp C        &kp O       &kp U        &ak_y
-   &hml LALT N &rml LCTRL R &hml LGUI T &asl LSHFT D      &hsr LSHFT S &hmr LGUI A &hmr LCTRL E &hmr LALT I 
-                    &bst _SM BSPC  &bst _A2 BSPC          &spt _NM SPACE  &spt _NV DEL
+   &hml LALT N &rml LCTRL R &tml LGUI T &asl LSHFT D      &hsr LSHFT S &hmr LGUI A &hmr LCTRL E &hmr LALT I 
+                    &bst _SM BSPC  &bst _A2 BSPC          &spt _NV SPACE  &spt _NM DEL
                         >;
                 };
                         //  &bst _SM BSPC  &bst _A2 BSPC     &spt _NM SPACE  &spt _NV RET
@@ -668,11 +688,11 @@
 // ---------------------------------    ---------------------------------
 // | INS | wCP  | mCP | PGUP |               | TAB  |  UP  | DEL  | ESC |
 // | PSC | HOME | END | PGDN |               | LEFT | DOWN | RGHT | RET |
-//                   | SPC  | BSPC |    | LS(SPC) | DEL |
+//                   | SPC  | BSPC |    | LS(SPC) | BSPC |
                         bindings = <
    &kp INS         &win_cp         &mac_cp       &kp PG_UP          &kp TAB          &kp UP         &kp DEL          &kp ESC
    &hml LALT PSCRN &hml LCTRL HOME &hml LGUI END &hsl LSHFT PG_DN   &hsr LSHFT LEFT  &hmr LGUI DOWN &hmr LCTRL RIGHT &hmr LALT RET
-                                   &kp SPACE     &kp BSPC           &tht LSHFT SPACE &kp DEL
+                                   &kp SPACE     &kp BSPC           &tht LSHFT SPACE &kp BSPC
                         >;
                 };
                 
