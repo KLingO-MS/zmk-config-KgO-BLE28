@@ -457,6 +457,7 @@
 
             akt_sk { trigger-keys = <S>; max-prior-idle-ms = <300>; bindings = <&kp K>; };
             akt_dk { trigger-keys = <D>; max-prior-idle-ms = <300>; bindings = <&kp K>; };
+            akt_tk { trigger-keys = <T>; max-prior-idle-ms = <300>; bindings = <&kp K>; };
             akt_ph { trigger-keys = <P>; max-prior-idle-ms = <300>; bindings = <&kp H>; };
         };
 
