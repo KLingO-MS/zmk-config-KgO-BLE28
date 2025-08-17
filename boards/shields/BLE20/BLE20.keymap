@@ -455,7 +455,8 @@
             #binding-cells = <0>;
             bindings = <&kp B>;
 
-            akt_sc { trigger-keys = <S>; max-prior-idle-ms = <300>; bindings = <&kp C>; };
+            akt_sk { trigger-keys = <S>; max-prior-idle-ms = <300>; bindings = <&kp K>; };
+            akt_dk { trigger-keys = <D>; max-prior-idle-ms = <300>; bindings = <&kp K>; };
             akt_ph { trigger-keys = <P>; max-prior-idle-ms = <300>; bindings = <&kp H>; };
         };
 
@@ -481,6 +482,7 @@
             bindings = <&kp P>;
 
             akt_tv { trigger-keys = <T>; max-prior-idle-ms = <300>; bindings = <&kp V>; };
+            akt_nk { trigger-keys = <N>; max-prior-idle-ms = <300>; bindings = <&kp K>; };
             akt_vt { trigger-keys = <V>; max-prior-idle-ms = <300>; bindings = <&kp T>; };
             akt_ck { trigger-keys = <C>; max-prior-idle-ms = <300>; bindings = <&kp K>; };
         };
