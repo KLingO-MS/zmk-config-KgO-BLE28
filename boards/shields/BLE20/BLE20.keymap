@@ -659,7 +659,7 @@
 //                   |  9  |  0  |    |     |     |
                         bindings = <
    &kp N8       &kp N7        &kp N6       &kp N5             &kp PLUS        &kp MINUS &kp STAR          &kp SLASH
-   &hml LALT N4 &hml LCTRL N3 &hml LGUI N2 &hsl LSHFT N1      &hsr LSHFT NSPC &hmr SPC  &hmr LCTRL KP_DOT &hmr LALT EQUAL
+   &hml LALT N4 &hml LCTRL N3 &hml LGUI N2 &hsl LSHFT N1      &hsr LSHFT BSPC &hmr SPC  &hmr LCTRL KP_DOT &hmr LALT EQUAL
                               &kp N9       &kp N0             &none     &none
                         >;
                 };
