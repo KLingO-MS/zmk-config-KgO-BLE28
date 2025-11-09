@@ -658,8 +658,8 @@
 // |  4  |  3  |  2  |  1  |                | BSPC | SPC |  .  |  =  |
 //                   |  9  |  0  |    |     |     |
                         bindings = <
-   &kp N8       &kp N7        &kp N6       &kp N5             &kp PLUS        &kp MINUS  &kp STAR          &kp SLASH
-   &hml LALT N4 &hml LCTRL N3 &hml LGUI N2 &hsl LSHFT N1      &hsr LSHFT BSPC &hmr SPACE &hmr LCTRL KP_DOT &hmr LALT EQUAL
+   &kp N8       &kp N7        &kp N6       &kp N5             &kp PLUS        &kp MINUS       &kp STAR          &kp SLASH
+   &hml LALT N4 &hml LCTRL N3 &hml LGUI N2 &hsl LSHFT N1      &hsr LSHFT BSPC &hmr LGUI SPACE &hmr LCTRL KP_DOT &hmr LALT EQUAL
                               &kp N9       &kp N0             &none     &none
                         >;
                 };
