@@ -618,11 +618,11 @@
 // -------------------------------    -------------------------------
 // |  B  |  L  |  M  |  P  |                |  C  |  O  |  U  |  Y  |
 // |  N  |  R  |  T  |  D  |                |  S  |  A  |  E  |  I  |
-//             | _SM(BSPC) | _A2 |    | _NV(SPC) | _NM(DEL) |
+//       | _SM(BSPC) | _A2(BSPC) |    | _NV(SPC) | _NM(SPC) |
                         bindings = <
    &ak_b       &kp L        &kp M       &ak_p             &kp C        &kp O       &kp U        &ak_y
    &hml LALT N &rml LCTRL R &tml LGUI T &asl LSHFT D      &hsr LSHFT S &hmr LGUI A &hmr LCTRL E &hmr LALT I 
-                    &bst _SM BSPC  &bst _A2 BSPC          &spt _NV SPACE  &spt _NM DEL
+                    &bst _SM BSPC  &bst _A2 BSPC          &spt _NV SPACE  &spt _NM SPACE
                         >;
                 };
                         //  &bst _SM BSPC  &bst _A2 BSPC     &spt _NM SPACE  &spt _NV RET
@@ -632,11 +632,11 @@
 // -------------------------------    -------------------------------
 // |  Q  |  W  |  F  |  K  |                |  G  |  ;  |  :  |  "  |
 // |  X  |  J  |  V  |  H  |                |  Z  |  ,  |  .  |  '  |
-//                  | BSPC |     |    | SPC | DEL |
+//                  | BSPC |     |    | SPC | SPC |
                         bindings = <
    &kp Q       &kp W        &kp F       &kp K             &kp G        &kp SEMI        &kp COLON      &kp DQT
    &hml LALT X &hml LCTRL J &hml LGUI V &hsl LSHFT H      &hsr LSHFT Z &hmr LGUI COMMA &hmr LCTRL DOT &hmr LALT SQT
-                            &kp BSPC    &none             &kp SPACE    &kp DEL
+                            &kp BSPC    &none             &kp SPACE    &kp SPACE
                         >;
                 };
 
@@ -672,7 +672,7 @@
                         bindings = <
    &kp TILDE       &kp C_MUTE    &kp C_VOL_DN   &kp C_VOL_UP         &kp EXCL         &kp QMARK       &kp PIPE        &kp BSLH
    &hml LALT GRAVE &hml LCTRL AT &hml LGUI HASH &hsl LSHFT DLLR      &hsr LSHFT PRCNT &hmr LGUI CARET &hmr LCTRL AMPS &hmr LALT UNDER
-                                                &none    &none       &kp SPACE     &kp DEL
+                                                &none    &none       &kp SPACE     &kp SPACE
                         >;
                 };
 
