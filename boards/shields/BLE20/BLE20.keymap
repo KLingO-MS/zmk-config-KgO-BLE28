@@ -654,24 +654,24 @@
                 
                 num_layer {
 // -------------------------------    --------------------------------
-// |  8  |  7  |  6  |  5  |                |  +   |  -  |  *  |  /  |
-// |  4  |  3  |  2  |  1  |                | BSPC | SPC |  .  |  =  |
-//                   |  9  |  0  |    |     |     |
+// |  8  |  7  |  6  |  5  |                |  9  |  =  |  *  |  /  |
+// |  4  |  3  |  2  |  1  |                |  0  | SPC |  +  |  -  |
+//                  | . , | BSPC |    |     |     |
                         bindings = <
-   &kp N8       &kp N7        &kp N6       &kp N5             &kp PLUS        &kp MINUS       &kp STAR          &kp SLASH
-   &hml LALT N4 &hml LCTRL N3 &hml LGUI N2 &hsl LSHFT N1      &hsr LSHFT BSPC &hmr LGUI SPACE &hmr LCTRL KP_DOT &hmr LALT EQUAL
-                              &kp N9       &kp N0             &none     &none
+   &kp N8       &kp N7        &kp N6       &kp N5             &kp N9        &kp EQUAL       &kp STAR        &kp SLASH
+   &hml LALT N4 &hml LCTRL N3 &hml LGUI N2 &hsl LSHFT N1      &hsr LSHFT N0 &hmr LGUI SPACE &hmr LCTRL PLUS &hmr LALT MINUS
+                              &kp KP_DOT   &kp BSPC           &none     &none
                         >;
                 };
 
                 sym_layer {
 // -------------------------------    -------------------------------
-// |  ~  |  V. |  V- |  V+ |                |  !  |  _  |  |  |  \  |
-// |  `  |  @  |  #  |  $  |                |  %  |  ^  |  &  |  ?  |
+// |  ~  |  V. |  V- |  V+ |                |  !  |  ?  |  |  |  \  |
+// |  `  |  @  |  #  |  $  |                |  %  |  ^  |  &  |  _  |
 //                   |     |     |    | SPC | BSPC |
                         bindings = <
-   &kp TILDE       &kp C_MUTE    &kp C_VOL_DN   &kp C_VOL_UP         &kp EXCL         &kp UNDER       &kp PIPE        &kp BSLH
-   &hml LALT GRAVE &hml LCTRL AT &hml LGUI HASH &hsl LSHFT DLLR      &hsr LSHFT PRCNT &hmr LGUI CARET &hmr LCTRL AMPS &hmr LALT QMARK
+   &kp TILDE       &kp C_MUTE    &kp C_VOL_DN   &kp C_VOL_UP         &kp EXCL         &kp QMARK       &kp PIPE        &kp BSLH
+   &hml LALT GRAVE &hml LCTRL AT &hml LGUI HASH &hsl LSHFT DLLR      &hsr LSHFT PRCNT &hmr LGUI CARET &hmr LCTRL AMPS &hmr LALT UNDER
                                                 &none    &none       &kp SPACE     &kp DEL
                         >;
                 };
