@@ -20,7 +20,6 @@
 #define _SM      4
 #define _FS      5
 #define _BT      6
-#define _NP      7
 
 // &sk {
 //     quick-release;
@@ -89,10 +88,10 @@
             layers = <_A1>;
         };
 
-        combo_NUMPAD {
+        combo_NUM {
             timeout-ms = <50>;
-            key-positions = <LTI LTM LTR>;
-            bindings = <&to _NP>;
+            key-positions = <LBI LBM LBR>;
+            bindings = <&to _NM>;
             require-prior-idle-ms = <300>;
             layers = <_A1>;
         };
@@ -102,16 +101,16 @@
             key-positions = <RBI RBM RBR>;
             bindings = <&to _A1>;
             require-prior-idle-ms = <300>;
-            layers = <_NV _NP>;
+            layers = <_NV _NM>;
         };
 
-        // combo_BASEL {
-        //     timeout-ms = <50>;
-        //     key-positions = <LBI LTM LBR>;
-        //     bindings = <&to _A1>;
-        //     require-prior-idle-ms = <200>;
-        //     layers = <_NV _NP>;
-        // };
+        combo_BASEL {
+            timeout-ms = <50>;
+            key-positions = <LBI LBM LBR>;
+            bindings = <&to _A1>;
+            require-prior-idle-ms = <300>;
+            layers = <_NV _NM>;
+        };
 
 // ------------------------- VOLUME COMBOS --------------------------------
         // combo_V_UP {
@@ -130,13 +129,12 @@
         //     layers = <_A1>;
         // };
 
-        // combo_MUTE {
-        //     timeout-ms = <40>;
-        //     key-positions = <LOT LIT>;
-        //     bindings = <&kp C_MUTE>;
-        //     require-prior-idle-ms = <200>;
-        //     layers = <_A1>;
-        // };
+        combo_MUTE {
+            timeout-ms = <50>;
+            key-positions = <LTI LTM>;
+            bindings = <&kp C_MUTE>;
+            layers = <_SM>;
+        };
 
         // combo_ESC {
         //     timeout-ms = <50>;
@@ -178,56 +176,6 @@
         //     require-prior-idle-ms = <200>;
         //     //layers = <_BASE>;
         // };
-
-// ------------------------- NUMPAD COMBOS --------------------------------
-        combo_RET {
-            timeout-ms = <50>;
-            key-positions = <LBM LBI LBR>;
-            bindings = <&kp KP_ENTER>;
-            layers = <_NP>;
-        };
-
-        combo_NP_BSPC {
-            timeout-ms = <50>;
-            key-positions = <LTP LTR>;
-            bindings = <&kp BSPC>;
-            layers = <_NP>;
-        };
-
-        combo_KPDOT {
-            timeout-ms = <50>;
-            key-positions = <LBR LBP>;
-            bindings = <&kp KP_DOT>;
-            layers = <_NP>;
-        };
-
-        combo_KPPLUS {
-            timeout-ms = <50>;
-            key-positions = <LTM LTI>;
-            bindings = <&kp KP_PLUS>;
-            layers = <_NP>;
-        };
-
-        combo_KPMINUS {
-            timeout-ms = <50>;
-            key-positions = <LBM LBI>;
-            bindings = <&kp KP_MINUS>;
-            layers = <_NP>;
-        };
-
-        combo_KPSTAR {
-            timeout-ms = <50>;
-            key-positions = <LTR LTM>;
-            bindings = <&kp KP_MULTIPLY>;
-            layers = <_NP>;
-        };
-
-        combo_KPSLASH {
-            timeout-ms = <50>;
-            key-positions = <LBR LBM>;
-            bindings = <&kp KP_DIVIDE>;
-            layers = <_NP>;
-        };
 
 // ------------------------- CHARACTER COMBOS --------------------------------
         combo_OU {
@@ -300,17 +248,19 @@
         //     layers = <_A1>;
         // };
 
-        combo_SQT {
+        combo_EXCL {
             timeout-ms = <50>;
-            key-positions = <LTR LTI>;
-            bindings = <&kp SQT>;
+            key-positions = <RTI RTM>;
+            bindings = <&kp EXCL>;
+            require-prior-idle-ms = <150>;
             layers = <_A1>;
         };
 
-        combo_DQT {
+        combo_QMARK {
             timeout-ms = <50>;
-            key-positions = <RTR RTI>;
-            bindings = <&kp DQT>;
+            key-positions = <RBI RBM>;
+            bindings = <&kp QMARK>;
+            require-prior-idle-ms = <150>;
             layers = <_A1>;
         };
 
@@ -447,7 +397,7 @@
             akt_sh { trigger-keys = <S>; max-prior-idle-ms = <300>; bindings = <&kp H>; };
             akt_gh { trigger-keys = <G>; max-prior-idle-ms = <300>; bindings = <&kp H>; };
 
-            akt_bn { trigger-keys = <B>; max-prior-idle-ms = <300>; bindings = <&kp N>; };
+            akt_br { trigger-keys = <B>; max-prior-idle-ms = <300>; bindings = <&kp R>; };
         };
 
         ak_b: ak_b {
@@ -482,12 +432,13 @@
             #binding-cells = <0>;
             bindings = <&kp P>;
 
-            akt_tv { trigger-keys = <T>; max-prior-idle-ms = <300>; bindings = <&kp V>; };
-            akt_rv { trigger-keys = <R>; max-prior-idle-ms = <300>; bindings = <&kp V>; };
             akt_nk { trigger-keys = <N>; max-prior-idle-ms = <300>; bindings = <&kp K>; };
             akt_lk { trigger-keys = <L>; max-prior-idle-ms = <300>; bindings = <&kp K>; };
-            akt_vt { trigger-keys = <V>; max-prior-idle-ms = <300>; bindings = <&kp T>; };
             akt_ck { trigger-keys = <C>; max-prior-idle-ms = <300>; bindings = <&kp K>; };
+            akt_tv { trigger-keys = <T>; max-prior-idle-ms = <300>; bindings = <&kp V>; };
+            akt_rv { trigger-keys = <R>; max-prior-idle-ms = <300>; bindings = <&kp V>; };
+            akt_vt { trigger-keys = <V>; max-prior-idle-ms = <300>; bindings = <&kp T>; };
+            akt_bn { trigger-keys = <B>; max-prior-idle-ms = <300>; bindings = <&kp N>; };
         };
 
         ak_y: ak_y {
@@ -679,12 +630,12 @@
 
                 alpha_2_layer{
 // -------------------------------    -------------------------------
-// |  Q  |  W  |  F  |  K  |                |  G  |  ;  |  :  |  !  |
-// |  X  |  J  |  V  |  H  |                |  Z  |  ,  |  .  |  ?  |
+// |  Q  |  W  |  F  |  K  |                |  G  |  ;  |  :  |  "  |
+// |  X  |  J  |  V  |  H  |                |  Z  |  ,  |  .  |  '  |
 //                  | BSPC |     |    | SPC | DEL |
                         bindings = <
-   &kp Q       &kp W        &kp F       &kp K             &kp G        &kp SEMI        &kp COLON      &kp EXCL
-   &hml LALT X &hml LCTRL J &hml LGUI V &hsl LSHFT H      &hsr LSHFT Z &hmr LGUI COMMA &hmr LCTRL DOT &hmr LALT QMARK
+   &kp Q       &kp W        &kp F       &kp K             &kp G        &kp SEMI        &kp COLON      &kp DQT
+   &hml LALT X &hml LCTRL J &hml LGUI V &hsl LSHFT H      &hsr LSHFT Z &hmr LGUI COMMA &hmr LCTRL DOT &hmr LALT SQT
                             &kp BSPC    &none             &kp SPACE    &kp DEL
                         >;
                 };
@@ -702,37 +653,37 @@
                 };
                 
                 num_layer {
-// -------------------------------    -------------------------------
-// |  =  |  +  |  -  |  5  |                |  6  |  _  |  *  |  /  |
-// |  1  |  2  |  3  |  4  |                |  7  |  8  |  9  |  0  |
-//                  | DOT | BSPC |    |     |     |
+// -------------------------------    --------------------------------
+// |  8  |  7  |  6  |  5  |                |  +   |  -  |  *  |  /  |
+// |  4  |  3  |  2  |  1  |                | BSPC | SPC |  .  |  =  |
+//                   |  9  |  0  |    |     |     |
                         bindings = <
-   &kp EQUAL    &kp PLUS      &kp MINUS    &kp N5             &kp N6        &kp UNDER    &kp STAR      &kp SLASH
-   &hml LALT N1 &hml LCTRL N2 &hml LGUI N3 &hsl LSHFT N4      &hsr LSHFT N7 &hmr LGUI N8 &hmr LCTRL N9 &hmr LALT N0
-                              &kp KP_DOT   &kp BSPC           &none     &none
+   &kp N8       &kp N7        &kp N6       &kp N5             &kp PLUS        &kp MINUS &kp STAR          &kp SLASH
+   &hml LALT N4 &hml LCTRL N3 &hml LGUI N2 &hsl LSHFT N1      &hsr LSHFT NSPC &hmr SPC  &hmr LCTRL KP_DOT &hmr LALT EQUAL
+                              &kp N9       &kp N0             &none     &none
                         >;
                 };
 
                 sym_layer {
 // -------------------------------    -------------------------------
-// |  V. |  V- |  V+ |  %  |                |  ^  |  `  |  ~  |  \  |
-// |  §  |  @  |  #  |  $  |                |  &  |  '  |  "  |  |  |
+// |  ~  |  V. |  V- |  V+ |                |  !  |  _  |  |  |  \  |
+// |  `  |  @  |  #  |  $  |                |  %  |  ^  |  &  |  ?  |
 //                   |     |     |    | SPC | BSPC |
                         bindings = <
-   &kp C_MUTE      &kp C_VOL_DN  &kp C_VOL_UP   &kp PRCNT            &kp CARET       &kp GRAVE     &kp TILDE      &kp BSLH
-   &hml LALT NUHS  &hml LCTRL AT &hml LGUI HASH &hsl LSHFT DLLR      &hsr LSHFT AMPS &hmr LGUI SQT &hmr LCTRL DQT &hmr LALT PIPE
+   &kp TILDE       &kp C_MUTE    &kp C_VOL_DN   &kp C_VOL_UP         &kp EXCL         &kp UNDER       &kp PIPE        &kp BSLH
+   &hml LALT GRAVE &hml LCTRL AT &hml LGUI HASH &hsl LSHFT DLLR      &hsr LSHFT PRCNT &hmr LGUI CARET &hmr LCTRL AMPS &hmr LALT QMARK
                                                 &none    &none       &kp SPACE     &kp DEL
                         >;
                 };
 
                 fun_layer {
-// -------------------------------    -------------------------------
-// | F1  | F2  | F3  | F4  |                | F5  | F6  | F7  | F8  |
-// | Alt | Ctl | Gui | Sft |                | F9  | F10 | F11 | F12 |
+// -------------------------------    ---------------------------
+// | F9  | F10 | F11 | F12 |                | F1 | F2 | F3 | F4 |
+// | Alt | Ctl | Gui | Sft |                | F5 | F6 | F7 | F8 |
 //                   |     |     |    |     |     |
                         bindings = <
-   &kp F1    &kp F2     &kp F3    &kp F4         &kp F5        &kp F6        &kp F7         &kp F8             
-   &kp LALT  &kp LCTRL  &kp LGUI  &kp LSHFT      &hsl LSHFT F9 &hml LGUI F10 &hml LCTRL F11 &hml LALT F12
+   &kp F9    &kp F10    &kp F11   &kp F12        &kp F1        &kp F2       &kp F3        &kp F4             
+   &kp LALT  &kp LCTRL  &kp LGUI  &kp LSHFT      &hsl LSHFT F5 &hml LGUI F6 &hml LCTRL F7 &hml LALT F8
                                &none  &none      &none  &none
                         >;
                 };
@@ -746,18 +697,6 @@
    &none        &none        &out OUT_TOG &bt BT_SEL 4        &none  &none  &none  &none
    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3        &none  &none  &none  &none
                                           &none  &none        &none  &none
-                        >;
-                };                
-
-                num_pad {
-// -------------------------    ---------------------
-// |  8  |  7  |  6  |  5  |    |    |    |    |    |
-// |  4  |  3  |  2  |  1  |    |    |    |    |    |
-//             |  9  |  0  |    |    |    |
-                        bindings = <
-   &kp KP_N8 &kp KP_N7 &kp KP_N6 &kp KP_N5        &none  &none  &none  &none
-   &kp KP_N4 &kp KP_N3 &kp KP_N2 &kp KP_N1        &none  &none  &none  &none
-                       &kp KP_N9 &kp KP_N0        &none  &none
                         >;
                 };                
 
