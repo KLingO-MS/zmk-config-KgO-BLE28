@@ -266,56 +266,56 @@
 
         combo_LPAR {
             timeout-ms = <40>;
-            key-positions = <LBI LTI>;
+            key-positions = <LBI LIT>;
             bindings = <&kp LPAR>;
             layers = <_A1>;
         };
 
         combo_RPAR {
             timeout-ms = <50>;
-            key-positions = <RTI RBI>;
+            key-positions = <RIT RBI>;
             bindings = <&kp RPAR>;
             layers = <_A1>;
         };
 
         combo_LBRC {
             timeout-ms = <50>;
-            key-positions = <LBM LTM>;
+            key-positions = <LBM LIT>;
             bindings = <&kp LBRC>;
             layers = <_A1>;
         };
 
         combo_RBRC {
             timeout-ms = <50>;
-            key-positions = <RTM RBM>;
+            key-positions = <RIT RBM>;
             bindings = <&kp RBRC>;
             layers = <_A1>;
         };
 
         combo_LBKT {
             timeout-ms = <50>;
-            key-positions = <LBR LTR>;
+            key-positions = <LBR LIT>;
             bindings = <&kp LBKT>;
             layers = <_A1>;
         };
 
         combo_RBKT {
             timeout-ms = <50>;
-            key-positions = <RBR RTR>;
+            key-positions = <RBR RIT>;
             bindings = <&kp RBKT>;
             layers = <_A1>;
         };
 
         combo_LT {
             timeout-ms = <50>;
-            key-positions = <LBP LTP>;
+            key-positions = <LBP LIT>;
             bindings = <&kp LT>;
             layers = <_A1>;
         };
 
         combo_GT {
             timeout-ms = <50>;
-            key-positions = <RBP RTP>;
+            key-positions = <RBP RIT>;
             bindings = <&kp GT>;
             layers = <_A1>;
         };
