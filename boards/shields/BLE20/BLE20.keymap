@@ -618,11 +618,11 @@
 // -------------------------------    -------------------------------
 // |  B  |  L  |  M  |  P  |                |  C  |  O  |  U  |  Y  |
 // |  N  |  R  |  T  |  D  |                |  S  |  A  |  E  |  I  |
-//       | _SM(BSPC) | _A2(BSPC) |    | _NV(SPC) | _NM(SPC) |
+//       | _SM(BSPC) | _A2(BSPC) |    | _NM(SPC) | _NV(SPC) |
                         bindings = <
    &ak_b       &kp L        &kp M       &ak_p             &kp C        &kp O       &kp U        &ak_y
    &hml LALT N &rml LCTRL R &tml LGUI T &asl LSHFT D      &hsr LSHFT S &hmr LGUI A &hmr LCTRL E &hmr LALT I 
-                    &bst _SM BSPC  &bst _A2 BSPC          &spt _NV SPACE  &spt _NM SPACE
+                    &bst _SM BSPC  &bst _A2 BSPC          &spt _NM SPACE  &spt _NV SPACE
                         >;
                 };
                         //  &bst _SM BSPC  &bst _A2 BSPC     &spt _NM SPACE  &spt _NV RET
@@ -644,34 +644,34 @@
 // ---------------------------------    ---------------------------------
 // | INS | wCP  | mCP | PGUP |               | TAB  |  UP  | DEL  | ESC |
 // | PSC | HOME | END | PGDN |               | LEFT | DOWN | RGHT | RET |
-//                   | SPC  | BSPC |    | LS(SPC) | BSPC |
+//                   | SPC  | BSPC |    | BSPC | LS(SPC) |
                         bindings = <
    &kp INS         &win_cp         &mac_cp       &kp PG_UP          &kp TAB          &kp UP         &kp DEL          &kp ESC
    &hml LALT PSCRN &hml LCTRL HOME &hml LGUI END &hsl LSHFT PG_DN   &hsr LSHFT LEFT  &hmr LGUI DOWN &hmr LCTRL RIGHT &hmr LALT RET
-                                   &kp SPACE     &kp BSPC           &tht LSHFT SPACE &kp BSPC
+                                   &kp SPACE     &kp BSPC           &kp BSPC         &tht LSHFT SPACE
                         >;
                 };
                 
                 num_layer {
 // -------------------------------    --------------------------------
-// |  8  |  7  |  6  |  5  |                |  9  |  =  |  *  |  /  |
-// |  4  |  3  |  2  |  1  |                |  0  | SPC |  +  |  -  |
+// |  8  |  7  |  6  |  5  |                |  +  |  -  |  *  |  /  |
+// |  4  |  3  |  2  |  1  |                |  9  | SPC |  0  |  =  |
 //                  | . , | BSPC |    |     |     |
                         bindings = <
-   &kp N8       &kp N7        &kp N6       &kp N5             &kp N9        &kp EQUAL       &kp STAR        &kp SLASH
-   &hml LALT N4 &hml LCTRL N3 &hml LGUI N2 &hsl LSHFT N1      &hsr LSHFT N0 &hmr LGUI SPACE &hmr LCTRL PLUS &hmr LALT MINUS
+   &kp N8       &kp N7        &kp N6       &kp N5             &kp PLUS      &kp MINUS       &kp STAR      &kp SLASH
+   &hml LALT N4 &hml LCTRL N3 &hml LGUI N2 &hsl LSHFT N1      &hsr LSHFT N9 &hmr LGUI SPACE &hmr LCTRL N0 &hmr LALT EQUAL
                               &kp KP_DOT   &kp BSPC           &none     &none
                         >;
                 };
 
                 sym_layer {
 // -------------------------------    -------------------------------
-// |  ~  |  V. |  V- |  V+ |                |  !  |  ?  |  |  |  \  |
-// |  `  |  @  |  #  |  $  |                |  %  |  ^  |  &  |  _  |
+// |  ~  |  V. |  V- |  V+ |                |  !  |  _  |  |  |  \  |
+// |  `  |  @  |  #  |  $  |                |  %  |  ^  |  &  |  ?  |
 //                   |     |     |    | SPC | BSPC |
                         bindings = <
-   &kp TILDE       &kp C_MUTE    &kp C_VOL_DN   &kp C_VOL_UP         &kp EXCL         &kp QMARK       &kp PIPE        &kp BSLH
-   &hml LALT GRAVE &hml LCTRL AT &hml LGUI HASH &hsl LSHFT DLLR      &hsr LSHFT PRCNT &hmr LGUI CARET &hmr LCTRL AMPS &hmr LALT UNDER
+   &kp TILDE       &kp C_MUTE    &kp C_VOL_DN   &kp C_VOL_UP         &kp EXCL         &kp UNDER       &kp PIPE        &kp BSLH
+   &hml LALT GRAVE &hml LCTRL AT &hml LGUI HASH &hsl LSHFT DLLR      &hsr LSHFT PRCNT &hmr LGUI CARET &hmr LCTRL AMPS &hmr LALT QMARK
                                                 &none    &none       &kp SPACE     &kp SPACE
                         >;
                 };
