@@ -253,7 +253,7 @@
             key-positions = <RTI RTM>;
             bindings = <&kp EXCL>;
             require-prior-idle-ms = <150>;
-            layers = <_A1>;
+            layers = <_A1 _A2>;
         };
 
         combo_QMARK {
@@ -261,7 +261,7 @@
             key-positions = <RBI RBM>;
             bindings = <&kp QMARK>;
             require-prior-idle-ms = <150>;
-            layers = <_A1>;
+            layers = <_A1 _A2>;
         };
 
         combo_LPAR {
