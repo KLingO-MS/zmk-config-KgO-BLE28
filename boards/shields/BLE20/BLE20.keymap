@@ -455,18 +455,18 @@
         };
 
 // ------------------------- TAP-DANCES --------------------------------
-        win_cp: win_cp {
+        copy: copy {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <400>;
-            bindings = <&kp LC(V)>, <&kp LC(C)>, <&kp LC(X)>;
+            bindings = <&kp LG(C)>, <&kp LC(C)>;
         };
 
-        mac_cp: mac_cp {
+        pasta: pasta {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <400>;
-            bindings = <&kp LG(V)>, <&kp LG(C)>, <&kp LG(X)>;
+            bindings = <&kp LG(V)>, <&kp LC(V)>;
         };
 
 // ------------------------- HOLD-TAPS --------------------------------
@@ -647,13 +647,13 @@
 
                 nav_layer {
 // ---------------------------------    ---------------------------------
-// | INS | wCP  | mCP | PGUP |               | TAB  |  UP  | DEL  | ESC |
-// | PSC | HOME | END | PGDN |               | LEFT | DOWN | RGHT | RET |
+// | INS | COPY | PGUP | PASTA |             | TAB  |  UP  | DEL  | ESC |
+// | PSC | HOME | PGDN |  END  |             | LEFT | DOWN | RGHT | RET |
 //                   | SPC  | BSPC |    | BSPC | LS(SPC) |
                         bindings = <
-   &kp INS         &win_cp         &mac_cp       &kp PG_UP          &kp TAB          &kp UP         &kp DEL          &kp ESC
-   &hml LALT PSCRN &hml LCTRL HOME &hml LGUI END &hsl LSHFT PG_DN   &hsr LSHFT LEFT  &hmr LGUI DOWN &hmr LCTRL RIGHT &hmr LALT RET
-                                   &kp SPACE     &kp BSPC           &kp BSPC         &tht LSHFT SPACE
+   &kp INS         &copy           &kp PG_UP       &pasta           &kp TAB          &kp UP         &kp DEL          &kp ESC
+   &hml LALT PSCRN &hml LCTRL HOME &hml LGUI PD_DN &hsl LSHFT END   &hsr LSHFT LEFT  &hmr LGUI DOWN &hmr LCTRL RIGHT &hmr LALT RET
+                                   &kp SPACE       &kp BSPC         &kp BSPC         &tht LSHFT SPACE
                         >;
                 };
                 
