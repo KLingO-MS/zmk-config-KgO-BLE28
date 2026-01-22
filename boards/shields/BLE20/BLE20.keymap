@@ -507,17 +507,17 @@
             hold-trigger-on-release;             // delay positional check until key-release
         };
 
-        tml: akt_left {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <300>;
-            quick-tap-ms = <170>;                // repeat on tap-into-hold
-            require-prior-idle-ms = <120>;
-            bindings = <&kp>, <&ak_t>;
-            hold-trigger-key-positions = <KEYS_R THUMBS>;
-            hold-trigger-on-release;             // delay positional check until key-release
-        };
+        // tml: akt_left {
+        //     compatible = "zmk,behavior-hold-tap";
+        //     #binding-cells = <2>;
+        //     flavor = "tap-preferred";
+        //     tapping-term-ms = <300>;
+        //     quick-tap-ms = <170>;                // repeat on tap-into-hold
+        //     require-prior-idle-ms = <120>;
+        //     bindings = <&kp>, <&ak_t>;
+        //     hold-trigger-key-positions = <KEYS_R THUMBS>;
+        //     hold-trigger-on-release;             // delay positional check until key-release
+        // };
 
         asl: aks_left {
             compatible = "zmk,behavior-hold-tap";
