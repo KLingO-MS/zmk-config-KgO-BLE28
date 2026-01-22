@@ -653,7 +653,7 @@
 //                   | SPC  | BSPC |    | BSPC | LS(SPC) |
                         bindings = <
    &kp INS         &copy           &kp PG_UP       &pasta           &kp TAB          &kp UP         &kp DEL          &kp ESC
-   &hml LALT PSCRN &hml LCTRL HOME &hml LGUI PD_DN &hsl LSHFT END   &hsr LSHFT LEFT  &hmr LGUI DOWN &hmr LCTRL RIGHT &hmr LALT RET
+   &hml LALT PSCRN &hml LCTRL HOME &hml LGUI PG_DN &hsl LSHFT END   &hsr LSHFT LEFT  &hmr LGUI DOWN &hmr LCTRL RIGHT &hmr LALT RET
                                    &kp SPACE       &kp BSPC         &kp BSPC         &tht LSHFT SPACE
                         >;
                 };
