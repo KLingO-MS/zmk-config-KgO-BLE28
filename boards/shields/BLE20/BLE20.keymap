@@ -413,6 +413,7 @@
             akt_sv { trigger-keys = <S>; max-prior-idle-ms = <300>; bindings = <&kp V>; };
             akt_dv { trigger-keys = <D>; max-prior-idle-ms = <300>; bindings = <&kp V>; };
             akt_tv { trigger-keys = <T>; max-prior-idle-ms = <300>; bindings = <&kp V>; };
+            akt_kv { trigger-keys = <K>; max-prior-idle-ms = <300>; bindings = <&kp V>; };
         };
 
         ak_r: ak_r {
