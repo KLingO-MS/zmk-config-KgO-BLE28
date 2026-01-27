@@ -3,7 +3,7 @@ id: BLE20
 name: BLE20
 type: shield
 url: handwired 20 keys split
-requires: [xiao_ble]
+requires: [seeed_xiao_ble]
 features:
   - keys
 siblings:

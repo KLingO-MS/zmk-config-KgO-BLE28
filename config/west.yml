@@ -13,7 +13,7 @@ manifest:
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: main
+      revision: v0.3
       # remote: zephyr35
       # revision: core/zephyr-3.5-update
       import: app/west.yml
