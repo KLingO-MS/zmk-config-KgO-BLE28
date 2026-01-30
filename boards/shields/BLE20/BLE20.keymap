@@ -685,12 +685,12 @@
                 fun_layer {
 // -------------------------------    ---------------------------
 // | F9  | F10 | F11 | F12 |                | F1 | F2 | F3 | F4 |
-// | Alt | Ctl | Gui | Sft |                | F5 | F6 | F7 | F8 |
+// | F13 | F14 | F15 | F16 |                | F5 | F6 | F7 | F8 |
 //                   |     |     |    |     |     |
                         bindings = <
-   &kp F9    &kp F10    &kp F11   &kp F12        &kp F1        &kp F2       &kp F3        &kp F4             
-   &kp LALT  &kp LCTRL  &kp LGUI  &kp LSHFT      &hsl LSHFT F5 &hml LGUI F6 &hml LCTRL F7 &hml LALT F8
-                               &none  &none      &none  &none
+   &kp F9        &kp F10        &kp F11       &kp F12             &kp F1         &kp F2       &kp F3        &kp F4             
+   &hml LALT F13 &hml LCTRL F14 &hml LGUI F15 &hsl LSHFT F16      &hsl LSHFT F5 &hml LGUI F6 &hml LCTRL F7 &hml LALT F8
+                                                &none  &none      &none  &none
                         >;
                 };
 
