@@ -265,56 +265,56 @@
         };
 
         combo_LPAR {
-            timeout-ms = <40>;
+            timeout-ms = <60>;
             key-positions = <LBI LIT>;
             bindings = <&kp LPAR>;
             layers = <_A1>;
         };
 
         combo_RPAR {
-            timeout-ms = <50>;
+            timeout-ms = <60>;
             key-positions = <RIT RBI>;
             bindings = <&kp RPAR>;
             layers = <_A1>;
         };
 
         combo_LBRC {
-            timeout-ms = <50>;
+            timeout-ms = <60>;
             key-positions = <LBM LIT>;
             bindings = <&kp LBRC>;
             layers = <_A1>;
         };
 
         combo_RBRC {
-            timeout-ms = <50>;
+            timeout-ms = <60>;
             key-positions = <RIT RBM>;
             bindings = <&kp RBRC>;
             layers = <_A1>;
         };
 
         combo_LBKT {
-            timeout-ms = <50>;
+            timeout-ms = <60>;
             key-positions = <LBR LIT>;
             bindings = <&kp LBKT>;
             layers = <_A1>;
         };
 
         combo_RBKT {
-            timeout-ms = <50>;
+            timeout-ms = <60>;
             key-positions = <RBR RIT>;
             bindings = <&kp RBKT>;
             layers = <_A1>;
         };
 
         combo_LT {
-            timeout-ms = <50>;
+            timeout-ms = <60>;
             key-positions = <LBP LIT>;
             bindings = <&kp LT>;
             layers = <_A1>;
         };
 
         combo_GT {
-            timeout-ms = <50>;
+            timeout-ms = <60>;
             key-positions = <RBP RIT>;
             bindings = <&kp GT>;
             layers = <_A1>;
@@ -459,14 +459,14 @@
         copy: copy {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <400>;
+            tapping-term-ms = <300>;
             bindings = <&kp LG(C)>, <&kp LC(C)>;
         };
 
         pasta: pasta {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <400>;
+            tapping-term-ms = <300>;
             bindings = <&kp LG(V)>, <&kp LC(V)>;
         };
 
@@ -527,7 +527,7 @@
             flavor = "balanced";
             tapping-term-ms = <300>;
             quick-tap-ms = <170>;                // repeat on tap-into-hold
-            require-prior-idle-ms = <150>;
+            require-prior-idle-ms = <120>;
             bindings = <&kp>, <&ak_d>;
             hold-trigger-key-positions = <KEYS_R THUMBS>;
             hold-trigger-on-release;             // delay positional check until key-release
@@ -539,7 +539,7 @@
             flavor = "balanced";
             tapping-term-ms = <300>;
             quick-tap-ms = <170>;                // repeat on tap-into-hold
-            require-prior-idle-ms = <150>;
+            require-prior-idle-ms = <120>;
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <KEYS_R THUMBS>;
             hold-trigger-on-release;             // delay positional check until key-release
@@ -551,7 +551,7 @@
             flavor = "balanced";
             tapping-term-ms = <300>;
             quick-tap-ms = <170>;                // repeat on tap-into-hold
-            require-prior-idle-ms = <150>;
+            require-prior-idle-ms = <120>;
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <KEYS_L THUMBS>;
             hold-trigger-on-release;             // delay positional check until key-release
