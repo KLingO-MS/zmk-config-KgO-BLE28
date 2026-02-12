@@ -21,12 +21,10 @@
 #define _FS      5
 #define _BT      6
 
-// &sk {
-//     quick-release;
-// };
 
-&sl {
+&sk {
     release-after-ms = <1500>;
+    quick-release;
 };
 
 / {
@@ -80,9 +78,23 @@
             require-prior-idle-ms = <200>;
         };
 
-        combo_NAV {
+        combo_RSFT {
             timeout-ms = <50>;
             key-positions = <RBI RBM RBR>;
+            bindings = <&sk LSHIFT>;
+            layers = <_A1 _A2>;
+        };
+
+        combo_LSFT {
+            timeout-ms = <50>;
+            key-positions = <LBI LBM LBR>;
+            bindings = <&sk LSHIFT>;
+            layers = <_A1 _A2>;
+        };
+
+        combo_NAV {
+            timeout-ms = <50>;
+            key-positions = <RTI RTM RTR>;
             bindings = <&to _NV>;
             require-prior-idle-ms = <300>;
             layers = <_A1>;
@@ -90,7 +102,7 @@
 
         combo_NUM {
             timeout-ms = <50>;
-            key-positions = <LBI LBM LBR>;
+            key-positions = <LTI LTM LTR>;
             bindings = <&to _NM>;
             require-prior-idle-ms = <300>;
             layers = <_A1>;
@@ -98,7 +110,7 @@
 
         combo_BASER {
             timeout-ms = <50>;
-            key-positions = <RBI RBM RBR>;
+            key-positions = <RTI RTM RTR>;
             bindings = <&to _A1>;
             require-prior-idle-ms = <300>;
             layers = <_NV _NM>;
@@ -106,7 +118,7 @@
 
         combo_BASEL {
             timeout-ms = <50>;
-            key-positions = <LBI LBM LBR>;
+            key-positions = <LTI LTM LTR>;
             bindings = <&to _A1>;
             require-prior-idle-ms = <300>;
             layers = <_NV _NM>;
@@ -443,6 +455,7 @@
             akt_ck { trigger-keys = <C>; max-prior-idle-ms = <300>; bindings = <&kp K>; };
             akt_tk { trigger-keys = <T>; max-prior-idle-ms = <300>; bindings = <&kp K>; };
             akt_rk { trigger-keys = <R>; max-prior-idle-ms = <300>; bindings = <&kp K>; };
+            akt_dk { trigger-keys = <D>; max-prior-idle-ms = <300>; bindings = <&kp K>; };
 
             akt_bn { trigger-keys = <B>; max-prior-idle-ms = <300>; bindings = <&kp N>; };
         };
