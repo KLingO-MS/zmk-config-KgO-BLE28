@@ -22,10 +22,10 @@
 #define _BT      6
 
 
-&sk {
-    release-after-ms = <1500>;
-    quick-release;
-};
+// &sk {
+//     release-after-ms = <1500>
+//     quick-release;
+// };
 
 / {
 // ------------------------- MACROS --------------------------------
@@ -78,23 +78,9 @@
             require-prior-idle-ms = <200>;
         };
 
-        combo_RSFT {
-            timeout-ms = <50>;
-            key-positions = <RBI RBM RBR>;
-            bindings = <&sk LSHIFT>;
-            layers = <_A1 _A2>;
-        };
-
-        combo_LSFT {
-            timeout-ms = <50>;
-            key-positions = <LBI LBM LBR>;
-            bindings = <&sk LSHIFT>;
-            layers = <_A1 _A2>;
-        };
-
         combo_NAV {
             timeout-ms = <50>;
-            key-positions = <RTI RTM RTR>;
+            key-positions = <RBI RBM RBR>;
             bindings = <&to _NV>;
             require-prior-idle-ms = <300>;
             layers = <_A1>;
@@ -102,7 +88,7 @@
 
         combo_NUM {
             timeout-ms = <50>;
-            key-positions = <LTI LTM LTR>;
+            key-positions = <LBI LBM LBR>;
             bindings = <&to _NM>;
             require-prior-idle-ms = <300>;
             layers = <_A1>;
@@ -110,7 +96,7 @@
 
         combo_BASER {
             timeout-ms = <50>;
-            key-positions = <RTI RTM RTR>;
+            key-positions = <RBI RBM RBR>;
             bindings = <&to _A1>;
             require-prior-idle-ms = <300>;
             layers = <_NV _NM>;
@@ -118,7 +104,7 @@
 
         combo_BASEL {
             timeout-ms = <50>;
-            key-positions = <LTI LTM LTR>;
+            key-positions = <LBI LBM LBR>;
             bindings = <&to _A1>;
             require-prior-idle-ms = <300>;
             layers = <_NV _NM>;
@@ -141,12 +127,12 @@
         //     layers = <_A1>;
         // };
 
-        combo_MUTE {
-            timeout-ms = <50>;
-            key-positions = <LTI LTM>;
-            bindings = <&kp C_MUTE>;
-            layers = <_SM>;
-        };
+        // combo_MUTE {
+        //     timeout-ms = <50>;
+        //     key-positions = <LTI LTM>;
+        //     bindings = <&kp C_MUTE>;
+        //     layers = <_SM>;
+        // };
 
         // combo_ESC {
         //     timeout-ms = <50>;
@@ -262,7 +248,7 @@
 
         combo_EXCL {
             timeout-ms = <50>;
-            key-positions = <RTI RTM>;
+            key-positions = <LBP LBR>;
             bindings = <&kp EXCL>;
             require-prior-idle-ms = <150>;
             layers = <_A1 _A2>;
@@ -270,7 +256,7 @@
 
         combo_QMARK {
             timeout-ms = <50>;
-            key-positions = <RBI RBM>;
+            key-positions = <RBP RBR>;
             bindings = <&kp QMARK>;
             require-prior-idle-ms = <150>;
             layers = <_A1 _A2>;
@@ -278,56 +264,56 @@
 
         combo_LPAR {
             timeout-ms = <60>;
-            key-positions = <LBI LIT>;
+            key-positions = <LBI LBM>;
             bindings = <&kp LPAR>;
             layers = <_A1>;
         };
 
         combo_RPAR {
             timeout-ms = <60>;
-            key-positions = <RIT RBI>;
+            key-positions = <RBI RBM>;
             bindings = <&kp RPAR>;
             layers = <_A1>;
         };
 
         combo_LBRC {
             timeout-ms = <60>;
-            key-positions = <LBM LIT>;
+            key-positions = <LTM LTR>;
             bindings = <&kp LBRC>;
             layers = <_A1>;
         };
 
         combo_RBRC {
             timeout-ms = <60>;
-            key-positions = <RIT RBM>;
+            key-positions = <RTM RTR>;
             bindings = <&kp RBRC>;
             layers = <_A1>;
         };
 
         combo_LBKT {
             timeout-ms = <60>;
-            key-positions = <LBR LIT>;
+            key-positions = <LTI LTM>;
             bindings = <&kp LBKT>;
             layers = <_A1>;
         };
 
         combo_RBKT {
             timeout-ms = <60>;
-            key-positions = <RBR RIT>;
+            key-positions = <RTM RTI>;
             bindings = <&kp RBKT>;
             layers = <_A1>;
         };
 
         combo_LT {
             timeout-ms = <60>;
-            key-positions = <LBP LIT>;
+            key-positions = <LBM LBR>;
             bindings = <&kp LT>;
             layers = <_A1>;
         };
 
         combo_GT {
             timeout-ms = <60>;
-            key-positions = <RBP RIT>;
+            key-positions = <RBM RBR>;
             bindings = <&kp GT>;
             layers = <_A1>;
         };
