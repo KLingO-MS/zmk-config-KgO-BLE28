@@ -248,7 +248,7 @@
 
         combo_EXCL {
             timeout-ms = <50>;
-            key-positions = <LBP LBR>;
+            key-positions = <LBM LBR>;
             bindings = <&kp EXCL>;
             require-prior-idle-ms = <150>;
             layers = <_A1 _A2>;
@@ -256,7 +256,7 @@
 
         combo_QMARK {
             timeout-ms = <50>;
-            key-positions = <RBP RBR>;
+            key-positions = <RBM RBR>;
             bindings = <&kp QMARK>;
             require-prior-idle-ms = <150>;
             layers = <_A1 _A2>;
@@ -278,14 +278,14 @@
 
         combo_LBRC {
             timeout-ms = <60>;
-            key-positions = <LTM LTR>;
+            key-positions = <LTI LTR>;
             bindings = <&kp LBRC>;
             layers = <_A1>;
         };
 
         combo_RBRC {
             timeout-ms = <60>;
-            key-positions = <RTM RTR>;
+            key-positions = <RTI RTR>;
             bindings = <&kp RBRC>;
             layers = <_A1>;
         };
@@ -306,14 +306,14 @@
 
         combo_LT {
             timeout-ms = <60>;
-            key-positions = <LBM LBR>;
+            key-positions = <LBI LBR>;
             bindings = <&kp LT>;
             layers = <_A1>;
         };
 
         combo_GT {
             timeout-ms = <60>;
-            key-positions = <RBM RBR>;
+            key-positions = <RBI RBR>;
             bindings = <&kp GT>;
             layers = <_A1>;
         };
