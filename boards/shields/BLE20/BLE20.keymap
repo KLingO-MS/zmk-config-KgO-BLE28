@@ -405,7 +405,7 @@
 
             akt_ph { trigger-keys = <P>; max-prior-idle-ms = <300>; bindings = <&kp H>; };
 
-            akt_vt { trigger-keys = <V>; max-prior-idle-ms = <300>; bindings = <&kp T>; };
+            // akt_vt { trigger-keys = <V>; max-prior-idle-ms = <300>; bindings = <&kp T>; };
 
             akt_rv { trigger-keys = <R>; max-prior-idle-ms = <300>; bindings = <&kp V>; };
             akt_sv { trigger-keys = <S>; max-prior-idle-ms = <300>; bindings = <&kp V>; };
@@ -420,7 +420,7 @@
             bindings = <&kp R>;
 
             akt_ng { trigger-keys = <N>; max-prior-idle-ms = <300>; bindings = <&kp G>; };
-            akt_sk { trigger-keys = <S>; max-prior-idle-ms = <300>; bindings = <&kp K>; };
+            // akt_sk { trigger-keys = <S>; max-prior-idle-ms = <300>; bindings = <&kp K>; };
         };
 
         // ak_t: ak_t {
@@ -441,7 +441,7 @@
             akt_ck { trigger-keys = <C>; max-prior-idle-ms = <300>; bindings = <&kp K>; };
             akt_tk { trigger-keys = <T>; max-prior-idle-ms = <300>; bindings = <&kp K>; };
             akt_rk { trigger-keys = <R>; max-prior-idle-ms = <300>; bindings = <&kp K>; };
-            akt_dk { trigger-keys = <D>; max-prior-idle-ms = <300>; bindings = <&kp K>; };
+            // akt_dk { trigger-keys = <D>; max-prior-idle-ms = <300>; bindings = <&kp K>; };
 
             akt_bn { trigger-keys = <B>; max-prior-idle-ms = <300>; bindings = <&kp N>; };
         };
@@ -526,7 +526,7 @@
             flavor = "balanced";
             tapping-term-ms = <300>;
             quick-tap-ms = <170>;                // repeat on tap-into-hold
-            require-prior-idle-ms = <120>;
+            // require-prior-idle-ms = <100>;
             bindings = <&kp>, <&ak_d>;
             hold-trigger-key-positions = <KEYS_R THUMBS>;
             hold-trigger-on-release;             // delay positional check until key-release
@@ -538,7 +538,7 @@
             flavor = "balanced";
             tapping-term-ms = <300>;
             quick-tap-ms = <170>;                // repeat on tap-into-hold
-            require-prior-idle-ms = <120>;
+            // require-prior-idle-ms = <100>;
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <KEYS_R THUMBS>;
             hold-trigger-on-release;             // delay positional check until key-release
@@ -550,7 +550,7 @@
             flavor = "balanced";
             tapping-term-ms = <300>;
             quick-tap-ms = <170>;                // repeat on tap-into-hold
-            require-prior-idle-ms = <120>;
+            // require-prior-idle-ms = <100>;
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <KEYS_L THUMBS>;
             hold-trigger-on-release;             // delay positional check until key-release
