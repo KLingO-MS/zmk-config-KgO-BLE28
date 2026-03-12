@@ -2,26 +2,18 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: caksoylar
-      url-base: https://github.com/caksoylar
-    - name: xudongz
-      url-base: https://github.com/xudongzheng
     - name: urob
       url-base: https://github.com/urob
-    - name: zephyr35
-      url-base: https://github.com/petejohanson
   projects:
     - name: zmk
       remote: zmkfirmware
       revision: v0.3
-      # remote: zephyr35
-      # revision: core/zephyr-3.5-update
       import: app/west.yml
-    - name: zmk-rgbled-widget
-      remote: caksoylar
-      revision: v0.3
+    - name: zmk-rgbled-widget  # <-- new entry
+      url: https://github.com/caksoylar/zmk-rgbled-widget
+      revision: v0.3           # MUST match your ZMK version!
     - name: zmk-adaptive-key
       remote: urob
-      revision: v0.1
+      revision: v0.3
   self:
     path: config
