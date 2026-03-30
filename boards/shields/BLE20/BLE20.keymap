@@ -183,19 +183,19 @@
             layers = <_A1>;
         };
 
-        // combo_ARE {
-        //     timeout-ms = <50>;
-        //     key-positions = <LTI LTM LTR>;
-        //     bindings = <&mlc_are>;
-        //     layers = <_A1>;
-        // };
+        combo_0 {
+            timeout-ms = <50>;
+            key-positions = <LBI LBM>;
+            bindings = <&kp N0>;
+            layers = <_NM>;
+        };
 
-        // combo_YOU {
-        //     timeout-ms = <50>;
-        //     key-positions = <RBI RBM RBR>;
-        //     bindings = <&mm_you>;
-        //     layers = <_A1>;
-        // };
+        combo_9 {
+            timeout-ms = <50>;
+            key-positions = <LTI LTM>;
+            bindings = <&kp N9>;
+            layers = <_NM>;
+        };
 
         // combo_THE {
         //     timeout-ms = <50>;
@@ -420,16 +420,16 @@
             bindings = <&kp R>;
 
             akt_ng { trigger-keys = <N>; max-prior-idle-ms = <300>; bindings = <&kp G>; };
-            // akt_sk { trigger-keys = <S>; max-prior-idle-ms = <300>; bindings = <&kp K>; };
+            akt_sk { trigger-keys = <S>; max-prior-idle-ms = <300>; bindings = <&kp K>; };
         };
 
-        // ak_t: ak_t {
-        //     compatible = "zmk,behavior-adaptive-key";
-        //     #binding-cells = <0>;
-        //     bindings = <&kp T>;
+        ak_t: ak_t {
+            compatible = "zmk,behavior-adaptive-key";
+            #binding-cells = <0>;
+            bindings = <&kp T>;
 
-        //     akt_dv { trigger-keys = <D>; max-prior-idle-ms = <300>; bindings = <&kp V>; };
-        // };
+            akt_dz { trigger-keys = <D>; max-prior-idle-ms = <300>; bindings = <&kp Z>; };
+        };
 
         ak_p: ak_p {
             compatible = "zmk,behavior-adaptive-key";
@@ -508,17 +508,17 @@
             hold-trigger-on-release;             // delay positional check until key-release
         };
 
-        // tml: akt_left {
-        //     compatible = "zmk,behavior-hold-tap";
-        //     #binding-cells = <2>;
-        //     flavor = "tap-preferred";
-        //     tapping-term-ms = <300>;
-        //     quick-tap-ms = <170>;                // repeat on tap-into-hold
-        //     require-prior-idle-ms = <120>;
-        //     bindings = <&kp>, <&ak_t>;
-        //     hold-trigger-key-positions = <KEYS_R THUMBS>;
-        //     hold-trigger-on-release;             // delay positional check until key-release
-        // };
+        tml: akt_left {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <300>;
+            quick-tap-ms = <170>;                // repeat on tap-into-hold
+            require-prior-idle-ms = <120>;
+            bindings = <&kp>, <&ak_t>;
+            hold-trigger-key-positions = <KEYS_R THUMBS>;
+            hold-trigger-on-release;             // delay positional check until key-release
+        };
 
         asl: aks_left {
             compatible = "zmk,behavior-hold-tap";
@@ -626,7 +626,7 @@
 //       | _SM(BSPC) | _A2(BSPC) |    | _NM(SPC) | _NV(SPC) |
                         bindings = <
    &ak_b       &kp L        &kp M       &ak_p             &kp C        &kp O       &kp U        &ak_y
-   &hml LALT N &rml LCTRL R &hml LGUI T &asl LSHFT D      &hsr LSHFT S &hmr LGUI A &hmr LCTRL E &hmr LALT I 
+   &hml LALT N &rml LCTRL R &tml LGUI T &asl LSHFT D      &hsr LSHFT S &hmr LGUI A &hmr LCTRL E &hmr LALT I 
                     &bst _SM BSPC  &bst _A2 BSPC          &spt _NM SPACE  &spt _NV SPACE
                         >;
                 };
