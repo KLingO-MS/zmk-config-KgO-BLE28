@@ -405,8 +405,6 @@
 
             akt_ph { trigger-keys = <P>; max-prior-idle-ms = <300>; bindings = <&kp H>; };
 
-            // akt_vt { trigger-keys = <V>; max-prior-idle-ms = <300>; bindings = <&kp T>; };
-
             akt_rv { trigger-keys = <R>; max-prior-idle-ms = <300>; bindings = <&kp V>; };
             akt_sv { trigger-keys = <S>; max-prior-idle-ms = <300>; bindings = <&kp V>; };
             akt_dv { trigger-keys = <D>; max-prior-idle-ms = <300>; bindings = <&kp V>; };
@@ -420,6 +418,7 @@
             bindings = <&kp R>;
 
             akt_ng { trigger-keys = <N>; max-prior-idle-ms = <300>; bindings = <&kp G>; };
+
             akt_sk { trigger-keys = <S>; max-prior-idle-ms = <300>; bindings = <&kp K>; };
         };
 
@@ -441,7 +440,8 @@
             akt_ck { trigger-keys = <C>; max-prior-idle-ms = <300>; bindings = <&kp K>; };
             akt_tk { trigger-keys = <T>; max-prior-idle-ms = <300>; bindings = <&kp K>; };
             akt_rk { trigger-keys = <R>; max-prior-idle-ms = <300>; bindings = <&kp K>; };
-            // akt_dk { trigger-keys = <D>; max-prior-idle-ms = <300>; bindings = <&kp K>; };
+
+            akt_kl { trigger-keys = <K>; max-prior-idle-ms = <300>; bindings = <&kp L>; };
 
             akt_bn { trigger-keys = <B>; max-prior-idle-ms = <300>; bindings = <&kp N>; };
         };
