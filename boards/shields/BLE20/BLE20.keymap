@@ -239,12 +239,12 @@
         //     layers = <_A1>;
         // };
 
-        // combo_EXCL {
-        //     timeout-ms = <60>;
-        //     key-positions = <RTP LIT>;
-        //     bindings = <&kp EXCL>;
-        //     layers = <_A1>;
-        // };
+        combo_MINUS {
+            timeout-ms = <50>;
+            key-positions = <RBM RBR>;
+            bindings = <&kp MINUS>;
+            layers = <_A1 _A2>;
+        };
 
         combo_EXCL {
             timeout-ms = <50>;
