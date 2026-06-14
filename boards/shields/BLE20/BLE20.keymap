@@ -22,10 +22,10 @@
 #define _BT      6
 
 
-// &sk {
-//     release-after-ms = <1500>
-//     quick-release;
-// };
+&sk {
+    release-after-ms = <1000>
+    quick-release;
+};
 
 / {
 // ------------------------- MACROS --------------------------------
@@ -159,6 +159,14 @@
             layers = <_A1 _A2>;
         };
 
+        combo_SHIFT {
+            timeout-ms = <50>;
+            key-positions = <LBI RBI>;
+            bindings = <&sk LSHIFT>;
+            require-prior-idle-ms = <120>;
+            layers = <_A1 _A2>;
+        };
+
         // combo_RALTL {
         //     timeout-ms = <40>;
         //     key-positions = <LMP LTP>;
@@ -243,7 +251,7 @@
             timeout-ms = <50>;
             key-positions = <RBM RBR>;
             bindings = <&kp MINUS>;
-            layers = <_A1 _A2>;
+            layers = <_A1 _A2 _NM>;
         };
 
         combo_EXCL {
@@ -524,10 +532,10 @@
         asl: aks_left {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "balanced";
+            flavor = "tap-preferred";
             tapping-term-ms = <300>;
             quick-tap-ms = <170>;                // repeat on tap-into-hold
-            // require-prior-idle-ms = <100>;
+            require-prior-idle-ms = <100>;
             bindings = <&kp>, <&ak_d>;
             hold-trigger-key-positions = <KEYS_R THUMBS>;
             hold-trigger-on-release;             // delay positional check until key-release
@@ -627,7 +635,7 @@
 //       | _SM(BSPC) | _A2(BSPC) |    | _NM(SPC) | _NV(SPC) |
                         bindings = <
    &ak_b       &kp L        &kp M       &ak_p             &kp C        &kp O       &kp U        &ak_y
-   &hml LALT N &rml LCTRL R &tml LGUI T &asl LSHFT D      &hsr LSHFT S &hmr LGUI A &hmr LCTRL E &hmr LALT I 
+   &hml LALT N &rml LCTRL R &tml LGUI T &asl LSHFT D      &hmr LSHFT S &hmr LGUI A &hmr LCTRL E &hmr LALT I 
                     &bst _SM BSPC  &bst _A2 BSPC          &spt _NM SPACE  &spt _NV SPACE
                         >;
                 };
@@ -641,7 +649,7 @@
 //                  | BSPC |     |    | SPC | SPC |
                         bindings = <
    &kp Q       &kp W        &kp F       &kp K             &kp G        &kp SEMI        &kp COLON      &kp DQT
-   &hml LALT X &hml LCTRL J &hml LGUI V &hsl LSHFT H      &hsr LSHFT Z &hmr LGUI COMMA &hmr LCTRL DOT &hmr LALT SQT
+   &hml LALT X &hml LCTRL J &hml LGUI V &hml LSHFT H      &hmr LSHFT Z &hmr LGUI COMMA &hmr LCTRL DOT &hmr LALT SQT
                             &kp BSPC    &none             &kp SPACE    &kp SPACE
                         >;
                 };
@@ -653,7 +661,7 @@
 //                   | SPC  | BSPC |    | BSPC | LS(SPC) |
                         bindings = <
    &kp INS         &copy           &kp PG_UP       &pasta           &kp TAB          &kp UP         &kp DEL          &kp ESC
-   &hml LALT PSCRN &hml LCTRL HOME &hml LGUI PG_DN &hsl LSHFT END   &hsr LSHFT LEFT  &hmr LGUI DOWN &hmr LCTRL RIGHT &hmr LALT RET
+   &hml LALT PSCRN &hml LCTRL HOME &hml LGUI PG_DN &hml LSHFT END   &hmr LSHFT LEFT  &hmr LGUI DOWN &hmr LCTRL RIGHT &hmr LALT RET
                                    &kp SPACE       &kp BSPC         &kp BSPC         &tht LSHFT SPACE
                         >;
                 };
@@ -665,7 +673,7 @@
 //                  | . , | BSPC |    |     |     |
                         bindings = <
    &kp N8       &kp N7        &kp N6       &kp N5             &kp N9        &kp EQUAL       &kp STAR        &kp SLASH
-   &hml LALT N4 &hml LCTRL N3 &hml LGUI N2 &hsl LSHFT N1      &hsr LSHFT N0 &hmr LGUI SPACE &hmr LCTRL PLUS &hmr LALT MINUS
+   &hml LALT N4 &hml LCTRL N3 &hml LGUI N2 &hml LSHFT N1      &hmr LSHFT N0 &hmr LGUI SPACE &hmr LCTRL PLUS &hmr LALT MINUS
                               &kp KP_DOT   &kp BSPC           &none     &none
                         >;
                 };
@@ -677,7 +685,7 @@
 //                   |     |     |    | SPC | BSPC |
                         bindings = <
    &kp TILDE       &kp C_MUTE    &kp C_VOL_DN   &kp C_VOL_UP         &kp EXCL         &kp QMARK       &kp PIPE        &kp BSLH
-   &hml LALT GRAVE &hml LCTRL AT &hml LGUI HASH &hsl LSHFT DLLR      &hsr LSHFT PRCNT &hmr LGUI CARET &hmr LCTRL AMPS &hmr LALT UNDER
+   &hml LALT GRAVE &hml LCTRL AT &hml LGUI HASH &hml LSHFT DLLR      &hmr LSHFT PRCNT &hmr LGUI CARET &hmr LCTRL AMPS &hmr LALT UNDER
                                                 &none    &none       &kp SPACE     &kp SPACE
                         >;
                 };
@@ -689,7 +697,7 @@
 //                   |     |     |    |     |     |
                         bindings = <
    &kp F9        &kp F10        &kp F11       &kp F12             &kp F1         &kp F2       &kp F3        &kp F4             
-   &hml LALT F13 &hml LCTRL F14 &hml LGUI F15 &hsl LSHFT F16      &hsl LSHFT F5 &hml LGUI F6 &hml LCTRL F7 &hml LALT F8
+   &hml LALT F13 &hml LCTRL F14 &hml LGUI F15 &hml LSHFT F16      &hml LSHFT F5 &hml LGUI F6 &hml LCTRL F7 &hml LALT F8
                                                 &none  &none      &none  &none
                         >;
                 };
