@@ -152,7 +152,7 @@
 
 // ------------------------- MODS COMBOS --------------------------------
         combo_CAPS {
-            timeout-ms = <50>;
+            timeout-ms = <55>;
             key-positions = <LTI RTI>;
             bindings = <&caps_word>;
             require-prior-idle-ms = <250>;
@@ -160,10 +160,10 @@
         };
 
         combo_SHIFT {
-            timeout-ms = <50>;
-            key-positions = <LBI RBI>;
+            timeout-ms = <55>;
+            key-positions = <RBM RBR>;
             bindings = <&sk LSHIFT>;
-            require-prior-idle-ms = <120>;
+            require-prior-idle-ms = <100>;
             layers = <_A1 _A2>;
         };
 
@@ -192,14 +192,14 @@
         };
 
         combo_0 {
-            timeout-ms = <50>;
+            timeout-ms = <55>;
             key-positions = <LBI LBM>;
             bindings = <&kp N0>;
             layers = <_NM>;
         };
 
         combo_9 {
-            timeout-ms = <50>;
+            timeout-ms = <55>;
             key-positions = <LTI LTM>;
             bindings = <&kp N9>;
             layers = <_NM>;
@@ -248,8 +248,8 @@
         // };
 
         combo_MINUS {
-            timeout-ms = <50>;
-            key-positions = <RBM RBR>;
+            timeout-ms = <55>;
+            key-positions = <LBM LBR>;
             bindings = <&kp MINUS>;
             layers = <_A1 _A2 _NM>;
         };
