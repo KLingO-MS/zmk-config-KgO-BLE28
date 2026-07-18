@@ -152,7 +152,7 @@
 
 // ------------------------- MODS COMBOS --------------------------------
         combo_CAPS {
-            timeout-ms = <55>;
+            timeout-ms = <60>;
             key-positions = <LTI RTI>;
             bindings = <&caps_word>;
             require-prior-idle-ms = <250>;
@@ -160,8 +160,8 @@
         };
 
         combo_SHIFT {
-            timeout-ms = <55>;
-            key-positions = <RBM RBR>;
+            timeout-ms = <60>;
+            key-positions = <LBI RBI>;
             bindings = <&sk LSHIFT>;
             require-prior-idle-ms = <100>;
             layers = <_A1 _A2>;
@@ -249,7 +249,7 @@
 
         combo_MINUS {
             timeout-ms = <55>;
-            key-positions = <LBM LBR>;
+            key-positions = <RBM RBR>;
             bindings = <&kp MINUS>;
             layers = <_A1 _A2 _NM>;
         };
@@ -532,10 +532,10 @@
         asl: aks_left {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "tap-preferred";
+            flavor = "balanced";
             tapping-term-ms = <300>;
             quick-tap-ms = <170>;                // repeat on tap-into-hold
-            require-prior-idle-ms = <100>;
+            // require-prior-idle-ms = <100>;
             bindings = <&kp>, <&ak_d>;
             hold-trigger-key-positions = <KEYS_R THUMBS>;
             hold-trigger-on-release;             // delay positional check until key-release
@@ -635,7 +635,7 @@
 //       | _SM(BSPC) | _A2(BSPC) |    | _NM(SPC) | _NV(SPC) |
                         bindings = <
    &ak_b       &kp L        &kp M       &ak_p             &kp C        &kp O       &kp U        &ak_y
-   &hml LALT N &rml LCTRL R &tml LGUI T &asl LSHFT D      &hmr LSHFT S &hmr LGUI A &hmr LCTRL E &hmr LALT I 
+   &hml LALT N &rml LCTRL R &tml LGUI T &asl LSHFT D      &hsr LSHFT S &hmr LGUI A &hmr LCTRL E &hmr LALT I 
                     &bst _SM BSPC  &bst _A2 BSPC          &spt _NM SPACE  &spt _NV SPACE
                         >;
                 };
@@ -649,7 +649,7 @@
 //                  | BSPC |     |    | SPC | SPC |
                         bindings = <
    &kp Q       &kp W        &kp F       &kp K             &kp G        &kp SEMI        &kp COLON      &kp DQT
-   &hml LALT X &hml LCTRL J &hml LGUI V &hml LSHFT H      &hmr LSHFT Z &hmr LGUI COMMA &hmr LCTRL DOT &hmr LALT SQT
+   &hml LALT X &hml LCTRL J &hml LGUI V &hsl LSHFT H      &hsr LSHFT Z &hmr LGUI COMMA &hmr LCTRL DOT &hmr LALT SQT
                             &kp BSPC    &none             &kp SPACE    &kp SPACE
                         >;
                 };
